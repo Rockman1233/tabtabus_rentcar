@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="rentacar@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="rentacar">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="php_blog"/>
+    <schema id="7" parent="1" name="special_for_train"/>
+    <table id="8" parent="2" name="Car"/>
+    <table id="9" parent="2" name="Contract"/>
+    <table id="10" parent="2" name="Driver"/>
+    <table id="11" parent="2" name="Owner">
+      <Comment>The table of car&apos;s owner</Comment>
+    </table>
+    <table id="12" parent="2" name="interval_availability"/>
+    <column id="13" parent="8" name="car_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="14" parent="8" name="mark">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="15" parent="8" name="model">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="16" parent="8" name="year">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="8" name="state_num">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="8" name="mileage">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="8" name="colour">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="8" name="consumption">
+      <Position>8</Position>
+      <Comment>liters for 100 km</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="8" name="int_of_availability">
+      <Position>9</Position>
+      <Comment>dates of avilability</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="8" name="cost_less_30_inc">
+      <Position>10</Position>
+      <Comment>per 1 day</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="8" name="cost_more_31">
+      <Position>11</Position>
+      <Comment>per 1 day</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="8" name="car_owner">
+      <Position>12</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="25" parent="8" name="car&apos;s_owner">
+      <ColNames>car_owner</ColNames>
+    </index>
+    <index id="26" parent="8" name="car_ibfk_1">
+      <ColNames>int_of_availability</ColNames>
+    </index>
+    <index id="27" parent="8" name="mark">
+      <ColNames>mark</ColNames>
+    </index>
+    <key id="28" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>car_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="29" parent="8" name="car_ibfk_1">
+      <ColNames>int_of_availability</ColNames>
+      <RefSchemaName>rentacar</RefSchemaName>
+      <RefTableName>interval_availability</RefTableName>
+      <RefColNames>interval_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="30" parent="8" name="car_ibfk_2">
+      <ColNames>car_owner</ColNames>
+      <RefSchemaName>rentacar</RefSchemaName>
+      <RefTableName>Owner</RefTableName>
+      <RefColNames>owner_id</RefColNames>
+    </foreign-key>
+    <column id="31" parent="9" name="contract_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="9" name="status">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="9" name="car">
+      <Position>3</Position>
+      <DataType>int(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="9" name="passport_number_owner">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="9" name="passport_number_driver">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="9" name="first_name_owner">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="9" name="last_name_owner">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="9" name="first_name_driver">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="9" name="last_name_driver">
+      <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="9" name="telephone_owner">
+      <Position>10</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="9" name="address_owner">
+      <Position>11</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="9" name="email_owner">
+      <Position>12</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="9" name="telephone_driver">
+      <Position>13</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="9" name="address_driver">
+      <Position>14</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="9" name="email_driver">
+      <Position>15</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="46" parent="9" name="address_driver">
+      <ColNames>address_driver</ColNames>
+    </index>
+    <index id="47" parent="9" name="address_owner">
+      <ColNames>address_owner</ColNames>
+    </index>
+    <index id="48" parent="9" name="car">
+      <ColNames>car</ColNames>
+    </index>
+    <index id="49" parent="9" name="email_driver">
+      <ColNames>email_driver</ColNames>
+    </index>
+    <index id="50" parent="9" name="email_owner">
+      <ColNames>email_owner</ColNames>
+    </index>
+    <index id="51" parent="9" name="first_name_driver">
+      <ColNames>first_name_driver</ColNames>
+    </index>
+    <index id="52" parent="9" name="first_name_owner">
+      <ColNames>first_name_owner</ColNames>
+    </index>
+    <index id="53" parent="9" name="last_name_driver">
+      <ColNames>last_name_driver</ColNames>
+    </index>
+    <index id="54" parent="9" name="last_name_owner">
+      <ColNames>last_name_owner</ColNames>
+    </index>
+    <index id="55" parent="9" name="passport_number_driver">
+      <ColNames>passport_number_driver</ColNames>
+    </index>
+    <index id="56" parent="9" name="passport_number_owner">
+      <ColNames>passport_number_owner</ColNames>
+    </index>
+    <index id="57" parent="9" name="telephone_driver">
+      <ColNames>telephone_driver</ColNames>
+    </index>
+    <index id="58" parent="9" name="telephone_owner">
+      <ColNames>telephone_owner</ColNames>
+    </index>
+    <key id="59" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>contract_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="60" parent="9" name="contract_ibfk_13">
+      <ColNames>car</ColNames>
+      <RefSchemaName>rentacar</RefSchemaName>
+      <RefTableName>Car</RefTableName>
+      <RefColNames>car_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="61" parent="9" name="contract_ibfk_1">
+      <ColNames>passport_number_owner</ColNames>
+      <RefSchemaName>rentacar</RefSchemaName>
+      <RefTableName>Owner</RefTableName>
+      <RefColNames>passport_num</RefColNames>
+    </foreign-key>
+    <foreign-key id="62" parent="9" name="contract_ibfk_7">
+      <ColNames>passport_number_driver</ColNames>
+      <RefSchemaName>rentacar</RefSchemaName>
+      <RefTableName>Driver</RefTableName>
+      <RefColNames>passport_num_d</RefColNames>
+    </foreign-key>
+    <foreign-key id="63" parent="9" name="contract_ibfk_2">
+      <ColNames>first_name_owner</ColNames>
+      <RefSchemaName>rentacar</RefSchemaName>
+      <RefTableName>Owner</RefTableName>
+      <RefColNames>first_name</RefColNames>
+    </foreign-key>
+    <foreign-key id="64" parent="9" name="contract_ibfk_3">
+      <ColNames>last_name_owner</ColNames>
+      <RefSchemaName>rentacar</RefSchemaName>
+      <RefTableName>Owner</RefTableName>
+      <RefColNames>last_name</RefColNames>
+    </foreign-key>
+    <foreign-key id="65" parent="9" name="contract_ibfk_8">
+      <ColNames>first_name_driver</ColNames>
+      <RefSchemaName>rentacar</RefSchemaName>
+      <RefTableName>Driver</RefTableName>
+      <RefColNames>first_name</RefColNames>
+    </foreign-key>
+    <foreign-key id="66" parent="9" name="contract_ibfk_9">
+      <ColNames>last_name_driver</ColNames>
+      <RefSchemaName>rentacar</RefSchemaName>
+      <RefTableName>Driver</RefTableName>
+      <RefColNames>last_name</RefColNames>
+    </foreign-key>
+    <foreign-key id="67" parent="9" name="contract_ibfk_4">
+      <ColNames>telephone_owner</ColNames>
+      <RefSchemaName>rentacar</RefSchemaName>
+      <RefTableName>Owner</RefTableName>
+      <RefColNames>telephone</RefColNames>
+    </foreign-key>
+    <foreign-key id="68" parent="9" name="contract_ibfk_5">
+      <ColNames>address_owner</ColNames>
+      <RefSchemaName>rentacar</RefSchemaName>
+      <RefTableName>Owner</RefTableName>
+      <RefColNames>address</RefColNames>
+    </foreign-key>
+    <foreign-key id="69" parent="9" name="contract_ibfk_6">
+      <ColNames>email_owner</ColNames>
+      <RefSchemaName>rentacar</RefSchemaName>
+      <RefTableName>Owner</RefTableName>
+      <RefColNames>email</RefColNames>
+    </foreign-key>
+    <foreign-key id="70" parent="9" name="contract_ibfk_10">
+      <ColNames>telephone_driver</ColNames>
+      <RefSchemaName>rentacar</RefSchemaName>
+      <RefTableName>Driver</RefTableName>
+      <RefColNames>telephone</RefColNames>
+    </foreign-key>
+    <foreign-key id="71" parent="9" name="contract_ibfk_11">
+      <ColNames>address_driver</ColNames>
+      <RefSchemaName>rentacar</RefSchemaName>
+      <RefTableName>Driver</RefTableName>
+      <RefColNames>address</RefColNames>
+    </foreign-key>
+    <foreign-key id="72" parent="9" name="contract_ibfk_12">
+      <ColNames>email_driver</ColNames>
+      <RefSchemaName>rentacar</RefSchemaName>
+      <RefTableName>Driver</RefTableName>
+      <RefColNames>email</RefColNames>
+    </foreign-key>
+    <column id="73" parent="10" name="driver_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="74" parent="10" name="first_name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="75" parent="10" name="last_name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="76" parent="10" name="telephone">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="77" parent="10" name="email">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="10" name="address">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="10" name="passport_num_d">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="80" parent="10" name="experience">
+      <Position>8</Position>
+      <Comment>years</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="81" parent="10" name="drive_license">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="82" parent="10" name="desired_dates">
+      <Position>10</Position>
+      <Comment>&quot;int&quot; because driver must choose offered dates</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="83" parent="10" name="desired_car">
+      <Position>11</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="84" parent="10" name="address">
+      <ColNames>address</ColNames>
+    </index>
+    <index id="85" parent="10" name="desired_car">
+      <ColNames>desired_car</ColNames>
+    </index>
+    <index id="86" parent="10" name="desired_dates">
+      <ColNames>desired_dates</ColNames>
+    </index>
+    <index id="87" parent="10" name="email">
+      <ColNames>email</ColNames>
+    </index>
+    <index id="88" parent="10" name="first_name">
+      <ColNames>first_name</ColNames>
+    </index>
+    <index id="89" parent="10" name="last_name">
+      <ColNames>last_name</ColNames>
+    </index>
+    <index id="90" parent="10" name="passport_num_d">
+      <ColNames>passport_num_d</ColNames>
+    </index>
+    <index id="91" parent="10" name="telephone">
+      <ColNames>telephone</ColNames>
+    </index>
+    <key id="92" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>driver_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="93" parent="10" name="driver_ibfk_2">
+      <ColNames>desired_dates</ColNames>
+      <RefSchemaName>rentacar</RefSchemaName>
+      <RefTableName>interval_availability</RefTableName>
+      <RefColNames>interval_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="94" parent="10" name="driver_ibfk_1">
+      <ColNames>desired_car</ColNames>
+      <RefSchemaName>rentacar</RefSchemaName>
+      <RefTableName>Car</RefTableName>
+      <RefColNames>mark</RefColNames>
+    </foreign-key>
+    <column id="95" parent="11" name="owner_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="96" parent="11" name="first_name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="97" parent="11" name="last_name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="98" parent="11" name="telephone">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="99" parent="11" name="email">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="100" parent="11" name="address">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="101" parent="11" name="cars">
+      <Position>7</Position>
+      <DataType>int(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="102" parent="11" name="passport_num">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="103" parent="11" name="address">
+      <ColNames>address</ColNames>
+    </index>
+    <index id="104" parent="11" name="cars">
+      <ColNames>cars</ColNames>
+    </index>
+    <index id="105" parent="11" name="email">
+      <ColNames>email</ColNames>
+    </index>
+    <index id="106" parent="11" name="first_name">
+      <ColNames>first_name</ColNames>
+    </index>
+    <index id="107" parent="11" name="last_name">
+      <ColNames>last_name</ColNames>
+    </index>
+    <index id="108" parent="11" name="passport_num">
+      <ColNames>passport_num</ColNames>
+    </index>
+    <index id="109" parent="11" name="telephone">
+      <ColNames>telephone</ColNames>
+    </index>
+    <key id="110" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>owner_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="111" parent="11" name="owner_ibfk_1">
+      <ColNames>cars</ColNames>
+      <RefSchemaName>rentacar</RefSchemaName>
+      <RefTableName>Car</RefTableName>
+      <RefColNames>car_id</RefColNames>
+    </foreign-key>
+    <column id="112" parent="12" name="interval_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="113" parent="12" name="start_date">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="114" parent="12" name="finish_date">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="115" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>interval_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
