@@ -16,7 +16,6 @@ class CarController {
 
         foreach ($_POST as $var => $value) {
             $NewCar->__set($var, $value);
-
         }
         $NewCar->safeCar();
         print_r($NewCar);
