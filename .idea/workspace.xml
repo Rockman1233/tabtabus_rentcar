@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d81c2fa1-0fe5-426c-83e4-120ca62fdf98" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ClassesExt.php" afterPath="$PROJECT_DIR$/models/ClassesExt.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/DBConnect.php" afterPath="$PROJECT_DIR$/models/DBConnect.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/32952eda-ff8c-408c-a3c5-6f09b7e10b6d.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/32952eda-ff8c-408c-a3c5-6f09b7e10b6d.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/CarController.php" afterPath="$PROJECT_DIR$/controllers/CarController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/ClassesExt.php" afterPath="$PROJECT_DIR$/models/ClassesExt.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/indexAuto.php" afterPath="$PROJECT_DIR$/views/indexAuto.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,8 +56,8 @@
       <file leaf-file-name="CarController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/CarController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+            <state relative-caret-position="0">
+              <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -66,8 +66,8 @@
       <file leaf-file-name="Car.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/Car.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+            <state relative-caret-position="582">
+              <caret line="46" column="27" lean-forward="true" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
               <folding>
                 <marker date="1509376429000" expanded="true" signature="713:833" ph="SELECT inter... interval_availability" />
                 <marker date="1509376429000" expanded="true" signature="992:1204" ph="UPDATE Car S... " />
@@ -77,22 +77,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassesExt.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ClassesExt.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/ClassesExt.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="30" selection-end-column="27" />
+            <state relative-caret-position="135">
+              <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
               <folding>
-                <marker date="1509374471000" expanded="true" signature="981:1021" ph="SELECT * FRO... $" />
-                <marker date="1509374471000" expanded="true" signature="1557:1609" ph="SELECT Car.m... Car" />
-                <marker date="1509374471000" expanded="true" signature="1778:1893" ph="UPDATE Owner... " />
-                <marker date="1509374471000" expanded="true" signature="1942:2132" ph="INSERT INTO Owner... " />
-                <marker date="1509374471000" expanded="true" signature="2797:2945" ph="SELECT Car.m... Car" />
-                <marker date="1509374471000" expanded="true" signature="3096:3300" ph="SELECT Car.m... interval_availability" />
-                <marker date="1509374471000" expanded="true" signature="3457:3659" ph="UPDATE Drive... " />
-                <marker date="1509374471000" expanded="true" signature="3711:3973" ph="INSERT INTO Driver... " />
-                <marker date="1509374471000" expanded="true" signature="4844:5358" ph="UPDATE Contr... " />
-                <marker date="1509374471000" expanded="true" signature="5412:5839" ph="INSERT INTO Contract... " />
+                <marker date="1509379866000" expanded="true" signature="980:1020" ph="SELECT * FRO... $" />
+                <marker date="1509379866000" expanded="true" signature="1556:1608" ph="SELECT Car.m... Car" />
+                <marker date="1509379866000" expanded="true" signature="1777:1892" ph="UPDATE Owner... " />
+                <marker date="1509379866000" expanded="true" signature="1941:2131" ph="INSERT INTO Owner... " />
+                <marker date="1509379866000" expanded="true" signature="2796:2944" ph="SELECT Car.m... Car" />
+                <marker date="1509379866000" expanded="true" signature="3095:3299" ph="SELECT Car.m... interval_availability" />
+                <marker date="1509379866000" expanded="true" signature="3456:3658" ph="UPDATE Drive... " />
+                <marker date="1509379866000" expanded="true" signature="3710:3972" ph="INSERT INTO Driver... " />
+                <marker date="1509379866000" expanded="true" signature="4843:5357" ph="UPDATE Contr... " />
+                <marker date="1509379866000" expanded="true" signature="5411:5838" ph="INSERT INTO Contract... " />
               </folding>
             </state>
           </provider>
@@ -108,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indexAuto.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="indexAuto.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/indexAuto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="43" column="36" lean-forward="true" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+            <state relative-caret-position="-183">
+              <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -141,10 +141,10 @@
         <option value="$PROJECT_DIR$/components/route.php" />
         <option value="$PROJECT_DIR$/views/index.php" />
         <option value="$PROJECT_DIR$/config/routes.php" />
-        <option value="$PROJECT_DIR$/models/ClassesExt.php" />
         <option value="$PROJECT_DIR$/models/Car.php" />
         <option value="$PROJECT_DIR$/controllers/CarController.php" />
         <option value="$PROJECT_DIR$/views/indexAuto.php" />
+        <option value="$PROJECT_DIR$/models/ClassesExt.php" />
       </list>
     </option>
   </component>
@@ -265,12 +265,12 @@
       <workItem from="1508761075498" duration="929000" />
       <workItem from="1509081549426" duration="16953000" />
       <workItem from="1509353073377" duration="2617000" />
-      <workItem from="1509356209352" duration="14753000" />
+      <workItem from="1509356209352" duration="16321000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54557000" />
+    <option name="totallyTimeSpent" value="56125000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -537,14 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/indexAuto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="43" column="36" lean-forward="true" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/DBConnect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -555,16 +547,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/CarController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ClassesExt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+          <folding>
+            <marker date="1509379866000" expanded="true" signature="980:1020" ph="SELECT * FRO... $" />
+            <marker date="1509379866000" expanded="true" signature="1556:1608" ph="SELECT Car.m... Car" />
+            <marker date="1509379866000" expanded="true" signature="1777:1892" ph="UPDATE Owner... " />
+            <marker date="1509379866000" expanded="true" signature="1941:2131" ph="INSERT INTO Owner... " />
+            <marker date="1509379866000" expanded="true" signature="2796:2944" ph="SELECT Car.m... Car" />
+            <marker date="1509379866000" expanded="true" signature="3095:3299" ph="SELECT Car.m... interval_availability" />
+            <marker date="1509379866000" expanded="true" signature="3456:3658" ph="UPDATE Drive... " />
+            <marker date="1509379866000" expanded="true" signature="3710:3972" ph="INSERT INTO Driver... " />
+            <marker date="1509379866000" expanded="true" signature="4843:5357" ph="UPDATE Contr... " />
+            <marker date="1509379866000" expanded="true" signature="5411:5838" ph="INSERT INTO Contract... " />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/Car.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+        <state relative-caret-position="582">
+          <caret line="46" column="27" lean-forward="true" selection-start-line="46" selection-start-column="27" selection-end-line="46" selection-end-column="27" />
           <folding>
             <marker date="1509376429000" expanded="true" signature="713:833" ph="SELECT inter... interval_availability" />
             <marker date="1509376429000" expanded="true" signature="992:1204" ph="UPDATE Car S... " />
@@ -573,22 +584,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/ClassesExt.php">
+    <entry file="file://$PROJECT_DIR$/views/indexAuto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="30" selection-end-column="27" />
-          <folding>
-            <marker date="1509374471000" expanded="true" signature="981:1021" ph="SELECT * FRO... $" />
-            <marker date="1509374471000" expanded="true" signature="1557:1609" ph="SELECT Car.m... Car" />
-            <marker date="1509374471000" expanded="true" signature="1778:1893" ph="UPDATE Owner... " />
-            <marker date="1509374471000" expanded="true" signature="1942:2132" ph="INSERT INTO Owner... " />
-            <marker date="1509374471000" expanded="true" signature="2797:2945" ph="SELECT Car.m... Car" />
-            <marker date="1509374471000" expanded="true" signature="3096:3300" ph="SELECT Car.m... interval_availability" />
-            <marker date="1509374471000" expanded="true" signature="3457:3659" ph="UPDATE Drive... " />
-            <marker date="1509374471000" expanded="true" signature="3711:3973" ph="INSERT INTO Driver... " />
-            <marker date="1509374471000" expanded="true" signature="4844:5358" ph="UPDATE Contr... " />
-            <marker date="1509374471000" expanded="true" signature="5412:5839" ph="INSERT INTO Contract... " />
-          </folding>
+        <state relative-caret-position="-183">
+          <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
