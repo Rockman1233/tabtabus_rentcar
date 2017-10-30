@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d81c2fa1-0fe5-426c-83e4-120ca62fdf98" name="Default" comment="" />
+    <list default="true" id="d81c2fa1-0fe5-426c-83e4-120ca62fdf98" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ClassesExt.php" afterPath="$PROJECT_DIR$/models/ClassesExt.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/DBConnect.php" afterPath="$PROJECT_DIR$/models/DBConnect.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/32952eda-ff8c-408c-a3c5-6f09b7e10b6d.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/32952eda-ff8c-408c-a3c5-6f09b7e10b6d.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,87 +36,83 @@
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="rentacar@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="rentacar" type="e3449647:DbNodeDescriptor" />
-        <item name="Contract" type="e3449647:DbNodeDescriptor" />
+        <item name="Car" type="e3449647:DbNodeDescriptor" />
       </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ClassesExt.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ClassesExt.php">
+      <file leaf-file-name="NewsController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/NewsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1638">
-              <caret line="202" column="26" lean-forward="true" selection-start-line="202" selection-start-column="26" selection-end-line="202" selection-end-column="26" />
+            <state relative-caret-position="180">
+              <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CarController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/CarController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Car.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/Car.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
               <folding>
-                <marker date="1509095123000" expanded="true" signature="979:1019" ph="SELECT * FRO... $" />
-                <marker date="1509095123000" expanded="true" signature="1796:1916" ph="SELECT * FRO... interval_availability" />
-                <marker date="1509095123000" expanded="true" signature="2078:2103" ph="UPDATE Car S... " />
-                <marker date="1509095123000" expanded="true" signature="2078:2122" ph="UPDATE Car S... " />
-                <marker date="1509095123000" expanded="true" signature="2078:2124" ph="UPDATE Car S... " />
-                <marker date="1509095123000" expanded="true" signature="2078:2132" ph="UPDATE Car S... " />
-                <marker date="1509095123000" expanded="true" signature="2078:2171" ph="UPDATE Car S... " />
-                <marker date="1509095123000" expanded="true" signature="2078:2172" ph="UPDATE Car S... " />
-                <marker date="1509095123000" expanded="true" signature="2078:2202" ph="UPDATE Car S... " />
-                <marker date="1509095123000" expanded="true" signature="2078:2220" ph="UPDATE Car S... " />
-                <marker date="1509095123000" expanded="true" signature="2078:2243" ph="UPDATE Car S... " />
-                <marker date="1509095123000" expanded="true" signature="2078:2257" ph="UPDATE Car S... " />
-                <marker date="1509095123000" expanded="true" signature="2078:2290" ph="UPDATE Car S... " />
-                <marker date="1509095123000" expanded="true" signature="2078:2291" ph="UPDATE Car S... " />
-                <marker date="1509095123000" expanded="true" signature="2341:2392" ph="INSErT INTO Car... " />
-                <marker date="1509095123000" expanded="true" signature="2341:2395" ph="INSERT INTO Car... " />
-                <marker date="1509095123000" expanded="true" signature="2341:2412" ph="INSERT INTO Car... " />
-                <marker date="1509095123000" expanded="true" signature="2341:2433" ph="INSERT INTO Car... " />
-                <marker date="1509095123000" expanded="true" signature="2341:2452" ph="INSERT INTO Car... " />
-                <marker date="1509095123000" expanded="true" signature="2341:2470" ph="INSERT INTO Car... " />
-                <marker date="1509095123000" expanded="true" signature="2341:2492" ph="INSERT INTO Car... " />
-                <marker date="1509095123000" expanded="true" signature="2341:2523" ph="INSERT INTO Car... " />
-                <marker date="1509095123000" expanded="true" signature="2341:2554" ph="INSERT INTO Car... " />
-                <marker date="1509095123000" expanded="true" signature="2341:2591" ph="INSERT INTO Car... " />
-                <marker date="1509095123000" expanded="true" signature="2341:2615" ph="INSERT INTO Car... " />
-                <marker date="1509095123000" expanded="true" signature="2341:2634" ph="INSERT INTO Car... " />
-                <marker date="1509095123000" expanded="true" signature="2352:2392" ph="UPDATE Car S... " />
-                <marker date="1509095123000" expanded="true" signature="3169:3214" ph="SELECT Car.m... Car" />
-                <marker date="1509095123000" expanded="true" signature="3169:3221" ph="SELECT Car.m... Car" />
-                <marker date="1509095123000" expanded="true" signature="3390:3504" ph="UPDATE Owner... " />
-                <marker date="1509095123000" expanded="true" signature="3390:3505" ph="UPDATE Owner... " />
-                <marker date="1509095123000" expanded="true" signature="3390:3520" ph="UPDATE Car S... " />
-                <marker date="1509095123000" expanded="true" signature="3554:3744" ph="INSERT INTO Owner... " />
-                <marker date="1509095123000" expanded="true" signature="3554:3767" ph="INSERT INTO Car... " />
-                <marker date="1509095123000" expanded="true" signature="4409:4557" ph="SELECT Car.m... Car" />
-                <marker date="1509095123000" expanded="true" signature="4708:4867" ph="SELECT Car.m... Car" />
-                <marker date="1509095123000" expanded="true" signature="4708:4892" ph="SELECT Car.m... interval_availability" />
-                <marker date="1509095123000" expanded="true" signature="4708:4912" ph="SELECT Car.m... interval_availability" />
-                <marker date="1509095123000" expanded="true" signature="5069:5157" ph="UPDATE Drive... " />
-                <marker date="1509095123000" expanded="true" signature="5069:5177" ph="UPDATE Drive... " />
-                <marker date="1509095123000" expanded="true" signature="5069:5271" ph="UPDATE Drive... " />
-                <marker date="1509095123000" expanded="true" signature="5069:5290" ph="UPDATE Drive... " />
-                <marker date="1509095123000" expanded="true" signature="5069:5322" ph="UPDATE Drive... " />
-                <marker date="1509095123000" expanded="true" signature="5323:5529" ph="INSERT INTO Driver... " />
-                <marker date="1509095123000" expanded="true" signature="5323:5559" ph="INSERT INTO Driver... " />
-                <marker date="1509095123000" expanded="true" signature="5323:5585" ph="INSERT INTO Driver... " />
-                <marker date="1509095123000" expanded="true" signature="6456:6720" ph="UPDATE Contr... " />
-                <marker date="1509095123000" expanded="true" signature="6456:6765" ph="UPDATE Contr... " />
-                <marker date="1509095123000" expanded="true" signature="6456:6807" ph="UPDATE Contr... " />
-                <marker date="1509095123000" expanded="true" signature="6456:6845" ph="UPDATE Contr... " />
-                <marker date="1509095123000" expanded="true" signature="6456:6886" ph="UPDATE Contr... " />
-                <marker date="1509095123000" expanded="true" signature="6456:6930" ph="UPDATE Contr... " />
-                <marker date="1509095123000" expanded="true" signature="6456:6970" ph="UPDATE Contr... " />
-                <marker date="1509095123000" expanded="true" signature="7024:7333" ph="INSERT INTO Driver... " />
-                <marker date="1509095123000" expanded="true" signature="7024:7362" ph="INSERT INTO Contract... " />
-                <marker date="1509095123000" expanded="true" signature="7024:7389" ph="INSERT INTO Contract... " />
-                <marker date="1509095123000" expanded="true" signature="7024:7421" ph="INSERT INTO Contract... " />
-                <marker date="1509095123000" expanded="true" signature="7024:7451" ph="INSERT INTO Contract... " />
+                <marker date="1509376429000" expanded="true" signature="713:833" ph="SELECT inter... interval_availability" />
+                <marker date="1509376429000" expanded="true" signature="992:1204" ph="UPDATE Car S... " />
+                <marker date="1509376429000" expanded="true" signature="1255:1529" ph="INSERT INTO Car... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClassesExt.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/ClassesExt.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="30" selection-end-column="27" />
+              <folding>
+                <marker date="1509374471000" expanded="true" signature="981:1021" ph="SELECT * FRO... $" />
+                <marker date="1509374471000" expanded="true" signature="1557:1609" ph="SELECT Car.m... Car" />
+                <marker date="1509374471000" expanded="true" signature="1778:1893" ph="UPDATE Owner... " />
+                <marker date="1509374471000" expanded="true" signature="1942:2132" ph="INSERT INTO Owner... " />
+                <marker date="1509374471000" expanded="true" signature="2797:2945" ph="SELECT Car.m... Car" />
+                <marker date="1509374471000" expanded="true" signature="3096:3300" ph="SELECT Car.m... interval_availability" />
+                <marker date="1509374471000" expanded="true" signature="3457:3659" ph="UPDATE Drive... " />
+                <marker date="1509374471000" expanded="true" signature="3711:3973" ph="INSERT INTO Driver... " />
+                <marker date="1509374471000" expanded="true" signature="4844:5358" ph="UPDATE Contr... " />
+                <marker date="1509374471000" expanded="true" signature="5412:5839" ph="INSERT INTO Contract... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="DBConnect.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DBConnect.php">
+        <entry file="file://$PROJECT_DIR$/models/DBConnect.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indexAuto.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/indexAuto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="392">
+              <caret line="43" column="36" lean-forward="true" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -119,24 +120,57 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/DBConnect.php" />
         <option value="$PROJECT_DIR$/ClassesExt.php" />
+        <option value="$PROJECT_DIR$/views/main.php" />
+        <option value="$PROJECT_DIR$/templates/template_view.php" />
+        <option value="$PROJECT_DIR$/views/view.php" />
+        <option value="$PROJECT_DIR$/controllers/main_controller.php" />
+        <option value="$PROJECT_DIR$/views/main_view.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/controllers/controller.php" />
+        <option value="$PROJECT_DIR$/models/News.php" />
+        <option value="$PROJECT_DIR$/views/Car.php" />
+        <option value="$PROJECT_DIR$/controllers/NewsController.php" />
+        <option value="$PROJECT_DIR$/components/route.php" />
+        <option value="$PROJECT_DIR$/views/index.php" />
+        <option value="$PROJECT_DIR$/config/routes.php" />
+        <option value="$PROJECT_DIR$/models/ClassesExt.php" />
+        <option value="$PROJECT_DIR$/models/Car.php" />
+        <option value="$PROJECT_DIR$/controllers/CarController.php" />
+        <option value="$PROJECT_DIR$/views/indexAuto.php" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpServers">
+    <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.6" />
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
     <option name="height" value="900" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -153,26 +187,57 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="employees" type="b2602c69:ProjectViewProjectNode" />
-              <item name="employees" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="rentacar_Andreykin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rentacar_Andreykin" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rentacar_Andreykin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rentacar_Andreykin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rentacar_Andreykin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rentacar_Andreykin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rentacar_Andreykin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rentacar_Andreykin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="rentacar_Andreykin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rentacar_Andreykin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="SQL Dialects" />
+    <property name="settings.editor.selected.configurable" value="php.test.frameworks.configurable" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/views" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/models" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/views" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -198,26 +263,29 @@
       <updated>1508668735881</updated>
       <workItem from="1508668737197" duration="19305000" />
       <workItem from="1508761075498" duration="929000" />
-      <workItem from="1509081549426" duration="11815000" />
+      <workItem from="1509081549426" duration="16953000" />
+      <workItem from="1509353073377" duration="2617000" />
+      <workItem from="1509356209352" duration="14753000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32049000" />
+    <option name="totallyTimeSpent" value="54557000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20171674" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2725322" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1788269" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -226,9 +294,54 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20171674" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2725322" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -238,156 +351,86 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ClassesExt.php">
+    <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1509095123000" expanded="true" signature="979:1019" ph="SELECT * FRO... $" />
-            <marker date="1509095123000" expanded="true" signature="1796:1916" ph="SELECT * FRO... interval_availability" />
-            <marker date="1509095123000" expanded="true" signature="2078:2103" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2122" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2124" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2132" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2171" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2172" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2202" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2220" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2243" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2257" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2290" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2291" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2392" ph="INSErT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2395" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2412" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2433" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2452" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2470" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2492" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2523" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2554" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2591" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2615" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2634" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2352:2392" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="3169:3214" ph="SELECT Car.m... Car" />
-            <marker date="1509095123000" expanded="true" signature="3169:3221" ph="SELECT Car.m... Car" />
-            <marker date="1509095123000" expanded="true" signature="3390:3504" ph="UPDATE Owner... " />
-            <marker date="1509095123000" expanded="true" signature="3390:3505" ph="UPDATE Owner... " />
-            <marker date="1509095123000" expanded="true" signature="3390:3520" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="3554:3744" ph="INSERT INTO Owner... " />
-            <marker date="1509095123000" expanded="true" signature="3554:3767" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="4409:4557" ph="SELECT Car.m... Car" />
-            <marker date="1509095123000" expanded="true" signature="4708:4867" ph="SELECT Car.m... Car" />
-            <marker date="1509095123000" expanded="true" signature="4708:4892" ph="SELECT Car.m... interval_availability" />
-            <marker date="1509095123000" expanded="true" signature="4708:4912" ph="SELECT Car.m... interval_availability" />
-            <marker date="1509095123000" expanded="true" signature="5069:5157" ph="UPDATE Drive... " />
-            <marker date="1509095123000" expanded="true" signature="5069:5177" ph="UPDATE Drive... " />
-            <marker date="1509095123000" expanded="true" signature="5069:5271" ph="UPDATE Drive... " />
-            <marker date="1509095123000" expanded="true" signature="5069:5290" ph="UPDATE Drive... " />
-            <marker date="1509095123000" expanded="true" signature="5069:5322" ph="UPDATE Drive... " />
-            <marker date="1509095123000" expanded="true" signature="5323:5529" ph="INSERT INTO Driver... " />
-            <marker date="1509095123000" expanded="true" signature="5323:5559" ph="INSERT INTO Driver... " />
-            <marker date="1509095123000" expanded="true" signature="5323:5585" ph="INSERT INTO Driver... " />
-            <marker date="1509095123000" expanded="true" signature="6456:6720" ph="UPDATE Contr... " />
-            <marker date="1509095123000" expanded="true" signature="6456:6765" ph="UPDATE Contr... " />
-            <marker date="1509095123000" expanded="true" signature="6456:6807" ph="UPDATE Contr... " />
-            <marker date="1509095123000" expanded="true" signature="6456:6845" ph="UPDATE Contr... " />
-            <marker date="1509095123000" expanded="true" signature="6456:6886" ph="UPDATE Contr... " />
-            <marker date="1509095123000" expanded="true" signature="6456:6930" ph="UPDATE Contr... " />
-            <marker date="1509095123000" expanded="true" signature="6456:6970" ph="UPDATE Contr... " />
-            <marker date="1509095123000" expanded="true" signature="7024:7333" ph="INSERT INTO Driver... " />
-            <marker date="1509095123000" expanded="true" signature="7024:7362" ph="INSERT INTO Contract... " />
-            <marker date="1509095123000" expanded="true" signature="7024:7389" ph="INSERT INTO Contract... " />
-            <marker date="1509095123000" expanded="true" signature="7024:7421" ph="INSERT INTO Contract... " />
-            <marker date="1509095123000" expanded="true" signature="7024:7451" ph="INSERT INTO Contract... " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBConnect.php">
+    <entry file="file://$PROJECT_DIR$/controllers/NewsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ClassesExt.php">
+    <entry file="file://$PROJECT_DIR$/components/route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="0" lean-forward="true" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Car.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1509095123000" expanded="true" signature="979:1019" ph="SELECT * FRO... $" />
-            <marker date="1509095123000" expanded="true" signature="1796:1916" ph="SELECT * FRO... interval_availability" />
-            <marker date="1509095123000" expanded="true" signature="2078:2103" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2122" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2124" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2132" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2171" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2172" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2202" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2220" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2243" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2257" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2290" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2291" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2392" ph="INSErT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2395" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2412" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2433" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2452" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2470" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2492" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2523" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2554" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2591" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2615" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2634" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2352:2392" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="3169:3214" ph="SELECT Car.m... Car" />
-            <marker date="1509095123000" expanded="true" signature="3169:3221" ph="SELECT Car.m... Car" />
-            <marker date="1509095123000" expanded="true" signature="3390:3504" ph="UPDATE Owner... " />
-            <marker date="1509095123000" expanded="true" signature="3390:3505" ph="UPDATE Owner... " />
-            <marker date="1509095123000" expanded="true" signature="3390:3520" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="3554:3744" ph="INSERT INTO Owner... " />
-            <marker date="1509095123000" expanded="true" signature="3554:3767" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="4409:4557" ph="SELECT Car.m... Car" />
-            <marker date="1509095123000" expanded="true" signature="4708:4867" ph="SELECT Car.m... Car" />
-            <marker date="1509095123000" expanded="true" signature="4708:4892" ph="SELECT Car.m... interval_availability" />
-            <marker date="1509095123000" expanded="true" signature="4708:4912" ph="SELECT Car.m... interval_availability" />
-            <marker date="1509095123000" expanded="true" signature="5069:5157" ph="UPDATE Drive... " />
-            <marker date="1509095123000" expanded="true" signature="5069:5177" ph="UPDATE Drive... " />
-            <marker date="1509095123000" expanded="true" signature="5069:5271" ph="UPDATE Drive... " />
-            <marker date="1509095123000" expanded="true" signature="5069:5290" ph="UPDATE Drive... " />
-            <marker date="1509095123000" expanded="true" signature="5069:5322" ph="UPDATE Drive... " />
-            <marker date="1509095123000" expanded="true" signature="5323:5529" ph="INSERT INTO Driver... " />
-            <marker date="1509095123000" expanded="true" signature="5323:5559" ph="INSERT INTO Driver... " />
-            <marker date="1509095123000" expanded="true" signature="5323:5585" ph="INSERT INTO Driver... " />
-            <marker date="1509095123000" expanded="true" signature="6456:6720" ph="UPDATE Contr... " />
-            <marker date="1509095123000" expanded="true" signature="6456:6765" ph="UPDATE Contr... " />
-            <marker date="1509095123000" expanded="true" signature="6456:6807" ph="UPDATE Contr... " />
-            <marker date="1509095123000" expanded="true" signature="6456:6845" ph="UPDATE Contr... " />
-            <marker date="1509095123000" expanded="true" signature="6456:6886" ph="UPDATE Contr... " />
-            <marker date="1509095123000" expanded="true" signature="6456:6930" ph="UPDATE Contr... " />
-            <marker date="1509095123000" expanded="true" signature="6456:6970" ph="UPDATE Contr... " />
-            <marker date="1509095123000" expanded="true" signature="7024:7333" ph="INSERT INTO Driver... " />
-            <marker date="1509095123000" expanded="true" signature="7024:7362" ph="INSERT INTO Contract... " />
-            <marker date="1509095123000" expanded="true" signature="7024:7389" ph="INSERT INTO Contract... " />
-            <marker date="1509095123000" expanded="true" signature="7024:7421" ph="INSERT INTO Contract... " />
-            <marker date="1509095123000" expanded="true" signature="7024:7451" ph="INSERT INTO Contract... " />
+            <marker date="1509376429000" expanded="true" signature="713:833" ph="SELECT inter... interval_availability" />
+            <marker date="1509376429000" expanded="true" signature="992:1204" ph="UPDATE Car S... " />
+            <marker date="1509376429000" expanded="true" signature="1255:1529" ph="INSERT INTO Car... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DBConnect.php">
+    <entry file="file://$PROJECT_DIR$/models/News.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        <state relative-caret-position="135">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ClassesExt.php" />
+    <entry file="file://$PROJECT_DIR$/DBConnect.php" />
+    <entry file="file://$PROJECT_DIR$/ClassesExt.php" />
+    <entry file="file://$PROJECT_DIR$/DBConnect.php" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/aedd5dca-13fb-430f-aa5c-61ddb0eb06db/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -405,77 +448,146 @@
     <entry file="das://table:/7b61f84d/32952eda-ff8c-408c-a3c5-6f09b7e10b6d/rentacar.interval_availability" />
     <entry file="das://table:/7b61f84d/32952eda-ff8c-408c-a3c5-6f09b7e10b6d/rentacar.Owner" />
     <entry file="das://table:/7b61f84d/32952eda-ff8c-408c-a3c5-6f09b7e10b6d/rentacar.Car" />
-    <entry file="file://$PROJECT_DIR$/DBConnect.php">
+    <entry file="file://$PROJECT_DIR$/DBConnect.php" />
+    <entry file="file://$PROJECT_DIR$/ClassesExt.php" />
+    <entry file="file://$PROJECT_DIR$/views/view.php" />
+    <entry file="file://$PROJECT_DIR$/controllers/controller_main.php" />
+    <entry file="file://$PROJECT_DIR$/views/template_view.php" />
+    <entry file="file://$PROJECT_DIR$/views/main_view.php" />
+    <entry file="file://$PROJECT_DIR$/bootstrap.php" />
+    <entry file="file://$PROJECT_DIR$/route.php" />
+    <entry file="file://$PROJECT_DIR$/controllers/controller.php" />
+    <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ClassesExt.php">
+    <entry file="file://$PROJECT_DIR$/css/bootstrap-theme.css.map">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1638">
-          <caret line="202" column="26" lean-forward="true" selection-start-line="202" selection-start-column="26" selection-end-line="202" selection-end-column="26" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bootstrap-theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-324">
+          <caret line="11" column="42" lean-forward="true" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/1f543b26/32952eda-ff8c-408c-a3c5-6f09b7e10b6d/rentacar.Car">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="57" column="44" lean-forward="true" selection-start-line="57" selection-start-column="44" selection-end-line="57" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/NewsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/indexAuto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="43" column="36" lean-forward="true" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/DBConnect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/CarController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="24" lean-forward="true" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Car.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
           <folding>
-            <marker date="1509095123000" expanded="true" signature="979:1019" ph="SELECT * FRO... $" />
-            <marker date="1509095123000" expanded="true" signature="1796:1916" ph="SELECT * FRO... interval_availability" />
-            <marker date="1509095123000" expanded="true" signature="2078:2103" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2122" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2124" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2132" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2171" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2172" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2202" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2220" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2243" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2257" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2290" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2078:2291" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2392" ph="INSErT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2395" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2412" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2433" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2452" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2470" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2492" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2523" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2554" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2591" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2615" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2341:2634" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="2352:2392" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="3169:3214" ph="SELECT Car.m... Car" />
-            <marker date="1509095123000" expanded="true" signature="3169:3221" ph="SELECT Car.m... Car" />
-            <marker date="1509095123000" expanded="true" signature="3390:3504" ph="UPDATE Owner... " />
-            <marker date="1509095123000" expanded="true" signature="3390:3505" ph="UPDATE Owner... " />
-            <marker date="1509095123000" expanded="true" signature="3390:3520" ph="UPDATE Car S... " />
-            <marker date="1509095123000" expanded="true" signature="3554:3744" ph="INSERT INTO Owner... " />
-            <marker date="1509095123000" expanded="true" signature="3554:3767" ph="INSERT INTO Car... " />
-            <marker date="1509095123000" expanded="true" signature="4409:4557" ph="SELECT Car.m... Car" />
-            <marker date="1509095123000" expanded="true" signature="4708:4867" ph="SELECT Car.m... Car" />
-            <marker date="1509095123000" expanded="true" signature="4708:4892" ph="SELECT Car.m... interval_availability" />
-            <marker date="1509095123000" expanded="true" signature="4708:4912" ph="SELECT Car.m... interval_availability" />
-            <marker date="1509095123000" expanded="true" signature="5069:5157" ph="UPDATE Drive... " />
-            <marker date="1509095123000" expanded="true" signature="5069:5177" ph="UPDATE Drive... " />
-            <marker date="1509095123000" expanded="true" signature="5069:5271" ph="UPDATE Drive... " />
-            <marker date="1509095123000" expanded="true" signature="5069:5290" ph="UPDATE Drive... " />
-            <marker date="1509095123000" expanded="true" signature="5069:5322" ph="UPDATE Drive... " />
-            <marker date="1509095123000" expanded="true" signature="5323:5529" ph="INSERT INTO Driver... " />
-            <marker date="1509095123000" expanded="true" signature="5323:5559" ph="INSERT INTO Driver... " />
-            <marker date="1509095123000" expanded="true" signature="5323:5585" ph="INSERT INTO Driver... " />
-            <marker date="1509095123000" expanded="true" signature="6456:6720" ph="UPDATE Contr... " />
-            <marker date="1509095123000" expanded="true" signature="6456:6765" ph="UPDATE Contr... " />
-            <marker date="1509095123000" expanded="true" signature="6456:6807" ph="UPDATE Contr... " />
-            <marker date="1509095123000" expanded="true" signature="6456:6845" ph="UPDATE Contr... " />
-            <marker date="1509095123000" expanded="true" signature="6456:6886" ph="UPDATE Contr... " />
-            <marker date="1509095123000" expanded="true" signature="6456:6930" ph="UPDATE Contr... " />
-            <marker date="1509095123000" expanded="true" signature="6456:6970" ph="UPDATE Contr... " />
-            <marker date="1509095123000" expanded="true" signature="7024:7333" ph="INSERT INTO Driver... " />
-            <marker date="1509095123000" expanded="true" signature="7024:7362" ph="INSERT INTO Contract... " />
-            <marker date="1509095123000" expanded="true" signature="7024:7389" ph="INSERT INTO Contract... " />
-            <marker date="1509095123000" expanded="true" signature="7024:7421" ph="INSERT INTO Contract... " />
-            <marker date="1509095123000" expanded="true" signature="7024:7451" ph="INSERT INTO Contract... " />
+            <marker date="1509376429000" expanded="true" signature="713:833" ph="SELECT inter... interval_availability" />
+            <marker date="1509376429000" expanded="true" signature="992:1204" ph="UPDATE Car S... " />
+            <marker date="1509376429000" expanded="true" signature="1255:1529" ph="INSERT INTO Car... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ClassesExt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="4" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="30" selection-end-column="27" />
+          <folding>
+            <marker date="1509374471000" expanded="true" signature="981:1021" ph="SELECT * FRO... $" />
+            <marker date="1509374471000" expanded="true" signature="1557:1609" ph="SELECT Car.m... Car" />
+            <marker date="1509374471000" expanded="true" signature="1778:1893" ph="UPDATE Owner... " />
+            <marker date="1509374471000" expanded="true" signature="1942:2132" ph="INSERT INTO Owner... " />
+            <marker date="1509374471000" expanded="true" signature="2797:2945" ph="SELECT Car.m... Car" />
+            <marker date="1509374471000" expanded="true" signature="3096:3300" ph="SELECT Car.m... interval_availability" />
+            <marker date="1509374471000" expanded="true" signature="3457:3659" ph="UPDATE Drive... " />
+            <marker date="1509374471000" expanded="true" signature="3711:3973" ph="INSERT INTO Driver... " />
+            <marker date="1509374471000" expanded="true" signature="4844:5358" ph="UPDATE Contr... " />
+            <marker date="1509374471000" expanded="true" signature="5412:5839" ph="INSERT INTO Contract... " />
           </folding>
         </state>
       </provider>

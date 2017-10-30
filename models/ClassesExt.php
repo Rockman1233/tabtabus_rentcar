@@ -19,7 +19,7 @@ abstract class Object{
     public function __get($name)
     {
         if (property_exists($this,$name))
-            return $this->name;
+            return $this->$name;
 
         return 'Not exist';
     }
@@ -27,7 +27,7 @@ abstract class Object{
     public function __set($name, $value)
     {
         if (property_exists($this,$name))
-            $this->name = $value;
+            $this->$name = $value;
         return 'Not exist';
     }
 
@@ -52,51 +52,7 @@ abstract class Object{
 }
 
 
-class Car extends Object {
 
-    protected $id;
-    protected $mark;
-    protected $model;
-    protected $state_num;
-    protected $mileage;
-    protected $colour;
-    protected $consuption;
-    protected $int_of_avaliability;
-    protected $cost_less_30;
-    protected $cost_more_31;
-    protected $car_owner;
-
-
-    static function TableName()
-    {
-        return 'Car';
-    }
-
-
-    protected function getCost($days){
-        if ($days<=30) {
-            return $days*$this->cost_less_30;
-        }
-        return $days*$this->cost_more_31;
-    }
-
-    protected function getDates(){
-        $oQuery = $this->db->query('SELECT interval_availability.start_date, interval_availability.finish_date FROM interval_availability WHERE interval_id='.$this->id);
-        $aRes = $oQuery->fetchAll();
-        return $aRes;
-
-    }
-
-    protected function safeCar() {
-        (isset($this->id) ? $this->db->query('UPDATE Car SET state_num='.$this->state_num.',mileage='.$this->mileage.',int_of_availability='.$this->int_of_avaliability.',cost_less_30_inc='.$this->cost_less_30.',cost_more_31='.$this->cost_more_31.',car_owner='.$this->car_owner):
-            $this->db->query('INSERT INTO Car VALUES ('.$this->id.','.$this->mark.','.$this->model.','.$this->state_num.','.$this->mileage.','.$this->colour.','.$this->consuption.','.$this->int_of_avaliability.','.$this->int_of_avaliability.','.$this->cost_less_30.'
-            ,'.$this->cost_more_31.','.$this->car_owner));
-
-        //если мы добавляем новую машину в бд то используем все поля а если уже существующую то не все (например цвет или марка остаются прежними)
-}
-
-
-}
 
 
 class Owner extends Object
@@ -209,12 +165,9 @@ class Contract extends Object {
         (isset($this->id)&&isset($this->status) ? $this->db->query('UPDATE Contract SET car=' . $this->car . ',passport_number_owner=' . $this->passport_number_owner . ',first_name_owner=' . $this->first_name_owner . ',last_name_owner=' . $this->last_name_owner . ',first_name_driver=' .$this->first_name_driver. ',last_name_driver='.$this->last_name_driver. ',telephone_owner='.$this->telephone_owner. ',address_owner='.$this->address_owner. ',email_owner='.$this->email_owner. ',telephone_driver='.$this->telephone_driver. ',address_driver='.$this->address_driver. ',email_driver='.$this->email_driver):
             $this->db->query('INSERT INTO Contract VALUES (' . $this-> contract_id . ',' . $this->car . ',' . $this->passport_number_owner . ',' . $this->passport_number_drive . ',' . $this->first_name_owner . ',' . $this->last_name_owner . ',' . $this->first_name_driver . ',' . $this->last_name_driver . ',' . $this->telephone_owner . ',' . $this->address_owner . ',' . $this->email_owner . ',' . $this->telephone_driver . ',' . $this->address_driver . ',' . $this->email_driver));
 
-        //если мы добавляем нового водителя в бд то используем все поля а если уже существующую то не все (например номер паспорта ббудет прежним)
 
 
     }
-
-
 
 
 }
