@@ -32,4 +32,8 @@ class CarController {
 
     }
 
+    public function actionShowAll() {
+        
+    }
+
 }

@@ -65,15 +65,25 @@ class Car extends Object {
             $this->consumption,
             $this->cost_less_30, 
             $this->cost_more_31)";
-        $asd = str_replace('"', "", $asd);
-        var_dump($asd);
+        echo($asd);
 
-        (isset($this->id) ? $this->db->query('UPDATE Car SET state_num='.$this->state_num.',mileage='.$this->mileage.',int_of_availability='.$this->int_of_avaliability.',
-        cost_less_30_inc='.$this->cost_less_30.',cost_more_31='.$this->cost_more_31.',car_owner='.$this->car_owner):
+
+        (isset($this->id) ? $this->db->query(
+            'UPDATE Car SET 
+            state_num='.$this->state_num.',
+            mileage='.$this->mileage.',
+            int_of_availability='.$this->int_of_avaliability.',
+            cost_less_30_inc='.$this->cost_less_30.',
+            cost_more_31='.$this->cost_more_31.',
+            car_owner='.$this->car_owner)
+            :
             //else
 
             $this->db->query($asd)
         );
+
+        echo '<br>';
+        print_r(self::$db->errorInfo());
 
 
         //если мы добавляем новую машину в бд то используем все поля а если уже существующую то не все (например цвет или марка остаются прежними)

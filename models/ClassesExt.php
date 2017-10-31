@@ -1,6 +1,6 @@
 <?php
 
-require_once('DBConnect.php');
+require('DBConnect.php');
 
 abstract class Object{
 
