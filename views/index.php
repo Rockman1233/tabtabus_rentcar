@@ -7,7 +7,7 @@
     <title>Bootstrap 101 Template</title>
 
     <!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -45,6 +45,11 @@
 <div class="container">
     <div class="row">
         <img src="../images/IMG_4252.JPG" class="img-responsive center-block" />
+    </div>
+</div>
+<div id="footer">
+    <div class="container">
+        <p class="muted credit">Andreykin RentaCar <a href="#">Жмяк</a> и <a href="#">Жмяк-жмяк</a>.</p>
     </div>
 </div>
 
