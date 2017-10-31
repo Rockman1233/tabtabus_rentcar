@@ -34,8 +34,8 @@ class CarController {
 
     public function actionShowall() {
 
-        $oQuery = Object::$db->prepare('SELECT * FROM `Car`');
-        $aRes = $oQuery->fetch(PDO::FETCH_ASSOC);
+        $oQuery = Object::$db->query('SELECT * FROM `Car`');
+        $aRes = $oQuery->fetchAll(PDO::FETCH_ASSOC);
         echo '<pre>';
         print_r($aRes);
         echo '</pre>';

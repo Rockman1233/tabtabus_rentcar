@@ -79,7 +79,17 @@ class Car extends Object {
             :
             //else
 
-            $this->db->query($asd)
+            $this->db->prepare($asd)->execute(
+                array('mark'=> $this->mark,
+                    'model'=> $this->model,
+                    'year'=> $this->year,
+                    'state_num'=> $this->state_num,
+                    'mileage'=> $this->mileage,
+                    'colour'=> $this->colour,
+                    'consumption'=> $this->consumption,
+                    'cost_less_30'=> $this->cost_less_30,
+                    'cost_more_31'=> $this->cost_more_31,
+                    ))
         );
 
 
