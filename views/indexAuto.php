@@ -59,6 +59,8 @@
     </div>
 <button type="submit" class="btn btn-default">Добавить авто</button>
 </form>
+<br>
+<a type="button" href="car/showall" class="btn btn-default">Показать все авто</a>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
