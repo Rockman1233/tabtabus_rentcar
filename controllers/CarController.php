@@ -6,26 +6,29 @@
  * Time: 13:51
  */
 include($_SERVER['DOCUMENT_ROOT'].'/models/Car.php');
+
+
 class CarController {
 
 
     public function actionIndex()
     {
-        $NewCar = new Car;
-        require $_SERVER['DOCUMENT_ROOT'].'/views/indexAuto.php';
 
-        foreach ($_POST as $var => $value) {
-            $NewCar->__set($var, $value);
-        }
-        $NewCar->safeCar();
-        print_r($NewCar);
+        require $_SERVER['DOCUMENT_ROOT'].'/views/indexAuto.php';
 
 
 
     }
-    public function actionView($category, $id) {
+    public function actionSafe() {
 
-        require_once $_SERVER['DOCUMENT_ROOT'].'/views/index.php';
+        $NewCar = new Car;
+        foreach ($_POST as $var => $value) {
+            $NewCar->__set($var, $value);
+        }
+        echo '<pre>';
+        print_r($NewCar);
+        echo '</pre>';
+        $NewCar->safeCar();
 
     }
 

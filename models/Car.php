@@ -43,7 +43,6 @@ class Car extends Object {
     }
 
     public function safeCar() {
-        var_dump($this);
         (isset($this->id) ? $this->db->query('UPDATE Car SET state_num='.$this->state_num.',mileage='.$this->mileage.',int_of_availability='.$this->int_of_avaliability.',
         cost_less_30_inc='.$this->cost_less_30.',cost_more_31='.$this->cost_more_31.',car_owner='.$this->car_owner):
             //else

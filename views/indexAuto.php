@@ -43,7 +43,7 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-<form method="post" action="/controllers/CarController.php">
+<form action="<?php echo 'car/safe'?>" method="post">
     <div class="form">
         <input type="text" class="form-control-static" name="mark" placeholder="Марка">
         <input type="text" class="form-control-static" name="model" placeholder="Модель">
@@ -51,8 +51,8 @@
         <input type="text" class="form-control-static" name="state_num" placeholder="Гос.номер">
         <input type="text" class="form-control-static" name="mileage" placeholder="Пробег">
         <input type="text" class="form-control-static" name="colour" placeholder="Цвет">
-        <input type="text" class="form-control-static" name="consumption" placeholder="Расход">
-        <input type="text" class="form-control-static" name="cost_less_30_inc" placeholder="Соимость до 30 сут (включ)">
+        <input type="text" class="form-control-static" name="consuption" placeholder="Расход">
+        <input type="text" class="form-control-static" name="cost_less_30" placeholder="Соимость до 30 сут (включ)">
         <input type="text" class="form-control-static" name="cost_more_31" placeholder="Стоимость более 31">
         <input type="text" class="form-control-static" name="car_owner" placeholder="Владелец">
 
