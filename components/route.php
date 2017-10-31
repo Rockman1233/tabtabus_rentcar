@@ -35,6 +35,11 @@ class Route
         $uri = $this->getURL();
         echo $uri;
 
+        if(!$uri){
+            include($_SERVER['DOCUMENT_ROOT'].'/views/index.php');
+            exit();
+        }
+
         foreach ($this->aRouts as $uriPattern => $path) {
             if (preg_match("~$uriPattern~",$uri)) {
 

@@ -13,4 +13,5 @@ return array(
     'owner' => 'owner/index',
     'driver' => 'driver/index',
     "^products$" => "product/view",
+    '' => '',
 );

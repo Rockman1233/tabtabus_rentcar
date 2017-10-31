@@ -27,29 +27,26 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Andreykin Rentacar</a>
+            <a class="navbar-brand" href="/">Andreykin Rentacar</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Автомобиль</a></li>
+                <li><a href="/car">Автомобиль</a></li>
                 <li><a href="#">Владелец</a></li>
                 <li><a href="#">Водитель</a></li>
-
             </ul>
 
 
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
-<form class="navbar-form navbar-left" role="search">
-    <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
-
+<div class="container">
+    <div class="row">
+        <img src="../images/IMG_4252.JPG" class="img-responsive center-block" />
     </div>
-<button type="submit" class="btn btn-default">Добавить авто</button>
-</form>
+</div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
