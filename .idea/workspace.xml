@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d81c2fa1-0fe5-426c-83e4-120ca62fdf98" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Car.php" afterPath="$PROJECT_DIR$/models/Car.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/indexAuto.php" afterPath="$PROJECT_DIR$/views/indexAuto.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -75,16 +73,16 @@
       <file leaf-file-name="Car.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/Car.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="55" column="28" lean-forward="true" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+            <state relative-caret-position="646">
+              <caret line="66" column="27" lean-forward="true" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
               <folding>
-                <marker date="1509442430000" expanded="true" signature="732:852" ph="SELECT inter... interval_availability" />
-                <marker date="1509442430000" expanded="true" signature="1011:1232" ph="UPDATE Car S... " />
-                <marker date="1509442430000" expanded="true" signature="1303:1444" ph="INSERT INTO Car... " />
-                <marker date="1509442430000" expanded="true" signature="1303:1455" ph="INSERT INTO Car... " />
-                <marker date="1509442430000" expanded="true" signature="1303:1456" ph="INSERT INTO Car... " />
-                <marker date="1509442430000" expanded="true" signature="1303:1738" ph="INSERT INTO Car... " />
-                <marker date="1509442430000" expanded="true" signature="1303:1902" ph="INSERT INTO Car... " />
+                <marker date="1509444108000" expanded="true" signature="732:852" ph="SELECT inter... interval_availability" />
+                <marker date="1509444108000" expanded="true" signature="1011:1232" ph="UPDATE Car S... " />
+                <marker date="1509444108000" expanded="true" signature="1303:1554" ph="INSERT INTO Car... " />
+                <marker date="1509444108000" expanded="true" signature="1303:1565" ph="INSERT INTO Car... " />
+                <marker date="1509444108000" expanded="true" signature="1303:1566" ph="INSERT INTO Car... " />
+                <marker date="1509444108000" expanded="true" signature="1303:1807" ph="INSERT INTO Car... " />
+                <marker date="1509444108000" expanded="true" signature="1303:1971" ph="INSERT INTO Car... " />
               </folding>
             </state>
           </provider>
@@ -103,8 +101,8 @@
       <file leaf-file-name="indexAuto.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/indexAuto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="53" column="72" lean-forward="false" selection-start-line="53" selection-start-column="72" selection-end-line="53" selection-end-column="72" />
+            <state relative-caret-position="222">
+              <caret line="36" column="49" lean-forward="true" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -268,12 +266,12 @@
       <workItem from="1508761075498" duration="929000" />
       <workItem from="1509081549426" duration="16953000" />
       <workItem from="1509353073377" duration="2617000" />
-      <workItem from="1509356209352" duration="25776000" />
+      <workItem from="1509356209352" duration="26787000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65580000" />
+    <option name="totallyTimeSpent" value="66591000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -399,13 +397,13 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1509442430000" expanded="true" signature="732:852" ph="SELECT inter... interval_availability" />
-            <marker date="1509442430000" expanded="true" signature="1011:1232" ph="UPDATE Car S... " />
-            <marker date="1509442430000" expanded="true" signature="1303:1444" ph="INSERT INTO Car... " />
-            <marker date="1509442430000" expanded="true" signature="1303:1455" ph="INSERT INTO Car... " />
-            <marker date="1509442430000" expanded="true" signature="1303:1456" ph="INSERT INTO Car... " />
-            <marker date="1509442430000" expanded="true" signature="1303:1738" ph="INSERT INTO Car... " />
-            <marker date="1509442430000" expanded="true" signature="1303:1902" ph="INSERT INTO Car... " />
+            <marker date="1509444108000" expanded="true" signature="732:852" ph="SELECT inter... interval_availability" />
+            <marker date="1509444108000" expanded="true" signature="1011:1232" ph="UPDATE Car S... " />
+            <marker date="1509444108000" expanded="true" signature="1303:1554" ph="INSERT INTO Car... " />
+            <marker date="1509444108000" expanded="true" signature="1303:1565" ph="INSERT INTO Car... " />
+            <marker date="1509444108000" expanded="true" signature="1303:1566" ph="INSERT INTO Car... " />
+            <marker date="1509444108000" expanded="true" signature="1303:1807" ph="INSERT INTO Car... " />
+            <marker date="1509444108000" expanded="true" signature="1303:1971" ph="INSERT INTO Car... " />
           </folding>
         </state>
       </provider>
@@ -600,22 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/CarController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/indexAuto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="53" column="72" lean-forward="false" selection-start-line="53" selection-start-column="72" selection-end-line="53" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/DBConnect.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -624,18 +606,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/indexAuto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="36" column="49" lean-forward="true" selection-start-line="36" selection-start-column="49" selection-end-line="36" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/CarController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="27" lean-forward="true" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/Car.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="55" column="28" lean-forward="true" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+        <state relative-caret-position="646">
+          <caret line="66" column="27" lean-forward="true" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
           <folding>
-            <marker date="1509442430000" expanded="true" signature="732:852" ph="SELECT inter... interval_availability" />
-            <marker date="1509442430000" expanded="true" signature="1011:1232" ph="UPDATE Car S... " />
-            <marker date="1509442430000" expanded="true" signature="1303:1444" ph="INSERT INTO Car... " />
-            <marker date="1509442430000" expanded="true" signature="1303:1455" ph="INSERT INTO Car... " />
-            <marker date="1509442430000" expanded="true" signature="1303:1456" ph="INSERT INTO Car... " />
-            <marker date="1509442430000" expanded="true" signature="1303:1738" ph="INSERT INTO Car... " />
-            <marker date="1509442430000" expanded="true" signature="1303:1902" ph="INSERT INTO Car... " />
+            <marker date="1509444108000" expanded="true" signature="732:852" ph="SELECT inter... interval_availability" />
+            <marker date="1509444108000" expanded="true" signature="1011:1232" ph="UPDATE Car S... " />
+            <marker date="1509444108000" expanded="true" signature="1303:1554" ph="INSERT INTO Car... " />
+            <marker date="1509444108000" expanded="true" signature="1303:1565" ph="INSERT INTO Car... " />
+            <marker date="1509444108000" expanded="true" signature="1303:1566" ph="INSERT INTO Car... " />
+            <marker date="1509444108000" expanded="true" signature="1303:1807" ph="INSERT INTO Car... " />
+            <marker date="1509444108000" expanded="true" signature="1303:1971" ph="INSERT INTO Car... " />
           </folding>
         </state>
       </provider>

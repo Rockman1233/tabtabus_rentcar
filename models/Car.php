@@ -17,7 +17,7 @@ class Car extends Object {
     public $mileage;
     public $colour;
     public $consumption;
-    public $int_of_avaliability;
+    public $int_of_availability;
     public $cost_less_30;
     public $cost_more_31;
     public $car_owner;
@@ -48,7 +48,18 @@ class Car extends Object {
         cost_less_30_inc='.$this->cost_less_30.',cost_more_31='.$this->cost_more_31.',car_owner='.$this->car_owner):
             //else
 
-            $this->db->query("INSERT INTO Car(mark,model,year,state_num,mileage,colour,consumption,int_of_availability,cost_less_30_inc,cost_more_31) VALUES 
+            $this->db->query("INSERT INTO 
+            Car(mark,
+            model,
+            year,
+            state_num,
+            mileage,
+            colour,
+            consumption,
+            int_of_availability,
+            cost_less_30_inc,
+            cost_more_31) 
+            VALUES 
             ($this->mark, 
             $this->model, 
             $this->year, 
