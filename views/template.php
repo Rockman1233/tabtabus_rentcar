@@ -44,7 +44,7 @@
 </nav>
 <div class="container">
     <div class="row">
-        <?php include $content_view; ?>
+        <?php include($this->aData['temp']); ?>
     </div>
 </div>
 <div id="footer">

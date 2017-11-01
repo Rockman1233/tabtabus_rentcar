@@ -7,17 +7,37 @@
  */
 class View
 {
-    //public $template_view; // здесь можно указать общий вид по умолчанию.
 
-    function generate($content_view, $template_view, $data = null)
+    private $aData = [];
+    private $template;
+
+    public function __construct($template)
     {
-        /*
-        if(is_array($data)) {
-            // преобразуем элементы массива в переменные
-            extract($data);
-        }
-        */
+        $this->template = $template;
+    }
 
-        include $template_view;
+
+    function addData($sName, $Value){
+        $this->aData[$sName] = $Value;
+    }
+
+    function generate()
+    {
+        echo '<br>';
+        print_r($this->aData);
+        foreach ($this->aData as $sName => $value) {
+        }
+        echo '<br>'.$this->aData['temp'];
+        include $this->template;
+    }
+
+    function generateIn()
+    {
+        echo '<br>';
+        foreach ($this->aData as $sName => $value) {
+            echo '<br>'.$sName;
+            echo '<br>'.$value;
+            include $this->aData['temp'];
+        }
     }
 }

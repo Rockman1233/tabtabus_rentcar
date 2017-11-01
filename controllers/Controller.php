@@ -6,13 +6,14 @@
  * Time: 9:49
  */
 include($_SERVER['DOCUMENT_ROOT'].'/views/view.php');
+
 class Controller {
+    public $view;
 
-
-    function __construct()
+    function __construct($template='template.php')
 
     {
-        $this->view = new View();
+        $this->view = new View($template);
     }
 
     public function actionIndex() {

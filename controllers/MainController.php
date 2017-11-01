@@ -12,8 +12,8 @@ class MainController extends Controller {
 
     public function actionIndex()
     {
-
-        $this->view->generate('indexMain.php', 'template.php');
+        $this->view->addData('temp','indexMain.php');
+        $this->view->generate();
 
     }
 
