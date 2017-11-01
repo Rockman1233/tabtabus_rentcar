@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>Аренда автомобилей</title>
 
     <!-- Bootstrap -->
     <link href="/css/bootstrap.css" rel="stylesheet">
@@ -44,7 +44,7 @@
 </nav>
 <div class="container">
     <div class="row">
-        <img src="../images/IMG_4252.JPG" class="img-responsive center-block" />
+        <?php include $content_view; ?>
     </div>
 </div>
 <div id="footer">

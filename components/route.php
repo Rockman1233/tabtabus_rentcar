@@ -33,11 +33,11 @@ class Route
 	public function start() {
 
         $uri = $this->getURL();
-        echo $uri;
+        echo "Строка запроса - ".$uri;
 
         if(!$uri){
-            include($_SERVER['DOCUMENT_ROOT'].'/views/index.php');
-            exit();
+            $controllerFile = $_SERVER['DOCUMENT_ROOT'].'/controllers/MainController.php';
+
         }
 
         foreach ($this->aRouts as $uriPattern => $path) {
@@ -50,6 +50,7 @@ class Route
 
                 $segments = explode('/',$internalRoute);
 
+
                 $controllerName = array_shift($segments).'Controller';
 
                 //take name of file with class
@@ -60,7 +61,16 @@ class Route
 
                 $actionName = 'action'.ucfirst(array_shift($segments));
                 $parametrs = $segments;
-                echo '<br>'.$controllerName;
+
+
+                if($controllerName=='Controller'&&$actionName=='action')
+                {
+                    $controllerName = 'MainController';
+                    $actionName='actionIndex';
+
+                }
+                echo '<br> Контроллер - '.$controllerName;
+                echo '<br> Метод контроллера - '.$actionName;
 
                 //connect files
                 $controllerFile = $_SERVER['DOCUMENT_ROOT'].'/controllers/'.$controllerName.'.php';
@@ -68,7 +78,6 @@ class Route
                 {
                     include_once $controllerFile;
                 }
-                echo '<br>'.$controllerFile;
                 //create new object
                 $classObject = new $controllerName();
                 $result = call_user_func_array(array($classObject, $actionName), $parametrs);

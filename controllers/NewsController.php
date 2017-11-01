@@ -14,7 +14,7 @@ class NewsController {
         $newList = News::getNewsList();
 
 
-        require_once $_SERVER['DOCUMENT_ROOT'].'/views/index.php';
+        require_once $_SERVER['DOCUMENT_ROOT'] . '/views/template.php';
 
     }
     public function actionView($category, $id) {

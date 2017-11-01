@@ -6,15 +6,14 @@
  * Time: 13:51
  */
 include($_SERVER['DOCUMENT_ROOT'].'/models/Car.php');
+include('Controller.php');
 
-
-class CarController {
+class CarController extends Controller {
 
 
     public function actionIndex()
     {
-
-        require $_SERVER['DOCUMENT_ROOT'].'/views/indexAuto.php';
+        $this->view->generate('indexAuto.php', 'template.php');
 
 
 
