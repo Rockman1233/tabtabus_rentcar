@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-<form action="<?php echo 'car/safe'?>" method="post">
+<form action="<?php echo 'safeconfirm'?>" method="post">
     <div class="form">
         <input type="text" class="form-control-static" name="mark" placeholder="Марка">
         <input type="text" class="form-control-static" name="model" placeholder="Модель">

@@ -46,7 +46,7 @@ class Car extends Object {
     public function safeCar() {
 
         $asd = "INSERT INTO 
-            Car(mark,
+            'Car'(mark,
             model,
             year,
             state_num,
@@ -55,8 +55,7 @@ class Car extends Object {
             consumption,
             cost_less_30_inc,
             cost_more_31) 
-            VALUES 
-            ('$this->mark', 
+            VALUES('$this->mark', 
             '$this->model', 
             $this->year, 
             $this->state_num, 
@@ -67,8 +66,9 @@ class Car extends Object {
             $this->cost_more_31)";
         echo($asd);
 
+        $this->db->prepare($asd)->execute();
 
-        (isset($this->id) ? $this->db->query(
+       /* (isset($this->id) ? $this->db->query(
             'UPDATE Car SET 
             state_num='.$this->state_num.',
             mileage='.$this->mileage.',
@@ -78,8 +78,9 @@ class Car extends Object {
             car_owner='.$this->car_owner)
             :
             //else
+       */
 
-            $this->db->prepare($asd)->execute(
+        /*    $this->db->prepare($asd)->execute(
                 array('mark'=> $this->mark,
                     'model'=> $this->model,
                     'year'=> $this->year,
@@ -89,10 +90,8 @@ class Car extends Object {
                     'consumption'=> $this->consumption,
                     'cost_less_30'=> $this->cost_less_30,
                     'cost_more_31'=> $this->cost_more_31,
-                    ))
-        );
-
-
+                    ));
+        */
 
         //если мы добавляем новую машину в бд то используем все поля а если уже существующую то не все (например цвет или марка остаются прежними)
     }

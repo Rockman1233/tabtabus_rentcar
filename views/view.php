@@ -27,7 +27,6 @@ class View
         print_r($this->aData);
         foreach ($this->aData as $sName => $value) {
         }
-        echo '<br>'.$this->aData['temp'];
         include $this->template;
     }
 
@@ -35,9 +34,10 @@ class View
     {
         echo '<br>';
         foreach ($this->aData as $sName => $value) {
-            echo '<br>'.$sName;
-            echo '<br>'.$value;
-            include $this->aData['temp'];
+           /* echo '<pre>';
+            print_r($value);
+            echo '</pre>'; */
         }
+        include $this->aData['temp'];
     }
 }
