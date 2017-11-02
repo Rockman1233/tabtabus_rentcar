@@ -33,6 +33,7 @@ class View
     function generateIn()
     {
         echo '<br>';
+        print_r($this->aData['temp']);
         foreach ($this->aData as $sName => $value) {
            /* echo '<pre>';
             print_r($value);

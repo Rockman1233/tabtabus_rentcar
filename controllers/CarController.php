@@ -13,7 +13,7 @@ class CarController extends Controller {
 
     public function actionIndex($render='indexCar.php')
     {
-
+var_dump(2222);
         $this->view->addData('temp',"$render");
         $this->view->generate();
 
@@ -38,6 +38,7 @@ class CarController extends Controller {
         print_r($NewCar);
         echo '</pre>';
         $NewCar->safeCar();
+
 
     }
 
