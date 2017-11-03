@@ -43,7 +43,7 @@ class Car extends Object {
 
     }
 
-    public function safeCar() {
+    public function saveCar() {
 
         /* $asd = "INSERT INTO
             'Car'(mark,

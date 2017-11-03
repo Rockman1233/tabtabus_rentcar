@@ -8,10 +8,10 @@
 include($_SERVER['DOCUMENT_ROOT'].'/models/Car.php');
 include('Controller.php');
 
-class CarController extends Controller {
+class DriverController extends Controller {
 
 
-    public function actionIndex($render='indexCar.php')
+    public function actionIndex($render='indexDriver.php')
     {
         $this->view->addData('temp',"$render");
         $this->view->generate();

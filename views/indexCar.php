@@ -6,6 +6,6 @@
 <a type="button" href="car/showall" class="btn btn-default">Показать все авто</a>
 <br>
 <br>
-<a type="button" href="car/safe" class="btn btn-default">Добавить авто</a>
+<a type="button" href="car/save" class="btn btn-default">Добавить авто</a>
 </div>
 </div>

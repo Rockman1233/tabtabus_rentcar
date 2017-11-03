@@ -34,8 +34,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="/car">Автомобиль</a></li>
-                <li><a href="#">Владелец</a></li>
-                <li><a href="#">Водитель</a></li>
+                <li><a href="/owner">Владелец</a></li>
+                <li><a href="/driver">Водитель</a></li>
             </ul>
 
 

@@ -1,6 +1,6 @@
 <?php
 
-include 'DBConnect.php';
+include $_SERVER['DOCUMENT_ROOT'].'/config/DBConnect.php';
 
 abstract class Object{
 
@@ -55,84 +55,8 @@ abstract class Object{
 
 
 
-class Owner extends Object
-{
-
-    protected $owner_id;
-    protected $first_name;
-    protected $last_name;
-    protected $telephone;
-    protected $email;
-    protected $address;
-    protected $cars;
-    protected $passport_num;
 
 
-    static function TableName()
-    {
-        return 'Owner';
-    }
-
-    protected function getCars()
-    {
-        $oQuery = $this->db->query('SELECT Car.mark, Car.model FROM Car WHERE car_owner=' . $this->id);
-        $aRes = $oQuery->fetchAll();
-        return $aRes;
-    }
-
-    protected function safeOwner()
-    {
-        (isset($this->id) ? $this->db->query('UPDATE Owner SET telephone=' . $this->telephone . ',email=' . $this->email . ',address=' . $this->address . ',cars=' . $this->cars) :
-            $this->db->query('INSERT INTO Owner VALUES (' . $this->owner_id . ',' . $this->first_name . ',' . $this->last_name . ',' . $this->telephone . ',' . $this->email . ',' . $this->address . ',' . $this->cars . ',' . $this->passport_num));
-
-        //если мы добавляем нового владельца в бд то используем все поля а если уже существующую то не все (например номер паспорта ббудет прежним)
-
-
-    }
-}
-
-class Driver extends Object {
-
-    protected $driver_id;
-    protected $first_name;
-    protected $last_name;
-    protected $telephone;
-    protected $email;
-    protected $address;
-    protected $desired_car;
-    protected $desired_dates;
-    protected $passport_num_d;
-    protected $experience;
-    protected $drive_license;
-
-
-    static function TableName()
-    {
-        return 'Driver';
-    }
-
-    protected function desireCar($model){
-        $oQuery = $this->db->query('SELECT Car.mark, Car.year, Car.mileage, Car.colour, Car.consumption, Car.`cost_less_30_inc`, Car.`cost_more_31`, Car.car_owner FROM Car WHERE model='.$model);
-        $aRes = $oQuery->fetchAll();
-        return $aRes;
-    }
-
-    protected function desireDates(){
-        $oQuery = $this->db->query('SELECT Car.model, interval_availability.start_date, interval_availability.finish_date FROM interval_availability JOIN Car ON interval_availability.interval_id=Car.`int_of_availability` GROUP BY start_date');
-        $aRes = $oQuery->fetchAll();
-        return $aRes;
-    }
-    protected function safeDriver()
-    {
-        (isset($this->id) ? $this->db->query('UPDATE Driver SET telephone=' . $this->telephone . ',email=' . $this->email . ',address=' . $this->address . ',desired_car=' . $this->desired_car . ',desired_dates=' .$this->desired_dates. ',experience='.$this->experience):
-            $this->db->query('INSERT INTO Driver VALUES (' . $this-> driver_id . ',' . $this->first_name . ',' . $this->last_name . ',' . $this->telephone . ',' . $this->email . ',' . $this->desired_car . ',' . $this->desired_dates . ',' . $this->passport_num_d . ',' . $this->experience . ',' . $this->drive_license));
-
-        //если мы добавляем нового водителя в бд то используем все поля а если уже существующую то не все (например номер паспорта ббудет прежним)
-
-
-    }
-
-}
 
 class Contract extends Object {
 
