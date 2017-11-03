@@ -19,7 +19,7 @@ class CarController extends Controller {
     }
     public function actionSave() {
 
-        $this->view->addData('temp','safeAuto.php');
+        $this->view->addData('temp','saveAuto.php');
         $this->view->generateIn();
     }
 

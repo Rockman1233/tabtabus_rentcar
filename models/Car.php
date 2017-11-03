@@ -45,74 +45,39 @@ class Car extends Object {
 
     public function saveCar() {
 
-        /* $asd = "INSERT INTO
-            'Car'(mark,
-            model,
-            year,
-            state_num,
-            mileage,
-            colour,
-            consumption,
-            cost_less_30_inc,
-            cost_more_31) 
-            VALUES('$this->mark', 
-            '$this->model', 
-            $this->year, 
-            $this->state_num, 
-            $this->mileage, 
-            '$this->colour', 
-            $this->consumption,
-            $this->cost_less_30, 
-            $this->cost_more_31)";
-        echo($asd);
+        $prepare = self::$db->prepare(
+            'INSERT INTO Car 
+                        (mark, 
+                        model, 
+                        year, 
+                        state_num, 
+                        mileage, 
+                        colour, 
+                        consumption, 
+                        cost_less_30_inc, 
+                        cost_more_31) 
+                        VALUES 
+                        (:mark, 
+                        :model, 
+                        :year, 
+                        :state_num, 
+                        :mileage, 
+                        :colour, 
+                        :consumption, 
+                        :cost_less_30_inc, 
+                        :cost_more_31)');
 
-        $this->db->prepare($asd)->execute(); */
-        $mark = $this->mark;
-        $model = $this->model;
-        $year = $this->year;
-        $state_num = $this->state_num;
-        $mileage = $this->mileage;
-        $colour = $this->colour;
-        $consumption = $this->consumption;
-        $cost_less_30_inc = $this->cost_less_30;
-        $cost_more_31 = $this->cost_more_31;
-
-        $prepare = self::$db->prepare('INSERT INTO Car (mark, model, year, state_num, mileage, colour, consumption, cost_less_30_inc, cost_more_31) VALUES (:mark, :model, :year, :state_num, :mileage, :colour, :consumption, :cost_less_30_inc, :cost_more_31)');
-        /*
-        $prepare->bindParam(':mark', $mark);
-        $prepare->bindParam(':model', $model);
-        $prepare->bindParam(':year', $year);
-        $prepare->bindParam(':state_num', $state_num);
-        $prepare->bindParam(':mileage', $mileage);
-        $prepare->bindParam(':colour', $colour);
-        $prepare->bindParam(':consumption', $consumption);
-        $prepare->bindParam(':cost_less_30_inc', $cost_less_30_inc);
-        $prepare->bindParam(':cost_more_31', $cost_more_31);
-
-        $prepare->execute(); */
-
-       /* (isset($this->id) ? $this->db->query(
-            'UPDATE Car SET 
-            state_num='.$this->state_num.',
-            mileage='.$this->mileage.',
-            int_of_availability='.$this->int_of_avaliability.',
-            cost_less_30_inc='.$this->cost_less_30.',
-            cost_more_31='.$this->cost_more_31.',
-            car_owner='.$this->car_owner)
-            :
-            //else
-       */
 
             $prepare->execute(
-                array('mark'=> $mark,
-                    'model'=> $model,
-                    'year'=> $year,
-                    'state_num'=> $state_num,
-                    'mileage'=> $mileage,
-                    'colour'=> $colour,
-                    'consumption'=> $consumption,
-                    'cost_less_30_inc'=> $cost_less_30_inc,
-                    'cost_more_31'=> $cost_more_31,
+                array('mark'=> $this->mark,
+                    'model'=> $this->model,
+                    'year'=> $this->year,
+                    'state_num'=> $this->state_num,
+                    'mileage'=> $this->mileage,
+                    'colour'=> $this->colour,
+                    'consumption'=> $this->consumption,
+                    'cost_less_30_inc'=> $this->cost_less_30,
+                    'cost_more_31'=> $this->cost_more_31,
                     ));
 
 

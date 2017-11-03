@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d81c2fa1-0fe5-426c-83e4-120ca62fdf98" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/models/DBConnect.php" afterPath="$PROJECT_DIR$/config/DBConnect.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/views/safeAuto.php" afterPath="$PROJECT_DIR$/views/saveAuto.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/CarController.php" afterPath="$PROJECT_DIR$/controllers/CarController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/DriverController.php" afterPath="$PROJECT_DIR$/controllers/DriverController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/OwnerController.php" afterPath="$PROJECT_DIR$/controllers/OwnerController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Car.php" afterPath="$PROJECT_DIR$/models/Car.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/ClassesExt.php" afterPath="$PROJECT_DIR$/models/ClassesExt.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/indexCar.php" afterPath="$PROJECT_DIR$/views/indexCar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/safeAuto.php" afterPath="$PROJECT_DIR$/views/safeAuto.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/template.php" afterPath="$PROJECT_DIR$/views/template.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Driver.php" afterPath="$PROJECT_DIR$/models/Driver.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Owner.php" afterPath="$PROJECT_DIR$/models/Owner.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,71 +40,22 @@
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="rentacar@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="rentacar" type="e3449647:DbNodeDescriptor" />
-        <item name="Car" type="e3449647:DbNodeDescriptor" />
+        <item name="Driver" type="e3449647:DbNodeDescriptor" />
       </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/MainController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Car.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/Car.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="45" column="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
+            <state relative-caret-position="195">
+              <caret line="47" column="8" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="80" selection-end-column="23" />
               <folding>
-                <marker date="1509691456000" expanded="true" signature="732:852" ph="SELECT inter... interval_availability" />
-                <marker date="1509691456000" expanded="true" signature="985:1202" ph="INSERT INTO Car" />
-                <marker date="1509691456000" expanded="true" signature="985:1222" ph="INSERT INTO Car" />
-                <marker date="1509691456000" expanded="true" signature="985:1223" ph="INSERT INTO Car" />
-                <marker date="1509691456000" expanded="true" signature="985:1237" ph="INSERT INTO Car" />
-                <marker date="1509691456000" expanded="true" signature="985:1482" ph="INSERT INTO Car" />
-                <marker date="1509691456000" expanded="true" signature="1927:2144" ph="INSERT INTO Car... " />
+                <marker date="1509695942000" expanded="true" signature="732:852" ph="SELECT inter... interval_availability" />
+                <marker date="1509695942000" expanded="true" signature="1018:1710" ph="INSERT INTO Car... " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Owner.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/Owner.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="35" lean-forward="false" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-              <folding>
-                <marker date="1509695332000" expanded="true" signature="480:532" ph="SELECT Car.m... Car" />
-                <marker date="1509695332000" expanded="true" signature="707:822" ph="UPDATE Owner... " />
-                <marker date="1509695332000" expanded="true" signature="871:1061" ph="INSERT INTO Owner... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="route.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/route.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="769">
-              <caret line="67" column="55" lean-forward="true" selection-start-line="67" selection-start-column="55" selection-end-line="67" selection-end-column="55" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -112,23 +63,78 @@
       <file leaf-file-name="Driver.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/Driver.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="906">
+              <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
-                <marker date="1509695332000" expanded="true" signature="606:754" ph="SELECT Car.m... Car" />
-                <marker date="1509695332000" expanded="true" signature="905:1109" ph="SELECT Car.m... interval_availability" />
-                <marker date="1509695332000" expanded="true" signature="1266:1468" ph="UPDATE Drive... " />
-                <marker date="1509695332000" expanded="true" signature="1520:1782" ph="INSERT INTO Driver... " />
+                <marker date="1509700386000" expanded="true" signature="570:718" ph="SELECT Car.m... Car" />
+                <marker date="1509700386000" expanded="true" signature="866:1070" ph="SELECT Car.m... interval_availability" />
+                <marker date="1509700386000" expanded="true" signature="1231:1896" ph="INSERT INTO Driver... " />
+                <marker date="1509700386000" expanded="true" signature="1231:2052" ph="INSERT INTO Driver... " />
+                <marker date="1509700386000" expanded="true" signature="1231:2613" ph="INSERT INTO Driver... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indexDriver.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Owner.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/Owner.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="52" column="33" lean-forward="true" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+              <folding>
+                <marker date="1509702009000" expanded="true" signature="477:529" ph="SELECT Car.m... Car" />
+                <marker date="1509702009000" expanded="true" signature="707:1221" ph="INSERT INTO Owner... " />
+                <marker date="1509702009000" expanded="true" signature="707:1253" ph="INSERT INTO Owner... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indexCar.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/indexCar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indexDriver.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/indexDriver.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="71" lean-forward="true" selection-start-line="2" selection-start-column="71" selection-end-line="2" selection-end-column="71" />
+            <state relative-caret-position="105">
+              <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="saveDriver.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/saveDriver.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="saveOwner.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/saveOwner.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="86" lean-forward="true" selection-start-line="10" selection-start-column="86" selection-end-line="10" selection-end-column="86" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indexOwner.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/indexOwner.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -137,34 +143,23 @@
       <file leaf-file-name="DriverController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/DriverController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <marker date="1509695332000" expanded="true" signature="860:879" ph="SELECT * FRO... Car" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="template.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/template.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassesExt.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/ClassesExt.php">
+      <file leaf-file-name="CarController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/CarController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="45">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="53" />
               <folding>
-                <marker date="1509695332000" expanded="true" signature="1008:1048" ph="SELECT * FRO... $" />
-                <marker date="1509695332000" expanded="true" signature="1894:2408" ph="UPDATE Contr... " />
-                <marker date="1509695332000" expanded="true" signature="2462:2889" ph="INSERT INTO Contract... " />
+                <marker date="1509696518000" expanded="true" signature="687:736" ph="..." />
+                <marker date="1509696518000" expanded="true" signature="854:873" ph="SELECT * FRO... Car" />
+                <marker date="1509696518000" expanded="true" signature="874:875" ph="SELECT * FRO... $" />
+                <marker date="1509696518000" expanded="true" signature="1349:1396" ph="..." />
               </folding>
             </state>
           </provider>
@@ -209,18 +204,21 @@
         <option value="$PROJECT_DIR$/controllers/MainController.php" />
         <option value="$PROJECT_DIR$/views/view.php" />
         <option value="$PROJECT_DIR$/models/DBConnect.php" />
-        <option value="$PROJECT_DIR$/models/Car.php" />
         <option value="$PROJECT_DIR$/views/indexCar.php" />
         <option value="$PROJECT_DIR$/views/safeAuto.php" />
         <option value="$PROJECT_DIR$/controllers/CarController.php" />
-        <option value="$PROJECT_DIR$/views/indexOwner.php" />
-        <option value="$PROJECT_DIR$/controllers/OwnerController.php" />
         <option value="$PROJECT_DIR$/models/ClassesExt.php" />
-        <option value="$PROJECT_DIR$/models/Owner.php" />
-        <option value="$PROJECT_DIR$/models/Driver.php" />
-        <option value="$PROJECT_DIR$/controllers/DriverController.php" />
         <option value="$PROJECT_DIR$/views/template.php" />
         <option value="$PROJECT_DIR$/views/indexDriver.php" />
+        <option value="$PROJECT_DIR$/views/indexOwner.php" />
+        <option value="$PROJECT_DIR$/models/Car.php" />
+        <option value="$PROJECT_DIR$/views/safeOwner.php" />
+        <option value="$PROJECT_DIR$/controllers/OwnerController.php" />
+        <option value="$PROJECT_DIR$/controllers/DriverController.php" />
+        <option value="$PROJECT_DIR$/views/saveDriver.php" />
+        <option value="$PROJECT_DIR$/models/Driver.php" />
+        <option value="$PROJECT_DIR$/views/saveOwner.php" />
+        <option value="$PROJECT_DIR$/models/Owner.php" />
       </list>
     </option>
   </component>
@@ -315,8 +313,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/controllers" />
       <recent name="$PROJECT_DIR$/views" />
+      <recent name="$PROJECT_DIR$/controllers" />
       <recent name="$PROJECT_DIR$/models" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -370,12 +368,12 @@
       <workItem from="1508761075498" duration="929000" />
       <workItem from="1509081549426" duration="16953000" />
       <workItem from="1509353073377" duration="2617000" />
-      <workItem from="1509356209352" duration="84374000" />
+      <workItem from="1509356209352" duration="89549000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124178000" />
+    <option name="totallyTimeSpent" value="129353000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -467,8 +465,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ClassesExt.php" />
-    <entry file="file://$PROJECT_DIR$/DBConnect.php" />
     <entry file="file://$PROJECT_DIR$/ClassesExt.php" />
     <entry file="file://$PROJECT_DIR$/DBConnect.php" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/aedd5dca-13fb-430f-aa5c-61ddb0eb06db/console.sql">
@@ -648,32 +644,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/indexCar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/safeAuto.php">
+    <entry file="file://$PROJECT_DIR$/views/saveAuto.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/CarController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
-          <folding>
-            <marker date="1509692670000" expanded="true" signature="687:736" ph="..." />
-            <marker date="1509692670000" expanded="true" signature="854:873" ph="SELECT * FRO... Car" />
-            <marker date="1509692670000" expanded="true" signature="874:875" ph="SELECT * FRO... $" />
-            <marker date="1509692670000" expanded="true" signature="1349:1396" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -682,24 +657,6 @@
         <state relative-caret-position="150">
           <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/indexOwner.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="79" lean-forward="false" selection-start-line="2" selection-start-column="79" selection-end-line="2" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/OwnerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="34" />
-          <folding>
-            <marker date="1509693576000" expanded="true" signature="858:877" ph="SELECT * FRO... Car" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -723,69 +680,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/Car.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="45" column="31" lean-forward="true" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
-          <folding>
-            <marker date="1509691456000" expanded="true" signature="732:852" ph="SELECT inter... interval_availability" />
-            <marker date="1509691456000" expanded="true" signature="985:1202" ph="INSERT INTO Car" />
-            <marker date="1509691456000" expanded="true" signature="985:1222" ph="INSERT INTO Car" />
-            <marker date="1509691456000" expanded="true" signature="985:1223" ph="INSERT INTO Car" />
-            <marker date="1509691456000" expanded="true" signature="985:1237" ph="INSERT INTO Car" />
-            <marker date="1509691456000" expanded="true" signature="985:1482" ph="INSERT INTO Car" />
-            <marker date="1509691456000" expanded="true" signature="1927:2144" ph="INSERT INTO Car... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Driver.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <marker date="1509695332000" expanded="true" signature="606:754" ph="SELECT Car.m... Car" />
-            <marker date="1509695332000" expanded="true" signature="905:1109" ph="SELECT Car.m... interval_availability" />
-            <marker date="1509695332000" expanded="true" signature="1266:1468" ph="UPDATE Drive... " />
-            <marker date="1509695332000" expanded="true" signature="1520:1782" ph="INSERT INTO Driver... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Owner.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="35" lean-forward="false" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
-          <folding>
-            <marker date="1509695332000" expanded="true" signature="480:532" ph="SELECT Car.m... Car" />
-            <marker date="1509695332000" expanded="true" signature="707:822" ph="UPDATE Owner... " />
-            <marker date="1509695332000" expanded="true" signature="871:1061" ph="INSERT INTO Owner... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/DriverController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <marker date="1509695332000" expanded="true" signature="860:879" ph="SELECT * FRO... Car" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/template.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
           <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/route.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="769">
-          <caret line="67" column="55" lean-forward="true" selection-start-line="67" selection-start-column="55" selection-end-line="67" selection-end-column="55" />
           <folding />
         </state>
       </provider>
@@ -798,11 +696,119 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/components/route.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-64">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/OwnerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <marker date="1509697150000" expanded="true" signature="875:896" ph="SELECT * FRO... Car" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Car.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="47" column="8" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="80" selection-end-column="23" />
+          <folding>
+            <marker date="1509695942000" expanded="true" signature="732:852" ph="SELECT inter... interval_availability" />
+            <marker date="1509695942000" expanded="true" signature="1018:1710" ph="INSERT INTO Car... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/CarController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="53" />
+          <folding>
+            <marker date="1509696518000" expanded="true" signature="687:736" ph="..." />
+            <marker date="1509696518000" expanded="true" signature="854:873" ph="SELECT * FRO... Car" />
+            <marker date="1509696518000" expanded="true" signature="874:875" ph="SELECT * FRO... $" />
+            <marker date="1509696518000" expanded="true" signature="1349:1396" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/DriverController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/indexOwner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Driver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="906">
+          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <marker date="1509700386000" expanded="true" signature="570:718" ph="SELECT Car.m... Car" />
+            <marker date="1509700386000" expanded="true" signature="866:1070" ph="SELECT Car.m... interval_availability" />
+            <marker date="1509700386000" expanded="true" signature="1231:1896" ph="INSERT INTO Driver... " />
+            <marker date="1509700386000" expanded="true" signature="1231:2052" ph="INSERT INTO Driver... " />
+            <marker date="1509700386000" expanded="true" signature="1231:2613" ph="INSERT INTO Driver... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/indexCar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="30" lean-forward="false" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/indexDriver.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="71" lean-forward="true" selection-start-line="2" selection-start-column="71" selection-end-line="2" selection-end-column="71" />
+        <state relative-caret-position="105">
+          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/saveDriver.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/saveOwner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="86" lean-forward="true" selection-start-line="10" selection-start-column="86" selection-end-line="10" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Owner.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="52" column="33" lean-forward="true" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+          <folding>
+            <marker date="1509702009000" expanded="true" signature="477:529" ph="SELECT Car.m... Car" />
+            <marker date="1509702009000" expanded="true" signature="707:1221" ph="INSERT INTO Owner... " />
+            <marker date="1509702009000" expanded="true" signature="707:1253" ph="INSERT INTO Owner... " />
+          </folding>
         </state>
       </provider>
     </entry>

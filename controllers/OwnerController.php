@@ -5,7 +5,7 @@
  * Date: 30.10.17
  * Time: 13:51
  */
-include($_SERVER['DOCUMENT_ROOT'].'/models/Car.php');
+include($_SERVER['DOCUMENT_ROOT'].'/models/Owner.php');
 include('Controller.php');
 
 class OwnerController extends Controller {
@@ -19,28 +19,28 @@ class OwnerController extends Controller {
     }
     public function actionSave() {
 
-        $this->view->addData('temp','safeAuto.php');
+        $this->view->addData('temp','saveOwner.php');
         $this->view->generateIn();
     }
 
     public function actionSaveConfirm(){
 
-        $NewCar = new Car;
+        $NewOwner = new Owner();
         foreach ($_POST as $var => $value) {
-            $NewCar->__set($var, $value);
+            $NewOwner->__set($var, $value);
         }
 
         echo '<pre>';
-        print_r($NewCar);
+        print_r($NewOwner);
         echo '</pre>';
-        $NewCar->saveCar();
+        $NewOwner->saveOwner();
 
 
     }
 
     public function actionShowall() {
 
-        $oQuery = Object::$db->query('SELECT * FROM `Car`');
+        $oQuery = Object::$db->query('SELECT * FROM `Owner`');
         $aRes = $oQuery->fetchAll(PDO::FETCH_ASSOC);
 
         // достаем из результирующего массива автомобили и передаем на обработку в шаблон
