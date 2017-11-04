@@ -12,6 +12,8 @@ return array(
     'car' => 'car/index',
     'owner' => 'owner/index',
     'driver' => 'driver/index',
+    'user' => 'user/index',
+
     "^products$" => "product/view",
     '' => '',
 );

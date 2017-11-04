@@ -33,9 +33,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="/car">Автомобиль</a></li>
-                <li><a href="/owner">Владелец</a></li>
-                <li><a href="/driver">Водитель</a></li>
+                <li><a href="/car">Автомобили</a></li>
+                <li><a href="/user">Войти</a></li>
             </ul>
 
 

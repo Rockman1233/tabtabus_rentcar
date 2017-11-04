@@ -18,9 +18,11 @@ class CarController extends Controller {
 
     }
     public function actionSave() {
-
-        $this->view->addData('temp','saveAuto.php');
-        $this->view->generateIn();
+        echo '<br>'.$_SESSION['user'];
+        if($_SESSION['user']) {
+            $this->view->addData('temp', 'saveAuto.php');
+            $this->view->generateIn();
+        }
     }
 
     public function actionSaveConfirm(){

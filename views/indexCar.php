@@ -6,6 +6,8 @@
 <a type="button" href="car/showall" class="btn btn-default">Показать все авто</a>
 <br>
 <br>
+<?php if($_SESSION['user']): ?>
 <a type="button" href="car/save" class="btn btn-default">Добавить авто</a>
+<?php endif; ?>
 </div>
 </div>

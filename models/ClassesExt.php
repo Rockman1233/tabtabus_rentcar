@@ -51,13 +51,6 @@ abstract class Object{
     }
 }
 
-
-
-
-
-
-
-
 class Contract extends Object {
 
     protected $contract_id;

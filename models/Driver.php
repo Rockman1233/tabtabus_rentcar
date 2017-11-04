@@ -11,6 +11,8 @@ class Driver extends Object {
 
     public $driver_id;
     public $first_name;
+    public $login;
+    public $pass;
     public $last_name;
     public $telephone;
     public $email;
@@ -43,7 +45,9 @@ class Driver extends Object {
 
         $prepare = self::$db->prepare(
             'INSERT INTO Driver 
-                        (first_name, 
+                        (login,
+                        pass,
+                        first_name, 
                         last_name, 
                         telephone, 
                         email, 
@@ -55,7 +59,9 @@ class Driver extends Object {
                         drive_license
                         ) 
                         VALUES 
-                        (:first_name, 
+                        (:login,
+                        :pass,
+                        :first_name, 
                         :last_name, 
                         :telephone, 
                         :email, 
@@ -68,7 +74,9 @@ class Driver extends Object {
 
 
         $prepare->execute(
-            array('first_name'=> $this->first_name,
+            array('User' => $this->login,
+                'pass'=> $this->pass,
+                'first_name'=> $this->first_name,
                 'last_name'=> $this->last_name,
                 'telephone'=> $this->telephone,
                 'email'=> $this->email,

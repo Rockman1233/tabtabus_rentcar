@@ -2,6 +2,8 @@
     <div class="row">
 <form action="<?php echo 'saveconfirm'?>" method="post">
     <div class="form">
+        <input type="text" class="form-control-static" name="login" placeholder="Придумайте логин">
+        <input type="password" class="form-control-static" name="pass" placeholder="Придумайте пароль">
         <input type="text" class="form-control-static" name="first_name" placeholder="Имя">
         <input type="text" class="form-control-static" name="last_name" placeholder="Фамилия">
         <input type="text" class="form-control-static" name="telephone" placeholder="Телефон">
