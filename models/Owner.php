@@ -11,6 +11,8 @@ class Owner extends Object
 {
 
     public $owner_id;
+    public $login;
+    public $pass;
     public $first_name;
     public $last_name;
     public $telephone;
@@ -36,7 +38,9 @@ class Owner extends Object
     {
         $prepare = self::$db->prepare(
             'INSERT INTO Owner 
-                        (first_name, 
+                        (login,
+                        pass,
+                        first_name, 
                         last_name, 
                         telephone, 
                         email, 
@@ -44,7 +48,9 @@ class Owner extends Object
                         passport_num,
                         cars) 
                         VALUES 
-                        (:first_name, 
+                        (:login,
+                        :pass,
+                        :first_name, 
                         :last_name, 
                         :telephone, 
                         :email, 
@@ -54,7 +60,9 @@ class Owner extends Object
 
 
         $prepare->execute(
-            array('first_name'=> $this->first_name,
+            array('login' => $this->login,
+                'pass' => $this->pass,
+                'first_name'=> $this->first_name,
                 'last_name'=> $this->last_name,
                 'telephone'=> $this->telephone,
                 'email'=> $this->email,

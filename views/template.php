@@ -35,6 +35,9 @@
             <ul class="nav navbar-nav">
                 <li><a href="/car">Автомобили</a></li>
                 <li><a href="/user">Войти</a></li>
+                <?php if(isset($_SESSION['user'])): ?>
+                <li><a href="/cabinet">Личный кабинет</a></li>
+                <?php endif; ?>
             </ul>
 
 

@@ -25,6 +25,7 @@ class User extends Object
         $oQuery = Object::$db->prepare("SELECT * FROM Driver WHERE login=:need_login AND pass=:pass");
         $oQuery->execute(['need_login' => $this->login, 'pass' => $this->pass]);
         $aRes = $oQuery->fetch(PDO::FETCH_ASSOC);
+
         echo '<pre>';
         print_r($aRes);
         echo '</pre>';
@@ -33,7 +34,21 @@ class User extends Object
         if ($aRes) {
             return $aRes['driver_id'];
         }
+        $oQuery = Object::$db->prepare("SELECT * FROM Owner WHERE login=:need_login AND pass=:pass");
+        $oQuery->execute(['need_login' => $this->login, 'pass' => $this->pass]);
+        $aRes = $oQuery->fetch(PDO::FETCH_ASSOC);
+        if ($aRes) {
+            return $aRes['owner_id'];
+        }
         return false;
+
+    }
+
+    static function whoisUser() {
+        if ($_SESSION['user'] >= 1000000) {
+            return 'Owner';
+        }
+        return 'Driver';
 
     }
 }

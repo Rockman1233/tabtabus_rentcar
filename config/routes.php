@@ -13,6 +13,7 @@ return array(
     'owner' => 'owner/index',
     'driver' => 'driver/index',
     'user' => 'user/index',
+    'cabinet' => 'cabinet/index',
 
     "^products$" => "product/view",
     '' => '',

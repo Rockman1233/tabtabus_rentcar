@@ -5,14 +5,14 @@
  * Date: 30.10.17
  * Time: 13:51
  */
-include($_SERVER['DOCUMENT_ROOT'].'/models/Car.php');
+include($_SERVER['DOCUMENT_ROOT'].'/models/Cabinet.php');
 include('Controller.php');
 include($_SERVER['DOCUMENT_ROOT'].'/models/User.php');
 
-class CarController extends Controller {
+class CabinetController extends Controller {
 
 
-    public function actionIndex($render='indexCar.php')
+    public function actionIndex($render='indexContract.php')
     {
         $this->view->addData('temp',"$render");
         $this->view->generate();
@@ -24,6 +24,21 @@ class CarController extends Controller {
             $this->view->addData('temp', 'saveAuto.php');
             $this->view->generateIn();
         }
+    }
+
+    public function actionCreate(){
+
+        $NewCar = new Car;
+        foreach ($_POST as $var => $value) {
+            $NewCar->__set($var, $value);
+        }
+
+        echo '<pre>';
+        print_r($NewCar);
+        echo '</pre>';
+        $NewCar->saveCar();
+
+
     }
 
     public function actionSaveConfirm(){
@@ -43,7 +58,7 @@ class CarController extends Controller {
 
     public function actionShowall() {
 
-        $oQuery = Object::$db->query('SELECT * FROM `Car`');
+        $oQuery = Object::$db->query('SELECT * FROM `Contract`');
         $aRes = $oQuery->fetchAll(PDO::FETCH_ASSOC);
 
         // достаем из результирующего массива автомобили и передаем на обработку в шаблон

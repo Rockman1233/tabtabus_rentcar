@@ -26,6 +26,7 @@ class UserController extends Controller {
 
         if($user_id == false){
             echo 'Неверные данные';
+            return false;
         }
         else {
             $_SESSION['user'] = $user_id;
