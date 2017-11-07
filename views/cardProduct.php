@@ -1,9 +1,11 @@
+
 <div class="container">
     <div class="row">
         <div class="col-md-8">
             <div class="panel panel-default  panel--styled">
                 <div class="panel-body">
                     <div class="col-md-12 panelTop">
+
                         <div class="col-md-4">
                             <img class="img-responsive" src="http://placehold.it/350x350" alt=""/>
                         </div>
@@ -23,7 +25,7 @@
 
                     <div class="col-md-12 panelBottom">
                         <div class="col-md-4 text-center">
-                            <button class="btn btn-lg btn-add-to-cart"><span class="glyphicon glyphicon-shopping-cart"></span>Заказать</button>
+                            <a class="btn btn-lg btn-add-to-cart" data-id="<?php echo $value['car_id'] ?>"><span class="glyphicon glyphicon-shopping-cart">Add</span></a>
                         </div>
                         <div class="col-md-4 text-right">
                             <h5>до 30 суток (вкл) -  <span class="itemPrice"><?php echo $value['cost_less_30_inc']?>$</span></span></h5>

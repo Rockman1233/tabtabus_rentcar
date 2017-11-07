@@ -32,12 +32,13 @@ class View
 
     function generateIn()
     {
-        echo '<br>';
-        print_r($this->aData['temp']);
+        /*echo '<pre>';
+        print_r($this->aData);
+        echo '</pre>'; */
         foreach ($this->aData as $sName => $value) {
-           /* echo '<pre>';
+            /*echo '<pre>';
             print_r($value);
-            echo '</pre>'; */
+            echo '</pre>';*/
         }
         include $this->aData['temp'];
     }

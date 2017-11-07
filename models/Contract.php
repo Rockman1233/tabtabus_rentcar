@@ -33,7 +33,7 @@ class Contract extends Object {
     }
 
 
-    protected function saveContract()
+    public function saveContract()
     {
         $prepare = self::$db->prepare(
             'INSERT INTO Contract 

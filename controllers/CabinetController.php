@@ -5,14 +5,16 @@
  * Date: 30.10.17
  * Time: 13:51
  */
-include($_SERVER['DOCUMENT_ROOT'].'/models/Cabinet.php');
+include($_SERVER['DOCUMENT_ROOT'].'/models/Contract.php');
+include($_SERVER['DOCUMENT_ROOT'].'/models/Car.php');
 include('Controller.php');
 include($_SERVER['DOCUMENT_ROOT'].'/models/User.php');
-
 class CabinetController extends Controller {
 
+    public $id;
+    public $car;
 
-    public function actionIndex($render='indexContract.php')
+    public function actionIndex($render='indexCabinet.php')
     {
         $this->view->addData('temp',"$render");
         $this->view->generate();
@@ -26,19 +28,34 @@ class CabinetController extends Controller {
         }
     }
 
+
+
     public function actionCreate(){
 
-        $NewCar = new Car;
+        $NewCont = new Contract();
         foreach ($_POST as $var => $value) {
-            $NewCar->__set($var, $value);
+            $NewCont->__set($var, $value);
+        }
+        $NewCont->car = $_SESSION['car'];
+        $res = Car::findById($_SESSION['car']);
+
+
+        /*echo '<pre>';
+        print_r($res);
+        echo '</pre>';*/
+        //$NewCont->saveContract();
+        $this->view->addData("newCont", $res);
+
+        if($res) {
+            $this->view->addData('temp', 'newContract.php');
+            $this->view->generateIn();
         }
 
-        echo '<pre>';
-        print_r($NewCar);
-        echo '</pre>';
-        $NewCar->saveCar();
 
+    }
 
+    public function actionAddcar(){
+         $_SESSION['car'] = $_POST['car'];
     }
 
     public function actionSaveConfirm(){
@@ -48,9 +65,9 @@ class CabinetController extends Controller {
             $NewCar->__set($var, $value);
         }
 
-        echo '<pre>';
+        /*echo '<pre>';
         print_r($NewCar);
-        echo '</pre>';
+        echo '</pre>';*/
         $NewCar->saveCar();
 
 

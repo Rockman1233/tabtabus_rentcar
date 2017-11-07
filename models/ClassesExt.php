@@ -43,7 +43,7 @@ abstract class Object{
         $class = get_called_class();
         $table = $class::TableName();
 
-        $oQuery = Object::$db->prepare("SELECT * FROM {$table} WHERE id=:need_id");
+        $oQuery = Object::$db->prepare("SELECT * FROM {$table} WHERE {$table}_id=:need_id");
         $oQuery->execute(['need_id' => $id]);
         $aRes = $oQuery->fetch(PDO::FETCH_ASSOC);
 
