@@ -10,7 +10,6 @@
         <input type="text" class="form-control-static" name="email" placeholder="Почта">
         <input type="text" class="form-control-static" name="address" placeholder="Адресс">
         <input type="text" class="form-control-static" name="passport_num" placeholder="Номер паспорта">
-        <input type="text" class="form-control-static" name="cars" placeholder="Авто">
     </div>
 <button type="submit" class="btn btn-default">Добавить владельца</button>
 </form>

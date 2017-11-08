@@ -43,7 +43,8 @@ class Car extends Object {
 
     }
 
-    public function saveCar() {
+    public function saveCar()
+    {
 
         $prepare = self::$db->prepare(
             'INSERT INTO Car 
@@ -55,7 +56,8 @@ class Car extends Object {
                         colour, 
                         consumption, 
                         cost_less_30_inc, 
-                        cost_more_31) 
+                        cost_more_31,
+                        car_owner) 
                         VALUES 
                         (:mark, 
                         :model, 
@@ -65,20 +67,34 @@ class Car extends Object {
                         :colour, 
                         :consumption, 
                         :cost_less_30_inc, 
-                        :cost_more_31)');
+                        :cost_more_31,
+                        :car_owner)');
 
 
-            $prepare->execute(
-                array('mark'=> $this->mark,
-                    'model'=> $this->model,
-                    'year'=> $this->year,
-                    'state_num'=> $this->state_num,
-                    'mileage'=> $this->mileage,
-                    'colour'=> $this->colour,
-                    'consumption'=> $this->consumption,
-                    'cost_less_30_inc'=> $this->cost_less_30,
-                    'cost_more_31'=> $this->cost_more_31,
-                    ));
+        $prepare->execute(
+            array('mark' => $this->mark,
+                'model' => $this->model,
+                'year' => $this->year,
+                'state_num' => $this->state_num,
+                'mileage' => $this->mileage,
+                'colour' => $this->colour,
+                'consumption' => $this->consumption,
+                'cost_less_30_inc' => $this->cost_less_30,
+                'cost_more_31' => $this->cost_more_31,
+                'car_owner' => $this->car_owner,
+            ));
+    }
+
+        static function Showall() {
+
+            //if user is authenticated as Owner show him his cars
+            if(User::whoisUser()=='Owner') {
+                $oQuery = Object::$db->query('SELECT * FROM `Car` WHERE car_owner=' . $_SESSION['user']);
+            }
+            else {
+                $oQuery = Object::$db->query('SELECT * FROM `Car`');
+            }
+            return $oQuery->fetchAll(PDO::FETCH_ASSOC);
 
 
 

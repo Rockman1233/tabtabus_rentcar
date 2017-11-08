@@ -26,17 +26,17 @@
     </thead>
     <tbody>
       <tr>
-        <td><?php echo $this->aData['newCont']->mark.' '.$this->aData['newCont']->model.'<br> Гос.номер: '.$this->aData['newCont']->state_num ?></td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-          <td>John</td>
-          <td>Doe</td>
-          <td>John</td>
-          <td>Doe</td>
-          <td>John</td>
-          <td>Doe</td>
-          <td>John</td>
-          <td>Doe</td>
+        <td><?php echo $this->aData['newContcar']->mark.' '.$this->aData['newContcar']->model.'<br> Гос.номер: '.$this->aData['newContcar']->state_num ?></td>
+        <td><?php echo $this->aData['newContown']->first_name ?></td>
+        <td><?php echo $this->aData['newContown']->last_name ?></td>
+          <td><?php echo $this->aData['newContown']->telephone ?></td>
+          <td><?php echo $this->aData['newContown']->passport_num ?></td>
+          <td><?php echo $this->aData['newContown']->address ?></td>
+          <td><?php echo $this->aData['newContdrv']->first_name ?></td>
+          <td><?php echo $this->aData['newContdrv']->last_name ?></td>
+          <td><?php echo $this->aData['newContdrv']->telephone ?></td>
+          <td><?php echo $this->aData['newContdrv']->passport_num_d ?></td>
+          <td><?php echo $this->aData['newContdrv']->address ?></td>
       </tr>
 
     </tbody>

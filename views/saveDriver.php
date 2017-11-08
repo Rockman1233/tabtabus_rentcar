@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-<form action="<?php echo 'saveconfirm'?>" method="post">
+<form action="<?php echo'saveconfirm'?>" method="post">
     <div class="form">
         <input type="text" class="form-control-static" name="login" placeholder="Придумайте логин">
         <input type="password" class="form-control-static" name="pass" placeholder="Придумайте пароль">

@@ -18,7 +18,6 @@ class Owner extends Object
     public $telephone;
     public $email;
     public $address;
-    public $cars;
     public $passport_num;
 
 
@@ -27,10 +26,34 @@ class Owner extends Object
         return 'Owner';
     }
 
-    static function getOwnerbyID($id)
-    {
-        return Object::findById($id);
+    public function edit() {
+
+        $prepare = self::$db->prepare(
+            'UPDATE Owner SET
+                        pass  = :pass,
+                        first_name = :first_name, 
+                        last_name = :last_name, 
+                        telephone = :telephone, 
+                        email = :email, 
+                        address = :address, 
+                        passport_num = :passport_num
+                        WHERE
+                        owner_id=:id');
+
+
+        $prepare->execute(
+            array('id'=> $this->owner_id,
+                'pass'=> $this->pass,
+                'first_name'=> $this->first_name,
+                'last_name'=> $this->last_name,
+                'telephone'=> $this->telephone,
+                'email'=> $this->email,
+                'address'=> $this->address,
+                'passport_num'=> $this->passport_num,
+
+            ));
     }
+
 
     public function getCars()
     {
@@ -50,8 +73,8 @@ class Owner extends Object
                         telephone, 
                         email, 
                         address, 
-                        passport_num,
-                        cars) 
+                        passport_num
+                        ) 
                         VALUES 
                         (:login,
                         :pass,
@@ -60,8 +83,8 @@ class Owner extends Object
                         :telephone, 
                         :email, 
                         :address, 
-                        :passport_num,
-                        :cars)');
+                        :passport_num
+                        )');
 
 
         $prepare->execute(
@@ -73,7 +96,6 @@ class Owner extends Object
                 'email'=> $this->email,
                 'address'=> $this->address,
                 'passport_num'=> $this->passport_num,
-                'cars'=> $this->cars,
 
             ));
 

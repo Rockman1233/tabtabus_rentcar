@@ -24,9 +24,15 @@
                     </div>
 
                     <div class="col-md-12 panelBottom">
+                        <?php if(User::whoisUser() == 'Driver'): ?>
                         <div class="col-md-4 text-center">
-                            <a class="btn btn-lg btn-add-to-cart" data-id="<?php echo $value['car_id'] ?>"><span class="glyphicon glyphicon-shopping-cart">Add</span></a>
+                            <a class="btn btn-lg btn-add-to-cart" data-id="<?php echo $value['car_id'] ?>"><span class="glyphicon glyphicon-ok"> Выбрать</span></a>
                         </div>
+                        <?php else: ; ?>
+                        <div class="col-md-4 text-center">
+                            <a class="btn btn-lg btn-add-to-cart" data-id="<?php echo $value['car_id'] ?>"><span class="glyphicon glyphicon-edit"> Редактировать</span></a>
+                        </div>
+                        <?php endif; ?>
                         <div class="col-md-4 text-right">
                             <h5>до 30 суток (вкл) -  <span class="itemPrice"><?php echo $value['cost_less_30_inc']?>$</span></span></h5>
                         </div>

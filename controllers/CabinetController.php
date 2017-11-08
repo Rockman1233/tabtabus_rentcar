@@ -37,15 +37,23 @@ class CabinetController extends Controller {
             $NewCont->__set($var, $value);
         }
         $NewCont->car = $_SESSION['car'];
-        $res = Car::findById($_SESSION['car']);
+        $carData = Car::findById($_SESSION['car']);
 
         /*echo '<pre>';
         print_r($res);
         echo '</pre>';*/
-        //$NewCont->saveContract();
-        $this->view->addData("newCont", $res);
+        $ownerID=$carData->car_owner;
+        $ownerData = Owner::findById($ownerID);
+        $driverID = $_SESSION['user'];
+        $driverData = Driver::findById($driverID);
 
-        if($res) {
+        //$NewCont->saveContract();
+        $this->view->addData("newContcar", $carData);
+        $this->view->addData("newContown", $ownerData);
+        $this->view->addData("newContdrv", $driverData);
+
+
+        if($carData) {
             $this->view->addData('temp', 'newContract.php');
             $this->view->generateIn();
         }
@@ -94,7 +102,7 @@ class CabinetController extends Controller {
     public function actionEdit() {
         $who = User::whoisUser(); //определяем Водителя или Владельца
         $userID = $_SESSION['user']; //Извлекаем айди из сесисс (после регистрации)
-        $userMain = ($who='Driver')? new Driver() :new Owner();
+        $userMain = ($who=='Driver')? new Driver() :new Owner();
         $userData = $userMain::findById($userID);
         // достаем из результирующего массива автомобили и передаем на обработку в шаблон
         $this->view->addData("User", $userData);

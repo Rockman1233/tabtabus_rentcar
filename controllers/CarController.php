@@ -32,7 +32,7 @@ class CarController extends Controller {
         foreach ($_POST as $var => $value) {
             $NewCar->__set($var, $value);
         }
-
+        $NewCar->__set('car_owner', $_SESSION['user']);
         echo '<pre>';
         print_r($NewCar);
         echo '</pre>';
@@ -42,10 +42,7 @@ class CarController extends Controller {
     }
 
     public function actionShowall() {
-
-        $oQuery = Object::$db->query('SELECT * FROM `Car`');
-        $aRes = $oQuery->fetchAll(PDO::FETCH_ASSOC);
-
+        $aRes = Car::Showall();
         // достаем из результирующего массива автомобили и передаем на обработку в шаблон
         $this->view->addData("temp", 'cardProduct.php');
         foreach($aRes as $carArray) {

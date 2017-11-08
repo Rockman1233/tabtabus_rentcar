@@ -11,7 +11,6 @@
         <input type="text" class="form-control-static" name="consumption" placeholder="Расход">
         <input type="text" class="form-control-static" name="cost_less_30" placeholder="Соимость до 30 сут (включ)">
         <input type="text" class="form-control-static" name="cost_more_31" placeholder="Стоимость более 31">
-        <input type="text" class="form-control-static" name="car_owner" placeholder="Владелец">
 
     </div>
 <button type="submit" class="btn btn-default">Добавить авто</button>

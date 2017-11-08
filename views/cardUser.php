@@ -6,7 +6,8 @@
 
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><?php echo $this->aData['User']->first_name.' '.$this->aData['User']->last_name.' ID:'.$this->aData['User']->driver_id ?></h3>
+                    <h3 class="panel-title"><?php echo $this->aData['User']->first_name.' '.$this->aData['User']->last_name.' ID:';
+                    echo (User::whoisUser() == 'Driver')?$this->aData['User']->driver_id:$this->aData['User']->owner_id ?></h3>
                 </div>
                 <div class="panel-body">
                     <div class="row">
@@ -36,8 +37,9 @@
                                 </tr>
                                 <tr>
                                     <td>Номер паспорта:</td>
-                                    <td><input type="text" class="form-control-static" name="passport_num_d" placeholder="<?php echo $this->aData['User']->passport_num_d ?>"></td>
+                                    <td><input type="text" class="form-control-static" name="<?php if(User::whoisUser() == 'Driver'): ?>passport_num_d<? else:?>passport_num<? endif;?>" placeholder="<?php echo (isset($this->aData['User']->drive_license))?$this->aData['User']->passport_num_d:$this->aData['User']->passport_num ?>"></td>
                                 </tr>
+                                <?php if(User::whoisUser() == 'Driver'): ?>
                                 <tr>
                                     <td>Номер вод.удостоверения:</td>
                                     <td><input type="text" class="form-control-static" name="drive_license" placeholder="<?php echo $this->aData['User']->drive_license ?>"></td>
@@ -46,6 +48,13 @@
                                     <td>Стаж вождения:</td>
                                     <td><input type="text" class="form-control-static" name="experience" placeholder="<?php echo $this->aData['User']->experience ?>"></td>
                                 </tr>
+                                <?php else: ?>
+                                <tr>
+                                    <td>Мои автомобили:</td>
+                                    <td><a href="../car/showall">Нажми</a></td>
+                                </tr>
+                                <?php endif; ?>
+
 
                                 </tbody>
                             </table>
