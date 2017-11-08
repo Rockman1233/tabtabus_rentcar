@@ -9,6 +9,8 @@ include($_SERVER['DOCUMENT_ROOT'] . '/models/User.php');
 include('Controller.php');
 class UserController extends Controller {
 
+    public $User;
+
 
     public function actionIndex($render='indexUser.php')
     {
@@ -18,11 +20,11 @@ class UserController extends Controller {
     }
     public function actionLogin() {
 
-        $NewUser = new User;
+        $this->User = new User;
         foreach ($_POST as $var => $value) {
-            $NewUser->__set($var, $value);
+            $this->User->__set($var, $value);
         }
-        $user_id = $NewUser->getUser();
+        $user_id = $this->User->getUser();
 
         if($user_id == false){
             echo 'Неверные данные';

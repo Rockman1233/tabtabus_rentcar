@@ -9,6 +9,8 @@ include($_SERVER['DOCUMENT_ROOT'].'/models/Contract.php');
 include($_SERVER['DOCUMENT_ROOT'].'/models/Car.php');
 include('Controller.php');
 include($_SERVER['DOCUMENT_ROOT'].'/models/User.php');
+include($_SERVER['DOCUMENT_ROOT'].'/models/Driver.php');
+include($_SERVER['DOCUMENT_ROOT'].'/models/Owner.php');
 class CabinetController extends Controller {
 
     public $id;
@@ -28,8 +30,6 @@ class CabinetController extends Controller {
         }
     }
 
-
-
     public function actionCreate(){
 
         $NewCont = new Contract();
@@ -38,7 +38,6 @@ class CabinetController extends Controller {
         }
         $NewCont->car = $_SESSION['car'];
         $res = Car::findById($_SESSION['car']);
-
 
         /*echo '<pre>';
         print_r($res);
@@ -91,5 +90,25 @@ class CabinetController extends Controller {
         print_r($aRes);
         echo '</pre>';*/
     }
+
+    public function actionEdit() {
+        $who = User::whoisUser(); //определяем Водителя или Владельца
+        $userID = $_SESSION['user']; //Извлекаем айди из сесисс (после регистрации)
+        $userMain = ($who='Driver')? new Driver() :new Owner();
+        $userData = $userMain::findById($userID);
+        // достаем из результирующего массива автомобили и передаем на обработку в шаблон
+        $this->view->addData("User", $userData);
+        $this->view->addData("temp", 'cardUser.php');
+        $this->view->generateIn();
+            // проверяем параметры на наличие изменений если были изменены то вносим исправления
+        foreach ($_POST as $par => $value) {
+            if($value) {
+                $userData->__set($par, $value);
+            }
+        }
+        $userData->edit();
+
+    }
+
 
 }

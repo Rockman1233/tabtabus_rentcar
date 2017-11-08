@@ -37,7 +37,7 @@
                 <li><a href="/car">Автомобили</a></li>
                 <li><a href="/user">Войти</a></li>
                 <?php if(isset($_SESSION['user'])): ?>
-                <li><a href="/cabinet">Личный кабинет</a></li>
+                <li><a href="/cabinet"><?php if($_SESSION['user'] >= 1000000): ?>Личный кабинет арендодателя<? else: ?>Личный кабинет водителя<?php endif; ?></a></li>
                 <?php endif; ?>
             </ul>
 
@@ -58,7 +58,7 @@
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<!-- ajax -->
+<!-- ajax (add car to contract)-->
 <script type="text/javascript">
     $(document).ready(function () {
         $('.btn-add-to-cart').click(function () {
@@ -75,7 +75,6 @@
         })
 
     })
-
 </script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="/js/bootstrap.min.js"></script>

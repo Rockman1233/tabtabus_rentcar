@@ -27,6 +27,11 @@ class Owner extends Object
         return 'Owner';
     }
 
+    static function getOwnerbyID($id)
+    {
+        return Object::findById($id);
+    }
+
     public function getCars()
     {
         $oQuery = self::$db->query('SELECT Car.mark, Car.model FROM Car WHERE car_owner=' . $this->owner_id);
