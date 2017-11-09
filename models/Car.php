@@ -45,7 +45,9 @@ class Car extends Object {
 
     public function saveCar()
     {
-
+        echo '<pre>';
+        echo $this->car_id;
+        echo '</pre>';
         $prepare = self::$db->prepare(
             'INSERT INTO Car 
                         (mark, 

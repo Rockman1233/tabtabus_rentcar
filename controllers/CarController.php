@@ -5,9 +5,10 @@
  * Date: 30.10.17
  * Time: 13:51
  */
-include($_SERVER['DOCUMENT_ROOT'].'/models/Car.php');
-include('Controller.php');
-include($_SERVER['DOCUMENT_ROOT'].'/models/User.php');
+
+include_once('Controller.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/models/Car.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/models/User.php');
 
 class CarController extends Controller {
 

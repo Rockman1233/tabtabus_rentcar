@@ -5,9 +5,9 @@
  * Date: 30.10.17
  * Time: 13:51
  */
-include($_SERVER['DOCUMENT_ROOT'].'/models/Owner.php');
-include('Controller.php');
 
+include_once('Controller.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/models/Owner.php');
 class OwnerController extends Controller {
 
 

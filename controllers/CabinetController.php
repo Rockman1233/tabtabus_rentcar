@@ -5,12 +5,13 @@
  * Date: 30.10.17
  * Time: 13:51
  */
-include($_SERVER['DOCUMENT_ROOT'].'/models/Contract.php');
-include($_SERVER['DOCUMENT_ROOT'].'/models/Car.php');
-include('Controller.php');
-include($_SERVER['DOCUMENT_ROOT'].'/models/User.php');
-include($_SERVER['DOCUMENT_ROOT'].'/models/Driver.php');
-include($_SERVER['DOCUMENT_ROOT'].'/models/Owner.php');
+
+include_once('Controller.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/models/Contract.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/models/Car.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/models/User.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/models/Driver.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/models/Owner.php');
 
 class CabinetController extends Controller {
 
@@ -41,7 +42,6 @@ class CabinetController extends Controller {
         //work with Car
         $this->contract->car = $_SESSION['car'];
         $carData = Car::findById($_SESSION['car']);
-        $this->contract = (['Car'=> $carData->car_id]);
 
         //work with Owner
         $ownerID=$carData->car_owner;
@@ -50,29 +50,17 @@ class CabinetController extends Controller {
         //work with Driver
         $driverID = $_SESSION['user'];
         $driverData = Driver::findById($driverID);
-
         $this->contract = new Contract(
             [
                 'car' => $_SESSION['car'],
-                'first_name_owner' => $ownerData->first_name,
-                'last_name_owner' => $ownerData->last_name,
-                'address_owner' => $ownerData->address,
-                'telephone_owner' => $ownerData->telephone,
-                'email_owner' => $ownerData->email,
-                'passport_number_owner' => $ownerData->passport_num,
-                'first_name_driver' => $driverData->first_name,
-                'last_name_driver' => $driverData->last_name,
-                'address_driver' => $driverData->address,
-                'telephone_driver' => $driverData->telephone,
-                'email_driver' => $driverData->email,
-                'passport_number_driver' => $driverData->passport_num,
+                'driver' => $driverID,
                 'status' => $_POST['status']
             ]
         );
         if(isset($this->contract->status))
         {
 
-            //$this->contract->saveContract();
+            $this->contract->saveContract();
             echo 'Контракт сохранен';
         }
         echo '<pre>';
