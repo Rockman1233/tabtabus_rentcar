@@ -71,7 +71,8 @@ class CabinetController extends Controller {
         );
         if(isset($this->contract->status))
         {
-            $this->contract->saveContract();
+
+            //$this->contract->saveContract();
             echo 'Контракт сохранен';
         }
         echo '<pre>';

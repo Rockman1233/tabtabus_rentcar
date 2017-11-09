@@ -1,6 +1,6 @@
 <?php
 
-$dsn = 'mysql:host=localhost;dbname=rentacar';
+$dsn = 'mysql:host=localhost;dbname=rentacar2';
 $user = 'root';
 $password = 'root';
 

@@ -45,7 +45,7 @@ class User extends Object
     }
 
     static function whoisUser() {
-        if ($_SESSION['user'] >= 1000000) {
+        if ($_SESSION['user'] >= 10000) {
             return 'Owner';
         }
         return 'Driver';

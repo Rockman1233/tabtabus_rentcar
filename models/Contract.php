@@ -37,7 +37,7 @@ class Contract extends Object {
     {
         $prepare = self::$db->prepare(
             'INSERT INTO Contract 
-                        (contract_id, 
+                        (
                         status, 
                         car, 
                         passport_number_owner, 
@@ -53,7 +53,7 @@ class Contract extends Object {
                         address_driver,
                         email_driver) 
                         VALUES 
-                        (:contract_id, 
+                        ( 
                         :status, 
                         :car, 
                         :passport_number_owner, 
@@ -72,7 +72,7 @@ class Contract extends Object {
 
 
         $prepare->execute(
-            array('contract_id'=> $this->contract_id,
+            array(
                 'status'=> $this->status,
                 'car'=> $this->car,
                 'passport_number_owner'=> $this->passport_number_owner,
@@ -89,6 +89,19 @@ class Contract extends Object {
                 'email_driver'=> $this->email_driver,
             ));
 
+
+    }
+
+    public function showCurrent() {
+
+        if(User::whoisUser()=='Owner') {
+            $oQuery = Object::$db->query('SELECT * FROM `Contract` WHERE car_owner='.$_SESSION['user'].' AND ');
+        }
+        return $oQuery->fetchAll(PDO::FETCH_ASSOC);
+
+    }
+
+    public function showAll() {
 
     }
 
