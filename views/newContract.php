@@ -40,8 +40,10 @@
 
     </tbody>
   </table>
-  <a href="createconfirm">Подтверждение</a>
-
+  <form action="" method="post">
+      <input type="hidden" name="status" value="0">
+      <button type="submit" class="btn btn-default">Подтвердить</button>
+  </form>
 
 </body>
 </html>

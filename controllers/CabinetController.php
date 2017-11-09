@@ -34,37 +34,46 @@ class CabinetController extends Controller {
 
     public function actionCreate(){
 
-        $this->contract = new Contract();
+
 
         //values from: Car, Owner, Driver to: Contract
 
         //work with Car
         $this->contract->car = $_SESSION['car'];
         $carData = Car::findById($_SESSION['car']);
-        $this->contract->__set('Car', $carData->car_id);
+        $this->contract = (['Car'=> $carData->car_id]);
 
         //work with Owner
         $ownerID=$carData->car_owner;
         $ownerData = Owner::findById($ownerID);
-        $this->contract->__set('first_name_owner', $ownerData->first_name);
-        $this->contract->__set('last_name_owner', $ownerData->last_name);
-        $this->contract->__set('address_owner', $ownerData->address);
-        $this->contract->__set('telephone_owner', $ownerData->telephone);
-        $this->contract->__set('email_owner', $ownerData->email);
-        $this->contract->__set('passport_number_owner', $ownerData->passport_num);
-
 
         //work with Driver
         $driverID = $_SESSION['user'];
         $driverData = Driver::findById($driverID);
-        $this->contract->__set('first_name_driver', $driverData->first_name);
-        $this->contract->__set('last_name_driver', $driverData->last_name);
-        $this->contract->__set('address_driver', $driverData->address);
-        $this->contract->__set('telephone_driver', $driverData->telephone);
-        $this->contract->__set('email_driver', $driverData->email);
-        $this->contract->__set('passport_number_driver', $driverData->passport_num);
 
-
+        $this->contract = new Contract(
+            [
+                'car' => $_SESSION['car'],
+                'first_name_owner' => $ownerData->first_name,
+                'last_name_owner' => $ownerData->last_name,
+                'address_owner' => $ownerData->address,
+                'telephone_owner' => $ownerData->telephone,
+                'email_owner' => $ownerData->email,
+                'passport_number_owner' => $ownerData->passport_num,
+                'first_name_driver' => $driverData->first_name,
+                'last_name_driver' => $driverData->last_name,
+                'address_driver' => $driverData->address,
+                'telephone_driver' => $driverData->telephone,
+                'email_driver' => $driverData->email,
+                'passport_number_driver' => $driverData->passport_num,
+                'status' => $_POST['status']
+            ]
+        );
+        if(isset($this->contract->status))
+        {
+            $this->contract->saveContract();
+            echo 'Контракт сохранен';
+        }
         echo '<pre>';
         print_r($this->contract);
         echo '</pre>';
@@ -87,15 +96,7 @@ class CabinetController extends Controller {
          $_SESSION['car'] = $_POST['car'];
     }
 
-    public function actionCreateConfirm(){
-        $this->contract->__set('status', 0);
-        $this->contract->saveContract();
 
-        echo '<pre>';4
-        print_r($this->contract);
-        echo '</pre>';
-
-    }
 
     public function actionShowall() {
 
