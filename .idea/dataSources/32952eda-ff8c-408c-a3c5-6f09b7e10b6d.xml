@@ -267,7 +267,7 @@
       <ColNames>passport_number_driver</ColNames>
       <RefSchemaName>rentacar</RefSchemaName>
       <RefTableName>Driver</RefTableName>
-      <RefColNames>passport_num_d</RefColNames>
+      <RefColNames>passport_num</RefColNames>
     </foreign-key>
     <foreign-key id="69" parent="10" name="contract_ibfk_2">
       <ColNames>first_name_owner</ColNames>
@@ -368,7 +368,7 @@
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="87" parent="11" name="passport_num_d">
+    <column id="87" parent="11" name="passport_num">
       <Position>9</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
@@ -414,7 +414,7 @@
       <ColNames>last_name</ColNames>
     </index>
     <index id="98" parent="11" name="passport_num_d">
-      <ColNames>passport_num_d</ColNames>
+      <ColNames>passport_num</ColNames>
     </index>
     <index id="99" parent="11" name="telephone">
       <ColNames>telephone</ColNames>
@@ -483,75 +483,59 @@
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="113" parent="12" name="cars">
+    <column id="113" parent="12" name="passport_num">
       <Position>9</Position>
-      <DataType>varchar(255)|0</DataType>
-    </column>
-    <column id="114" parent="12" name="passport_num">
-      <Position>10</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="115" parent="12" name="address">
+    <index id="114" parent="12" name="address">
       <ColNames>address</ColNames>
     </index>
-    <index id="116" parent="12" name="cars">
-      <ColNames>cars</ColNames>
-    </index>
-    <index id="117" parent="12" name="email">
+    <index id="115" parent="12" name="email">
       <ColNames>email</ColNames>
     </index>
-    <index id="118" parent="12" name="first_name">
+    <index id="116" parent="12" name="first_name">
       <ColNames>first_name</ColNames>
     </index>
-    <index id="119" parent="12" name="last_name">
+    <index id="117" parent="12" name="last_name">
       <ColNames>last_name</ColNames>
     </index>
-    <index id="120" parent="12" name="passport_num">
+    <index id="118" parent="12" name="passport_num">
       <ColNames>passport_num</ColNames>
     </index>
-    <index id="121" parent="12" name="telephone">
+    <index id="119" parent="12" name="telephone">
       <ColNames>telephone</ColNames>
     </index>
-    <index id="122" parent="12" name="cars_2">
-      <ColNames>cars</ColNames>
-    </index>
-    <index id="123" parent="12" name="login">
+    <index id="120" parent="12" name="login">
       <ColNames>login</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="124" parent="12" name="PRIMARY">
+    <key id="121" parent="12" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>owner_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="125" parent="12" name="login">
+    <key id="122" parent="12" name="login">
       <ColNames>login</ColNames>
       <UnderlyingIndexName>login</UnderlyingIndexName>
     </key>
-    <foreign-key id="126" parent="12" name="owner_ibfk_1">
-      <ColNames>cars</ColNames>
-      <RefSchemaName>rentacar</RefSchemaName>
-      <RefTableName>Car</RefTableName>
-      <RefColNames>mark</RefColNames>
-    </foreign-key>
-    <column id="127" parent="13" name="interval_id">
+    <column id="123" parent="13" name="interval_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>&apos;0&apos;</DefaultExpression>
     </column>
-    <column id="128" parent="13" name="start_date">
+    <column id="124" parent="13" name="start_date">
       <Position>2</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="129" parent="13" name="finish_date">
+    <column id="125" parent="13" name="finish_date">
       <Position>3</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="130" parent="13" name="PRIMARY">
+    <key id="126" parent="13" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>interval_id</ColNames>
       <Primary>1</Primary>

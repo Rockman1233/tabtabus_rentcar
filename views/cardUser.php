@@ -37,7 +37,7 @@
                                 </tr>
                                 <tr>
                                     <td>Номер паспорта:</td>
-                                    <td><input type="text" class="form-control-static" name="<?php if(User::whoisUser() == 'Driver'): ?>passport_num_d<? else:?>passport_num<? endif;?>" placeholder="<?php echo (isset($this->aData['User']->drive_license))?$this->aData['User']->passport_num_d:$this->aData['User']->passport_num ?>"></td>
+                                    <td><input type="text" class="form-control-static" name="passport_num" placeholder="<?php echo $this->aData['User']->passport_num ?>"></td>
                                 </tr>
                                 <?php if(User::whoisUser() == 'Driver'): ?>
                                 <tr>

@@ -11,10 +11,12 @@ include('Controller.php');
 include($_SERVER['DOCUMENT_ROOT'].'/models/User.php');
 include($_SERVER['DOCUMENT_ROOT'].'/models/Driver.php');
 include($_SERVER['DOCUMENT_ROOT'].'/models/Owner.php');
+
 class CabinetController extends Controller {
 
     public $id;
     public $car;
+    public $contract;
 
     public function actionIndex($render='indexCabinet.php')
     {
@@ -32,22 +34,42 @@ class CabinetController extends Controller {
 
     public function actionCreate(){
 
-        $NewCont = new Contract();
-        foreach ($_POST as $var => $value) {
-            $NewCont->__set($var, $value);
-        }
-        $NewCont->car = $_SESSION['car'];
-        $carData = Car::findById($_SESSION['car']);
+        $this->contract = new Contract();
 
-        /*echo '<pre>';
-        print_r($res);
-        echo '</pre>';*/
+        //values from: Car, Owner, Driver to: Contract
+
+        //work with Car
+        $this->contract->car = $_SESSION['car'];
+        $carData = Car::findById($_SESSION['car']);
+        $this->contract->__set('Car', $carData->car_id);
+
+        //work with Owner
         $ownerID=$carData->car_owner;
         $ownerData = Owner::findById($ownerID);
+        $this->contract->__set('first_name_owner', $ownerData->first_name);
+        $this->contract->__set('last_name_owner', $ownerData->last_name);
+        $this->contract->__set('address_owner', $ownerData->address);
+        $this->contract->__set('telephone_owner', $ownerData->telephone);
+        $this->contract->__set('email_owner', $ownerData->email);
+        $this->contract->__set('passport_number_owner', $ownerData->passport_num);
+
+
+        //work with Driver
         $driverID = $_SESSION['user'];
         $driverData = Driver::findById($driverID);
+        $this->contract->__set('first_name_driver', $driverData->first_name);
+        $this->contract->__set('last_name_driver', $driverData->last_name);
+        $this->contract->__set('address_driver', $driverData->address);
+        $this->contract->__set('telephone_driver', $driverData->telephone);
+        $this->contract->__set('email_driver', $driverData->email);
+        $this->contract->__set('passport_number_driver', $driverData->passport_num);
 
-        //$NewCont->saveContract();
+
+        echo '<pre>';
+        print_r($this->contract);
+        echo '</pre>';
+
+
         $this->view->addData("newContcar", $carData);
         $this->view->addData("newContown", $ownerData);
         $this->view->addData("newContdrv", $driverData);
@@ -58,25 +80,20 @@ class CabinetController extends Controller {
             $this->view->generateIn();
         }
 
-
     }
 
+    //AJAX function catches var from productCard
     public function actionAddcar(){
          $_SESSION['car'] = $_POST['car'];
     }
 
-    public function actionSaveConfirm(){
+    public function actionCreateConfirm(){
+        $this->contract->__set('status', 0);
+        $this->contract->saveContract();
 
-        $NewCar = new Car;
-        foreach ($_POST as $var => $value) {
-            $NewCar->__set($var, $value);
-        }
-
-        /*echo '<pre>';
-        print_r($NewCar);
-        echo '</pre>';*/
-        $NewCar->saveCar();
-
+        echo '<pre>';4
+        print_r($this->contract);
+        echo '</pre>';
 
     }
 

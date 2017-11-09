@@ -9,7 +9,7 @@ include_once 'ClassesExt.php';
 
 class Car extends Object {
 
-    public $id;
+    public $car_id;
     public $mark;
     public $model;
     public $year;
@@ -18,7 +18,7 @@ class Car extends Object {
     public $colour;
     public $consumption;
     public $int_of_availability;
-    public $cost_less_30;
+    public $cost_less_30_inc;
     public $cost_more_31;
     public $car_owner;
 

@@ -19,7 +19,7 @@ class Driver extends Object {
     public $address;
     public $desired_car;
     public $desired_dates;
-    public $passport_num_d;
+    public $passport_num;
     public $experience;
     public $drive_license;
 
@@ -40,7 +40,7 @@ class Driver extends Object {
                         telephone = :telephone, 
                         email = :email, 
                         address = :address, 
-                        passport_num_d = :passport_num_d,
+                        passport_num = :passport_num,
                         desired_car = :desired_car,
                         desired_dates = :desired_dates,
                         experience = :experience,
@@ -57,7 +57,7 @@ class Driver extends Object {
                 'telephone'=> $this->telephone,
                 'email'=> $this->email,
                 'address'=> $this->address,
-                'passport_num_d'=> $this->passport_num_d,
+                'passport_num'=> $this->passport_num,
                 'desired_car'=> $this->desired_car,
                 'desired_dates'=> $this->desired_dates,
                 'experience'=> $this->experience,
@@ -88,7 +88,7 @@ class Driver extends Object {
                         telephone, 
                         email, 
                         address, 
-                        passport_num_d,
+                        passport_num,
                         desired_car,
                         desired_dates,
                         experience,
@@ -102,7 +102,7 @@ class Driver extends Object {
                         :telephone, 
                         :email, 
                         :address, 
-                        :passport_num_d,
+                        :passport_num,
                         :desired_car,
                         :desired_dates,
                         :experience,
@@ -117,7 +117,7 @@ class Driver extends Object {
                 'telephone'=> $this->telephone,
                 'email'=> $this->email,
                 'address'=> $this->address,
-                'passport_num_d'=> $this->passport_num_d,
+                'passport_num'=> $this->passport_num,
                 'desired_car'=> $this->desired_car,
                 'desired_dates'=> $this->desired_dates,
                 'experience'=> $this->experience,
