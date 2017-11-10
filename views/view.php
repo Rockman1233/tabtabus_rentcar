@@ -19,6 +19,10 @@ class View
 
     function addData($sName, $Value){
         $this->aData[$sName] = $Value;
+        /*echo '<pre>';
+        print_r($Value);
+        echo '</pre>';*/
+
     }
 
     function generate()

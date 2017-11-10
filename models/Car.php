@@ -81,9 +81,9 @@ class Car extends Object {
                 'mileage' => $this->mileage,
                 'colour' => $this->colour,
                 'consumption' => $this->consumption,
-                'cost_less_30_inc' => $this->cost_less_30,
+                'cost_less_30_inc' => $this->cost_less_30_inc,
                 'cost_more_31' => $this->cost_more_31,
-                'car_owner' => $this->car_owner,
+                'car_owner' => $this->car_owner
             ));
     }
 

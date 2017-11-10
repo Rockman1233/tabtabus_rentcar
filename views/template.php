@@ -9,6 +9,7 @@
 
     <!-- Bootstrap -->
     <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/font-awesome.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -37,7 +38,7 @@
                 <li><a href="/car">Автомобили</a></li>
                 <li><a href="/user">Войти</a></li>
                 <?php if(isset($_SESSION['user'])): ?>
-                <li><a href="/cabinet"><?php if($_SESSION['user'] >= 1000000): ?>Личный кабинет арендодателя<? else: ?>Личный кабинет водителя<?php endif; ?></a></li>
+                <li><a href="/cabinet"><?php if($_SESSION['user'] >= 10000): ?>Личный кабинет арендодателя<? else: ?>Личный кабинет водителя<?php endif; ?></a></li>
                 <?php endif; ?>
             </ul>
 
@@ -50,6 +51,7 @@
         <?php include($this->aData['temp']); ?>
     </div>
 </div>
+<!--
 <div id="footer">
     <div class="container">
         <p class="muted credit">Andreykin RentaCar <a href="#">Жмяк</a> и <a href="#">Жмяк-жмяк</a>.</p>

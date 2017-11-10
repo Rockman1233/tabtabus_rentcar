@@ -9,7 +9,7 @@
         <input type="text" class="form-control-static" name="mileage" placeholder="Пробег">
         <input type="text" class="form-control-static" name="colour" placeholder="Цвет">
         <input type="text" class="form-control-static" name="consumption" placeholder="Расход">
-        <input type="text" class="form-control-static" name="cost_less_30" placeholder="Соимость до 30 сут (включ)">
+        <input type="text" class="form-control-static" name="cost_less_30_inc" placeholder="Соимость до 30 сут (включ)">
         <input type="text" class="form-control-static" name="cost_more_31" placeholder="Стоимость более 31">
 
     </div>

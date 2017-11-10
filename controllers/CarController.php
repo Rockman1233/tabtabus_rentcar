@@ -31,6 +31,8 @@ class CarController extends Controller {
 
         $NewCar = new Car;
         foreach ($_POST as $var => $value) {
+            echo '<br>';
+            echo $var.' '.$value;
             $NewCar->__set($var, $value);
         }
         $NewCar->__set('car_owner', $_SESSION['user']);

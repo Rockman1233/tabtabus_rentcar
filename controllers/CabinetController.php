@@ -25,22 +25,18 @@ class CabinetController extends Controller {
         $this->view->generate();
 
     }
-    public function actionSave() {
-        echo '<br>'.$_SESSION['user'];
-        if($_SESSION['user']) {
-            $this->view->addData('temp', 'saveAuto.php');
-            $this->view->generateIn();
-        }
-    }
+
 
     public function actionCreate(){
 
-
-
         //values from: Car, Owner, Driver to: Contract
-
         //work with Car
         $this->contract->car = $_SESSION['car'];
+        if(!$_SESSION['car'])
+        {
+            echo 'Сначала выберите автомобиль';
+            return false;
+        }
         $carData = Car::findById($_SESSION['car']);
 
         //work with Owner
@@ -63,20 +59,13 @@ class CabinetController extends Controller {
             $this->contract->saveContract();
             echo 'Контракт сохранен';
         }
-        echo '<pre>';
-        print_r($this->contract);
-        echo '</pre>';
-
-
+        //push data to temp
         $this->view->addData("newContcar", $carData);
         $this->view->addData("newContown", $ownerData);
         $this->view->addData("newContdrv", $driverData);
-
-
-        if($carData) {
-            $this->view->addData('temp', 'newContract.php');
-            $this->view->generateIn();
-        }
+        //build temp
+        $this->view->addData('temp', 'newContract.php');
+        $this->view->generateIn();
 
     }
 
@@ -85,26 +74,34 @@ class CabinetController extends Controller {
          $_SESSION['car'] = $_POST['car'];
     }
 
+    public function actionAccepting() {
 
-
-    public function actionShowall() {
-
-        $oQuery = Object::$db->query('SELECT * FROM `Contract`');
-        $aRes = $oQuery->fetchAll(PDO::FETCH_ASSOC);
-
-        // достаем из результирующего массива автомобили и передаем на обработку в шаблон
-        $this->view->addData("temp", 'cardProduct.php');
-        foreach($aRes as $carArray) {
+        //get contract details for current Owner
+        $aRes = Contract::showAllforOwner();
+        //get information about current Owner
+        //build temp
+        foreach($aRes as $contArray) {
             //передаем машину в массив с контентом , затем вызываем ф-цию построение "карточки машины"
-            $this->view->addData("CurrentCar", $carArray);
+            $this->view->addData("CurrentCont", $contArray);
+            $this->view->addData("temp", 'newContract.php');
             $this->view->generateIn();
+
+            if(isset($_POST['status']))
+            {
+                $newCont = new Contract();
+                $newCont->status = $_POST['status'];  //here we are checking changes in status
+                $newCont->contract_id = $_POST['id'];
+                $newCont->changeStatus();
+                //сюда можно запилить уведомление на электронку
+            }
+
+        }
+        //$this->view->addData("CurrentCont", $aRes);
+
+
 
         }
 
-        /*echo '<pre>';
-        print_r($aRes);
-        echo '</pre>';*/
-    }
 
     public function actionEdit() {
         $who = User::whoisUser(); //определяем Водителя или Владельца
