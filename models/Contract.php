@@ -70,5 +70,13 @@ class Contract extends Object {
 
 }
 
+    static function showAllforDriver() {
+
+        $oQuery = Object::$db->query('SELECT Contract.contract_id, Contract.status, Owner.first_name, Owner.last_name, Owner.address, Owner.passport_num, Owner.telephone, Owner.email, Car.mark, Car.model, Car.state_num FROM Contract JOIN Car ON Contract.car=Car.car_id JOIN Owner ON Car.car_owner=Owner.owner_id WHERE driver='.$_SESSION['user']);
+        return $oQuery->fetchAll(PDO::FETCH_ASSOC);
+
+
+
+    }
 
 }

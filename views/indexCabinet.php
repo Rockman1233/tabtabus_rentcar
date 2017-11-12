@@ -7,7 +7,7 @@
 <br>
 <?php if(User::whoisUser() == 'Driver'): ?>
 <a type="button" href="cabinet/create" class="btn btn-default">Заключить новый контракт</a>
-    <a type="button" href="cabinet/create" class="btn btn-default">Текущий контракт</контракт></a>
+    <a type="button" href="cabinet/wait" class="btn btn-default">Ожидающие подтверждения</контракт></a>
 <?php endif; ?>
 
 <?php if(User::whoisUser() == 'Owner'): ?>

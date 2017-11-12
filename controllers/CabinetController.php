@@ -26,7 +26,6 @@ class CabinetController extends Controller {
 
     }
 
-
     public function actionCreate(){
 
         //values from: Car, Owner, Driver to: Contract
@@ -94,14 +93,8 @@ class CabinetController extends Controller {
                 $newCont->changeStatus();
                 //сюда можно запилить уведомление на электронку
             }
-
         }
-        //$this->view->addData("CurrentCont", $aRes);
-
-
-
         }
-
 
     public function actionEdit() {
         $who = User::whoisUser(); //определяем Водителя или Владельца
@@ -120,6 +113,25 @@ class CabinetController extends Controller {
         }
         $userData->edit();
 
+    }
+    public function actionWait() {
+        $aRes = Contract::showAllforDriver();
+        foreach($aRes as $contArray) {
+            //передаем машину в массив с контентом , затем вызываем ф-цию построение "карточки машины"
+            $this->view->addData("CurrentCont", $contArray);
+            $this->view->addData("temp", 'newContract.php');
+            $this->view->generateIn();
+            /*
+            if(isset($_POST['status']))
+            {
+                $newCont = new Contract();
+                $newCont->status = $_POST['status'];  //here we are checking changes in status
+                $newCont->contract_id = $_POST['id'];
+                $newCont->changeStatus();
+                //сюда можно запилить уведомление на электронку
+            }
+            */
+        }
     }
 
 
