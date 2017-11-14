@@ -38,6 +38,11 @@
     <tbody>
       <?php if((User::whoisUser()=='Driver')&&(!isset($this->aData['CurrentCont']['contract_id']))):?>
           <!-- if contract is new -->
+          <?php if(isset($_POST['start_date'])&&isset($_POST['finish_date'])): ?>
+          <h4>Сообщение системы:</h4>
+          <p>Ваши даты: <?php echo 'c '.$_POST['start_date'].' по '.$_POST['finish_date']?></p>
+          <p><?php echo $_SESSION['message'] ?></p>
+          <?php endif; ?>
       <tr>
         <td><?php echo $this->aData['newContcar']->mark.' '.$this->aData['newContcar']->model.'<br> Гос.номер: '.$this->aData['newContcar']->state_num ?></td>
         <td><?php echo $this->aData['newContown']->first_name ?></td>
@@ -46,6 +51,7 @@
         <td><?php echo $this->aData['newContown']->passport_num ?></td>
         <td><?php echo $this->aData['newContown']->address ?></td>
         <td><?php echo $this->aData['newContown']->email ?></td>
+          <td><?php if(!isset($this->aData['CurrentCont']['contract_id'])):?><span class="itemPrice"><?php echo $this->aData['newCont']->cost ?>$</span><? endif; ?></td>
       </tr>
       <? elseif((User::whoisUser()=='Driver')&&(isset($this->aData['CurrentCont']['contract_id']))): ?>
           <!-- if  -->

@@ -53,11 +53,6 @@ class CabinetController extends Controller {
                 'finish_date' => $_POST['finish_date']
             ]
         );
-        echo '<br>';
-        echo 'Ваши даты: ';
-        echo $_POST['start_date'];
-        echo " " . $_POST['finish_date'];
-        echo '<br>';
 
         if (isset($this->contract->status)&&(User::whoisUser()=='Driver')) {
             $errors = 0;
@@ -66,9 +61,9 @@ class CabinetController extends Controller {
             $days = date_diff($date1, $date2); //checks days of order
             $cost = ($days<=30)?$carData->cost_less_30_inc*$days->d:$carData->cost_more_31*$days->d; //cost of order
             $this->contract->__set('cost',$cost);
-            echo '<pre>';
+            /*echo '<pre>';
             print_r($this->contract);
-            echo '</pre>';
+            echo '</pre>';*/
             if ($date1 < $date2) {
                 $dates = Contract::searchDates($_SESSION['car']);
                 foreach ($dates as $object) {
@@ -76,21 +71,21 @@ class CabinetController extends Controller {
                     $date4 = new DateTime($object['finish_date']);
                     //crossing first date
                     if ($date1 >= $date3 && $date4 >= $date1) {
-                        echo('Выберите другую дату.Машина занята с ' . $date3->format('Y-m-d') . ' по ' . $date4->format('Y-m-d'));
+                        $_SESSION['message']=('Выберите другую дату.Машина занята с ' . $date3->format('Y-m-d') . ' по ' . $date4->format('Y-m-d'));
                         $errors = +1;
                     } //crossing second date
                     elseif ($date2 >= $date3 && $date1 <= $date3) {
-                        echo('Выберите другую дату. Машина занята с ' . $date3->format('Y-m-d') . ' по ' . $date4->format('Y-m-d'));
+                        $_SESSION['message']=('Выберите другую дату. Машина занята с ' . $date3->format('Y-m-d') . ' по ' . $date4->format('Y-m-d'));
                         $errors = +1;
                     }
                 }
             } else {
-                echo 'Дата окончания аренды не может быть меньше даты её начала';
+                $_SESSION['message']='Дата окончания аренды не может быть меньше даты её начала';
                 $errors = +1;}
 
             if ($errors == 0) {
                 $this->contract->saveContract();
-                echo 'Заявка отправлена на рассмотрение';
+                $_SESSION['message']='Заявка отправлена на рассмотрение';
         }
 
         }
@@ -163,16 +158,7 @@ class CabinetController extends Controller {
             $this->view->addData("CurrentCont", $contArray);
             $this->view->addData("temp", 'newContract.php');
             $this->view->generateIn();
-            /*
-            if(isset($_POST['status']))
-            {
-                $newCont = new Contract();
-                $newCont->status = $_POST['status'];  //here we are checking changes in status
-                $newCont->contract_id = $_POST['id'];
-                $newCont->changeStatus();
-                //сюда можно запилить уведомление на электронку
-            }
-            */
+
         }
     }
 
