@@ -17,7 +17,8 @@ class Car extends Object {
     public $mileage;
     public $colour;
     public $consumption;
-    public $int_of_availability;
+    public $start_date;
+    public $finish_date;
     public $cost_less_30_inc;
     public $cost_more_31;
     public $car_owner;
@@ -36,13 +37,21 @@ class Car extends Object {
         return $days*$this->cost_more_31;
     }
 
-    public function getDates(){
-        $oQuery = $this->db->query('SELECT interval_availability.start_date, interval_availability.finish_date FROM interval_availability WHERE interval_id='.$this->id);
-        $aRes = $oQuery->fetchAll();
-        return $aRes;
+    public function setDates()
+    {
+        $prepare = self::$db->prepare(
+            'UPDATE Car SET
+                        start_date  = :start_date,
+                        finish_date = :finish_date
+                        WHERE
+                        car_id='.$this->car_id);
 
+        $prepare->execute(
+            array('start_date' => $this->start_date,
+                'finish_date' => $this->finish_date,
+
+            ));
     }
-
     public function saveCar()
     {
         echo '<pre>';

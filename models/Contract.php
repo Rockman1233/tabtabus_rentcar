@@ -13,6 +13,8 @@ class Contract extends Object {
     public $car;
     public $status;
     public $driver;
+    public $start_date;
+    public $finish_date;
 
 
     static function TableName()
@@ -20,51 +22,65 @@ class Contract extends Object {
         return 'Contract';
     }
 
+    static function searchDates($car)
+    {
+        $oQuery = Object::$db->query('SELECT Contract.start_date, Contract.finish_date FROM Contract WHERE car='.$car);
+        return $oQuery->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     public function saveContract()
     {
         $prepare = self::$db->prepare(
             'INSERT INTO Contract 
                         (
-                        status, 
+                        status,
                         car,  
-                        driver
+                        driver,
+                        start_date,
+                        finish_date
                         ) 
                         VALUES 
                         ( 
                         :status, 
                         :car, 
-                        :driver
+                        :driver,
+                        :start_date,
+                        :finish_date
                         )');
         $prepare->execute(
             array(
                 'status'=> $this->status,
                 'car'=> $this->car,
-                'driver'=> $this->driver
+                'driver'=> $this->driver,
+                'start_date'=> $this->start_date,
+                'finish_date'=> $this->finish_date
             ));
     }
 
     public function changeStatus() {
+
         $prepare = self::$db->prepare(
             'UPDATE Contract SET
                         status  ='.$this->status.'
                         WHERE
                         contract_id='.$this->contract_id);
-        $prepare->execute();
-    }
 
-
-    public function showCurrent() {
-
-        if(User::whoisUser()=='Owner') {
-            $oQuery = Object::$db->query('SELECT * FROM `Contract` WHERE car_owner='.$_SESSION['user']);
+        /*$prepare->execute();
+        if($this->status==1){
+            $prepare1 = self::$db->prepare(
+                "UPDATE Car SET
+                        start_date  = '$this->start_date',
+                        finish_date = '$this->finish_date'
+                        WHERE
+                        car_id=$this->car");
+            $prepare1->execute();*/
         }
-        return $oQuery->fetchAll(PDO::FETCH_ASSOC);
 
-    }
+
 
     static function showAllforOwner() {
 
-        $oQuery = Object::$db->query('SELECT Contract.contract_id, Contract.status, Driver.first_name, Driver.last_name, Driver.address, Driver.passport_num, Driver.telephone, Driver.email, Car.mark, Car.model, Car.state_num FROM Contract JOIN Car ON Contract.car=Car.car_id JOIN Driver ON Contract.driver=Driver.driver_id WHERE car_owner='.$_SESSION['user']);
+        $oQuery = Object::$db->query('SELECT Contract.contract_id, Contract.status, Contract.start_date, Contract.finish_date, Driver.first_name, Driver.last_name, Driver.address, Driver.passport_num, Driver.telephone, Driver.email, Car.mark, Car.model, Car.state_num, Car.car_id FROM Contract JOIN Car ON Contract.car=Car.car_id JOIN Driver ON Contract.driver=Driver.driver_id WHERE car_owner='.$_SESSION['user']);
         return $oQuery->fetchAll(PDO::FETCH_ASSOC);
 
 
@@ -72,7 +88,7 @@ class Contract extends Object {
 
     static function showAllforDriver() {
 
-        $oQuery = Object::$db->query('SELECT Contract.contract_id, Contract.status, Owner.first_name, Owner.last_name, Owner.address, Owner.passport_num, Owner.telephone, Owner.email, Car.mark, Car.model, Car.state_num FROM Contract JOIN Car ON Contract.car=Car.car_id JOIN Owner ON Car.car_owner=Owner.owner_id WHERE driver='.$_SESSION['user']);
+        $oQuery = Object::$db->query('SELECT Contract.contract_id, Contract.status, Contract.start_date, Contract.finish_date, Owner.first_name, Owner.last_name, Owner.address, Owner.passport_num, Owner.telephone, Owner.email, Car.mark, Car.model, Car.state_num, Car.car_id FROM Contract JOIN Car ON Contract.car=Car.car_id JOIN Owner ON Car.car_owner=Owner.owner_id WHERE driver='.$_SESSION['user']);
         return $oQuery->fetchAll(PDO::FETCH_ASSOC);
 
 

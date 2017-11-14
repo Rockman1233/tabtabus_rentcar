@@ -42,7 +42,7 @@
         <td><?php echo $this->aData['newContown']->address ?></td>
         <td><?php echo $this->aData['newContown']->email ?></td>
       </tr>
-      <? else: ?>
+      <? elseif((User::whoisUser()=='Driver')&&(isset($this->aData['CurrentCont']['contract_id']))): ?>
           <!-- if  -->
           <td><?php echo $this->aData['CurrentCont']['mark'].' '.$this->aData['CurrentCont']['model'].'<br> Гос.номер: '.$this->aData['CurrentCont']['state_num'] ?></td>
           <td><?php echo $this->aData['CurrentCont']['first_name'] ?></td>
@@ -51,6 +51,7 @@
           <td><?php echo $this->aData['CurrentCont']['passport_num'] ?></td>
           <td><?php echo $this->aData['CurrentCont']['address'] ?></td>
           <td><?php echo $this->aData['CurrentCont']['email'] ?></td>
+          <?php echo 'c '.$this->aData['CurrentCont']['start_date'] ?><?php echo ' по '.$this->aData['CurrentCont']['finish_date'] ?>
       <?php endif; ?>
       <?php if(User::whoisUser()=='Owner'):?>
           <td><?php echo $this->aData['CurrentCont']['mark'].' '.$this->aData['CurrentCont']['model'].'<br> Гос.номер: '.$this->aData['CurrentCont']['state_num'] ?></td>
@@ -60,6 +61,7 @@
           <td><?php echo $this->aData['CurrentCont']['passport_num'] ?></td>
           <td><?php echo $this->aData['CurrentCont']['address'] ?></td>
           <td><?php echo $this->aData['CurrentCont']['email'] ?></td>
+          <?php echo 'c '.$this->aData['CurrentCont']['start_date'] ?><?php echo ' по '.$this->aData['CurrentCont']['finish_date'] ?>
       <?php endif; ?>
 
     </tbody>
@@ -77,11 +79,34 @@
       <button type="submit" class="btn btn-default">Отклонить</button>
   </form>
   <?php endif; ?>
+
+  <!-- form for sending order-->
   <?php if((User::whoisUser()=='Driver')&&(!isset($this->aData['CurrentCont']['contract_id']))): ?>
   <form action="" method="post">
       <input type="hidden" name="status" value="0">
-      <button type="submit" class="btn btn-default">Отправить на рассмотрение</button>
+
+      <div class="container">Начало аренды:</div>
+      <div class="form-group">
+          <div class="input-group" id="datetimepicker1">
+              <input type="text" name='start_date' class="form-control"/>
+              <span class="input-group-addon">
+                <i class="glyphicon glyphicon-calendar"></i>
+            </span>
+          </div>
+      </div>
+      <div class="container">Окончание аренды:</div>
+      <div class="form-group">
+          <div class="input-group" id="datetimepicker2">
+              <input type="text" name='finish_date' class="form-control"/>
+              <span class="input-group-addon">
+                <i class="glyphicon glyphicon-calendar"></i>
+            </span>
+          </div>
+      </div>
+
+<button type="submit" class="btn btn-default">Отправить на рассмотрение</button>
   </form>
+
   <?php endif; ?>
 
 </div>

@@ -10,7 +10,10 @@
     <!-- Bootstrap -->
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/font-awesome.css" rel="stylesheet">
-
+    <!-- 1. Подключить CSS-файл Bootstrap 3 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+    <!-- 2. Подключить CSS-файл библиотеки Bootstrap 3 DateTimePicker -->
+    <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -58,8 +61,14 @@
     </div>
 </div>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<!-- 3. Подключить библиотеку jQuery -->
+<script src="../js/jquery-3.2.1.min.js"></script>
+<!-- 4. Подключить библиотеку moment -->
+<script src="../js/moment-with-locales.min.js"></script>
+<!-- 5. Подключить js-файл фреймворка Bootstrap 3 -->
+<script src="../js/bootstrap.min.js"></script>
+<!-- 6. Подключить js-файл библиотеки Bootstrap 3 DateTimePicker -->
+<script src="../js/bootstrap-datetimepicker.min.js"></script>
 <!-- ajax (add car to contract)-->
 <script type="text/javascript">
     $(document).ready(function () {
@@ -75,10 +84,27 @@
             });
 
         })
-
     })
 </script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('#datetimepicker1').datetimepicker({
+            locale: 'ru',
+            format: 'YYYY-MM-DD',
+            minDate: Date()
+        });
+    });
+</script>
+<script>
+    $(function () {
+        $('#datetimepicker2').datetimepicker({
+            locale: 'ru',
+            format: 'YYYY-MM-DD',
+            minDate: Date()
+        });
+    });
+</script>
+
+
 </body>
 </html>
