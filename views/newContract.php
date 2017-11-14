@@ -5,6 +5,9 @@
     <?php if($this->aData['CurrentCont']['status']==2): ?><span class="glyphicon glyphicon-ban-circle fa-1x"> Заявка отклонена<?php endif; ?></h2>
     <?php endif; ?>
     <h2>Ваш заказ</h2>
+    <?php if((User::whoisUser()=='Driver')&&(!isset($this->aData['CurrentCont']['contract_id']))):?>
+        <p>Сумма заказа <span class="itemPrice"><?php echo $this->aData['newCont']->cost ?>$</span></p>
+    <?endif; ?>
   <p>Внимательно ознакомьтесь с контрактом: </p>
 
   <table class="table table-bordered">
@@ -19,6 +22,7 @@
           <th>Номер паспорта арендатора</th>
           <th>Адресс арендатора</th>
           <th>Email</th>
+          <th>Стоимость</th>
       </tr>
     <?else:?>
         <th>Автомобиль</th>
@@ -28,6 +32,7 @@
         <th>Номер паспорта владельца</th>
         <th>Адресс владельца</th>
         <th>Email</th>
+        <th>Стоимость</th>
     <? endif;?>
     </thead>
     <tbody>
@@ -51,6 +56,7 @@
           <td><?php echo $this->aData['CurrentCont']['passport_num'] ?></td>
           <td><?php echo $this->aData['CurrentCont']['address'] ?></td>
           <td><?php echo $this->aData['CurrentCont']['email'] ?></td>
+          <td><span class="itemPrice"><?php echo $this->aData['CurrentCont']['cost'] ?>$</span></td>
           <?php echo 'c '.$this->aData['CurrentCont']['start_date'] ?><?php echo ' по '.$this->aData['CurrentCont']['finish_date'] ?>
       <?php endif; ?>
       <?php if(User::whoisUser()=='Owner'):?>
@@ -61,6 +67,7 @@
           <td><?php echo $this->aData['CurrentCont']['passport_num'] ?></td>
           <td><?php echo $this->aData['CurrentCont']['address'] ?></td>
           <td><?php echo $this->aData['CurrentCont']['email'] ?></td>
+          <td><span class="itemPrice"><?php echo $this->aData['CurrentCont']['cost'] ?>$</span></td>
           <?php echo 'c '.$this->aData['CurrentCont']['start_date'] ?><?php echo ' по '.$this->aData['CurrentCont']['finish_date'] ?>
       <?php endif; ?>
 

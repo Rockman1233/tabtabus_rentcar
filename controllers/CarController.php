@@ -26,6 +26,25 @@ class CarController extends Controller {
             $this->view->generateIn();
         }
     }
+    //AJAX function catches var from productCard
+
+    public function actionEdit() {
+        $car = Car::findById($_SESSION['car']);
+        /*echo '<pre>';
+        print_r($car);
+        echo '</pre>';*/
+        if(User::whoisUser()=='Owner') {
+            $this->view->addData('temp', 'cardCar.php');
+            $this->view->addData('Car', $car);
+            $this->view->generateIn();
+        }
+        foreach ($_POST as $par => $value) {
+            if($value) {
+                $car->__set($par, $value);
+            }
+        }
+        $car->edit();
+    }
 
     public function actionSaveConfirm(){
 

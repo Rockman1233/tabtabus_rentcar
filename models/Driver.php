@@ -17,8 +17,6 @@ class Driver extends Object {
     public $telephone;
     public $email;
     public $address;
-    public $desired_car;
-    public $desired_dates;
     public $passport_num;
     public $experience;
     public $drive_license;
@@ -41,8 +39,6 @@ class Driver extends Object {
                         email = :email, 
                         address = :address, 
                         passport_num = :passport_num,
-                        desired_car = :desired_car,
-                        desired_dates = :desired_dates,
                         experience = :experience,
                         drive_license = :drive_license 
                         WHERE
@@ -58,8 +54,6 @@ class Driver extends Object {
                 'email'=> $this->email,
                 'address'=> $this->address,
                 'passport_num'=> $this->passport_num,
-                'desired_car'=> $this->desired_car,
-                'desired_dates'=> $this->desired_dates,
                 'experience'=> $this->experience,
                 'drive_license'=> $this->drive_license,
             ));
@@ -89,8 +83,6 @@ class Driver extends Object {
                         email, 
                         address, 
                         passport_num,
-                        desired_car,
-                        desired_dates,
                         experience,
                         drive_license
                         ) 
@@ -103,8 +95,6 @@ class Driver extends Object {
                         :email, 
                         :address, 
                         :passport_num,
-                        :desired_car,
-                        :desired_dates,
                         :experience,
                         :drive_license)');
 
@@ -118,8 +108,6 @@ class Driver extends Object {
                 'email'=> $this->email,
                 'address'=> $this->address,
                 'passport_num'=> $this->passport_num,
-                'desired_car'=> $this->desired_car,
-                'desired_dates'=> $this->desired_dates,
                 'experience'=> $this->experience,
                 'drive_license'=> $this->drive_license,
             ));

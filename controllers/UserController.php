@@ -11,7 +11,6 @@ class UserController extends Controller {
 
     public $User;
 
-
     public function actionIndex($render='indexUser.php')
     {
         $this->view->addData('temp',"$render");

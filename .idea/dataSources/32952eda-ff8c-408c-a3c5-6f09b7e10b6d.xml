@@ -78,227 +78,216 @@
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="25" parent="8" name="start_date">
-      <Position>13</Position>
-      <DataType>date|0</DataType>
-    </column>
-    <column id="26" parent="8" name="finish_date">
-      <Position>14</Position>
-      <DataType>date|0</DataType>
-    </column>
-    <index id="27" parent="8" name="car_owner">
+    <index id="25" parent="8" name="car_owner">
       <ColNames>car_owner</ColNames>
     </index>
-    <key id="28" parent="8" name="PRIMARY">
+    <key id="26" parent="8" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>car_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="29" parent="8" name="car_ibfk_2">
+    <foreign-key id="27" parent="8" name="car_ibfk_2">
       <ColNames>car_owner</ColNames>
       <RefSchemaName>rentacar2</RefSchemaName>
       <RefTableName>Owner</RefTableName>
       <RefColNames>owner_id</RefColNames>
     </foreign-key>
-    <column id="30" parent="9" name="contract_id">
+    <column id="28" parent="9" name="contract_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="31" parent="9" name="car">
+    <column id="29" parent="9" name="car">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="32" parent="9" name="driver">
+    <column id="30" parent="9" name="driver">
       <Position>3</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="33" parent="9" name="status">
+    <column id="31" parent="9" name="status">
       <Position>4</Position>
       <DataType>int(1)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="34" parent="9" name="start_date">
+    <column id="32" parent="9" name="start_date">
       <Position>5</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="35" parent="9" name="finish_date">
+    <column id="33" parent="9" name="finish_date">
       <Position>6</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="36" parent="9" name="car">
+    <column id="34" parent="9" name="cost">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="35" parent="9" name="car">
       <ColNames>car</ColNames>
     </index>
-    <index id="37" parent="9" name="driver">
+    <index id="36" parent="9" name="driver">
       <ColNames>driver</ColNames>
     </index>
-    <key id="38" parent="9" name="PRIMARY">
+    <key id="37" parent="9" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>contract_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="39" parent="9" name="contract_ibfk_1">
+    <foreign-key id="38" parent="9" name="contract_ibfk_1">
       <ColNames>car</ColNames>
       <RefSchemaName>rentacar2</RefSchemaName>
       <RefTableName>Car</RefTableName>
       <RefColNames>car_id</RefColNames>
     </foreign-key>
-    <foreign-key id="40" parent="9" name="contract_ibfk_2">
+    <foreign-key id="39" parent="9" name="contract_ibfk_2">
       <ColNames>driver</ColNames>
       <RefSchemaName>rentacar2</RefSchemaName>
       <RefTableName>Driver</RefTableName>
       <RefColNames>driver_id</RefColNames>
     </foreign-key>
-    <column id="41" parent="10" name="driver_id">
+    <column id="40" parent="10" name="driver_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="42" parent="10" name="first_name">
+    <column id="41" parent="10" name="first_name">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="43" parent="10" name="last_name">
+    <column id="42" parent="10" name="last_name">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="44" parent="10" name="login">
+    <column id="43" parent="10" name="login">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="45" parent="10" name="pass">
+    <column id="44" parent="10" name="pass">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="46" parent="10" name="drive_license">
+    <column id="45" parent="10" name="drive_license">
       <Position>6</Position>
       <DataType>bigint(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="47" parent="10" name="email">
+    <column id="46" parent="10" name="email">
       <Position>7</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="48" parent="10" name="experience">
+    <column id="47" parent="10" name="experience">
       <Position>8</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="49" parent="10" name="passport_num">
+    <column id="48" parent="10" name="passport_num">
       <Position>9</Position>
       <DataType>bigint(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="50" parent="10" name="telephone">
+    <column id="49" parent="10" name="telephone">
       <Position>10</Position>
       <DataType>bigint(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="51" parent="10" name="desired_car">
+    <column id="50" parent="10" name="address">
       <Position>11</Position>
-      <DataType>int(11)|0</DataType>
-    </column>
-    <column id="52" parent="10" name="desired_dates">
-      <Position>12</Position>
-      <DataType>int(11)|0</DataType>
-    </column>
-    <column id="53" parent="10" name="address">
-      <Position>13</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="54" parent="10" name="PRIMARY">
+    <key id="51" parent="10" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>driver_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="55" parent="11" name="owner_id">
+    <column id="52" parent="11" name="owner_id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="56" parent="11" name="login">
+    <column id="53" parent="11" name="login">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="57" parent="11" name="pass">
+    <column id="54" parent="11" name="pass">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="58" parent="11" name="first_name">
+    <column id="55" parent="11" name="first_name">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="59" parent="11" name="last_name">
+    <column id="56" parent="11" name="last_name">
       <Position>5</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="60" parent="11" name="telephone">
+    <column id="57" parent="11" name="telephone">
       <Position>6</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="61" parent="11" name="email">
+    <column id="58" parent="11" name="email">
       <Position>7</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="62" parent="11" name="passport_num">
+    <column id="59" parent="11" name="passport_num">
       <Position>8</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="63" parent="11" name="address">
+    <column id="60" parent="11" name="address">
       <Position>9</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="64" parent="11" name="login">
+    <index id="61" parent="11" name="login">
       <ColNames>login</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="65" parent="11" name="PRIMARY">
+    <key id="62" parent="11" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>owner_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="66" parent="11" name="login">
+    <key id="63" parent="11" name="login">
       <ColNames>login</ColNames>
       <UnderlyingIndexName>login</UnderlyingIndexName>
     </key>
-    <column id="67" parent="12" name="interval_id">
+    <column id="64" parent="12" name="interval_id">
       <Position>1</Position>
       <DataType>int(255)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="68" parent="12" name="start_date">
+    <column id="65" parent="12" name="start_date">
       <Position>2</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="69" parent="12" name="finish_date">
+    <column id="66" parent="12" name="finish_date">
       <Position>3</Position>
       <DataType>date|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="70" parent="12" name="PRIMARY">
+    <key id="67" parent="12" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>interval_id</ColNames>
       <Primary>1</Primary>

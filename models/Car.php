@@ -12,13 +12,12 @@ class Car extends Object {
     public $car_id;
     public $mark;
     public $model;
+    public $foto;
     public $year;
     public $state_num;
     public $mileage;
     public $colour;
     public $consumption;
-    public $start_date;
-    public $finish_date;
     public $cost_less_30_inc;
     public $cost_more_31;
     public $car_owner;
@@ -36,22 +35,29 @@ class Car extends Object {
         }
         return $days*$this->cost_more_31;
     }
+    public function edit() {
 
-    public function setDates()
-    {
         $prepare = self::$db->prepare(
             'UPDATE Car SET
-                        start_date  = :start_date,
-                        finish_date = :finish_date
+                        foto  = :foto,
+                        cost_less_30_inc = :cost_less_30_inc, 
+                        cost_more_31 = :cost_more_31, 
+                        consumption = :consumption,
+                        mileage = :mileage
                         WHERE
-                        car_id='.$this->car_id);
+                        car_id=:id');
 
         $prepare->execute(
-            array('start_date' => $this->start_date,
-                'finish_date' => $this->finish_date,
-
+            array(
+                'id'=> $this->car_id,
+                'foto'=> $this->foto,
+                'cost_less_30_inc'=> $this->cost_less_30_inc,
+                'cost_more_31'=> $this->cost_more_31,
+                'consumption'=> $this->consumption,
+                'mileage'=> $this->mileage
             ));
     }
+
     public function saveCar()
     {
         echo '<pre>';

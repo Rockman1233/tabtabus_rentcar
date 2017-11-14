@@ -30,7 +30,7 @@
                         </div>
                         <?php else: ; ?>
                         <div class="col-md-4 text-center">
-                            <a class="btn btn-lg btn-add-to-cart" data-id="<?php echo $value['car_id'] ?>"><span class="glyphicon glyphicon-edit"> Редактировать</span></a>
+                            <a class="btn btn-lg btn-add-to-cart" data-id="<?php echo $value['car_id'] ?>" href="edit"  "><span class="glyphicon glyphicon-edit"> Редактировать</span></a>
                         </div>
                         <?php endif; ?>
                         <div class="col-md-4 text-right">
