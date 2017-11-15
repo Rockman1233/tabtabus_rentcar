@@ -19,6 +19,8 @@ class CarController extends Controller {
         $this->view->generate();
 
     }
+
+
     public function actionSave() {
         echo '<br>'.$_SESSION['user'];
         if($_SESSION['user']) {
@@ -29,6 +31,14 @@ class CarController extends Controller {
     //AJAX function catches var from productCard
 
     public function actionEdit() {
+        //operation of uploading file (from php.net)
+        $uploaddir = $_SERVER['DOCUMENT_ROOT'].'/foto/';
+        $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
+        if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
+            echo "Файл корректен и был успешно загружен.\n";
+        } else {
+            echo "Ошибка загрузки файла!\n";
+        }
         $car = Car::findById($_SESSION['car']);
         /*echo '<pre>';
         print_r($car);
@@ -43,11 +53,21 @@ class CarController extends Controller {
                 $car->__set($par, $value);
             }
         }
+        $car->__set('foto', $_FILES['userfile']['name']);
         $car->edit();
     }
 
     public function actionSaveConfirm(){
-
+        //operation of uploading file (from php.net)
+        $uploaddir = $_SERVER['DOCUMENT_ROOT'].'/foto/';
+        $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
+        echo '<pre>';
+        echo $_FILES['userfile']['name'];
+        if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
+            echo "Файл корректен и был успешно загружен.\n";
+        } else {
+            echo "Ошибка загрузки файла!\n";
+        }
         $NewCar = new Car;
         foreach ($_POST as $var => $value) {
             echo '<br>';
@@ -55,6 +75,7 @@ class CarController extends Controller {
             $NewCar->__set($var, $value);
         }
         $NewCar->__set('car_owner', $_SESSION['user']);
+        $NewCar->__set('foto', $_FILES['userfile']['name']);
         echo '<pre>';
         print_r($NewCar);
         echo '</pre>';

@@ -7,15 +7,15 @@
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="" class="img-circle img-responsive"> </div>
+                        <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="../foto/<?php echo $this->aData['Car']->foto ?>" class="img-circle img-responsive"> </div>
 
                         <div class=" col-md-9 col-lg-9 ">
-                            <form action="edit" method="post">
+                            <form action="edit" method="post" enctype="multipart/form-data">
                             <table class="table table-user-information">
                                 <tbody>
                                 <tr>
                                     <td>Фото:</td>
-                                    <td><input type="text" class="form-control-static" name="foto" placeholder="<?php echo $this->aData['Car']->foto ?>"></td>
+                                    <td><input type="file" class="form-control-static" name="userfile" ></td>
                                 </tr>
                                 <tr>
                                 <tr>

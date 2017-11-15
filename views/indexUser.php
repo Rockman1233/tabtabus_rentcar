@@ -9,7 +9,9 @@
         </form>
         <br>
         <a type="button" href="user/logout" class="btn btn-default">Выйти</a>
+        <?php if(!$_SESSION['user']): ?>
         <a type="button" href="/owner" class="btn btn-default">Регистрация владельца</a>
         <a type="button" href="/driver" class="btn btn-default">Регистрация водителя</a>
+        <?php endif; ?>
     </div>
 </div>

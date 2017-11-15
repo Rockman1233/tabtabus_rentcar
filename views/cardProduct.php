@@ -7,7 +7,7 @@
                     <div class="col-md-12 panelTop">
 
                         <div class="col-md-4">
-                            <img class="img-responsive" src="http://placehold.it/350x350" alt=""/>
+                            <img class="img-responsive" src="<?php if($value['foto']): ?><? echo '../foto/'.$value['foto'] ?><? else: ?>http://placehold.it/350x350<? endif; ?>" alt=""/>
                         </div>
                         <div class="col-md-8">
                             <h2><?php echo $value['mark'].' '.$value['model'] ?></h2>

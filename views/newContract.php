@@ -42,7 +42,7 @@
           <h4>Сообщение системы:</h4>
           <p>Ваши даты: <?php echo 'c '.$_POST['start_date'].' по '.$_POST['finish_date']?></p>
           <p><?php echo $_SESSION['message'] ?></p>
-          <?php endif; ?>
+          <? endif; ?>
       <tr>
         <td><?php echo $this->aData['newContcar']->mark.' '.$this->aData['newContcar']->model.'<br> Гос.номер: '.$this->aData['newContcar']->state_num ?></td>
         <td><?php echo $this->aData['newContown']->first_name ?></td>

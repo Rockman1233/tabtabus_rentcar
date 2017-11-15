@@ -71,7 +71,8 @@ class Car extends Object {
                         state_num, 
                         mileage, 
                         colour, 
-                        consumption, 
+                        consumption,
+                        foto, 
                         cost_less_30_inc, 
                         cost_more_31,
                         car_owner) 
@@ -82,7 +83,8 @@ class Car extends Object {
                         :state_num, 
                         :mileage, 
                         :colour, 
-                        :consumption, 
+                        :consumption,
+                        :foto, 
                         :cost_less_30_inc, 
                         :cost_more_31,
                         :car_owner)');
@@ -96,6 +98,7 @@ class Car extends Object {
                 'mileage' => $this->mileage,
                 'colour' => $this->colour,
                 'consumption' => $this->consumption,
+                'foto' => $this->foto,
                 'cost_less_30_inc' => $this->cost_less_30_inc,
                 'cost_more_31' => $this->cost_more_31,
                 'car_owner' => $this->car_owner
