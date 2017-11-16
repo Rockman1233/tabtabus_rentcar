@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost:8889
--- Время создания: Ноя 15 2017 г., 22:26
+-- Время создания: Ноя 16 2017 г., 20:33
 -- Версия сервера: 5.6.35
 -- Версия PHP: 7.0.15
 
@@ -114,9 +114,16 @@ CREATE TABLE `Driver` (
 --
 
 INSERT INTO `Driver` (`driver_id`, `first_name`, `last_name`, `login`, `pass`, `drive_license`, `email`, `experience`, `passport_num`, `telephone`, `address`) VALUES
-(1, 'Иван', 'Ургант', 'zxc', '123', 300334, 'urgant@djdjd.ru', 10, 555152, 89103348889, 'РФ, Москва'),
-(3, 'Криштиану', 'Рональдо', 'qwe', '123', 487575, 'ronaldo@port.dd', 3, 28484, 8393303, 'Португалия'),
-(4, 'Юрий', 'Куклачев', 'xcv', '123', 32525, 'kukla@kot.ru', 6, 2334445, 8930475756, 'Москва');
+(1, 'Иван', 'Ургант', 'zxc', '$2y$10$pSehOAE6YLeq9Pqq8q/dbevkEaGKobCU5g.i3MrId9XtIA5eNi6fC', 300334, 'urgant@djdjd.ru', 10, 555152, 89103348889, 'РФ, Москва'),
+(3, 'Криштиану', 'Рональдо', 'qwe', '$2y$10$pSehOAE6YLeq9Pqq8q/dbevkEaGKobCU5g.i3MrId9XtIA5eNi6fC', 487575, 'ronaldo@port.dd', 3, 28484, 8393303, 'Португалия'),
+(4, 'Юрий', 'Куклачев', 'xcv', '$2y$10$pSehOAE6YLeq9Pqq8q/dbevkEaGKobCU5g.i3MrId9XtIA5eNi6fC', 32525, 'kukla@kot.ru', 6, 2334445, 8930475756, 'Москва'),
+(5, 'Иван', 'Дуров', 'Rock', 'v8v8', 383737, 'durov@sss.ss', 9, 38383838, 837377, 'Иваново'),
+(6, 'Иван', 'Дуров', 'Rock', 'v8v8', 383737, 'durov@sss.ss', 9, 38383838, 837377, 'Иваново'),
+(7, 'Иван', 'Дуров', 'Rock', 'v8v8', 383737, 'durov@sss.ss', 9, 38383838, 837377, 'Иваново'),
+(8, 'Иван', 'Дуров', 'Rock', '2b6b88559f2fcc19c8129d5bd1e7cc28', 383737, 'durov@sss.ss', 9, 38383838, 837377, 'Иваново'),
+(9, 'Иван', 'Дуров', 'Rock', '$2y$10$0bikzKSOOlUnrCggM8zomeKpEXOFZhVNIlF/rEiFGiFmSe2knYWlm', 383737, 'durov@sss.ss', 9, 38383838, 837377, 'Иваново'),
+(11, 'Bond', 'James', 'lkj', '$2y$10$j7wX1LAnjsjP9HC7JPHwxuzq8tv9obNiW7aqV/GnFSq6IS4s1uBZy', 77778, 'bond@007.ocm', 19, 777777, 777, 'UK'),
+(12, 'Robert', 'Winston', 'Pop', '$2y$10$JsFpJb9kc6dzoRnXhaFgM.cQX8/z5FgXb0XTxpUAl5x/zUE5rw53K', 38383, 'winston@sigareta.com', 9, 939399, 8383, 'Bronx');
 
 -- --------------------------------------------------------
 
@@ -160,8 +167,11 @@ CREATE TABLE `Owner` (
 --
 
 INSERT INTO `Owner` (`owner_id`, `login`, `pass`, `first_name`, `last_name`, `telephone`, `email`, `passport_num`, `address`) VALUES
-(10000, 'asdd', '123', 'Стив', 'Джобс', 2244, 'jobs@sss.com', 446633, 'Сан-Франциско'),
-(10001, 'iop', '123', 'Михаэль', 'Шумахер', 8474755, 'mish@gonka.com', 9844444, 'Germany');
+(10000, 'asdd', '$2y$10$D7m5YEt4NtD5Z1tEPa4V9.V.qA0F2wsKNYnOU7EfrLaQlot27oWky', 'Стив', 'Джобс', 2244, 'jobs@sss.com', 446633, 'Сан-Франциско'),
+(10001, 'iop', '$2y$10$D7m5YEt4NtD5Z1tEPa4V9.V.qA0F2wsKNYnOU7EfrLaQlot27oWky', 'Михаэль', 'Шумахер', 8474755, 'mish@gonka.com', 9844444, 'Germany'),
+(10002, 'Rock', '$2y$10$cljJGacQoBhLZlPOLGl.ye1MjgDgTjOyc14kDYAqCfYnel3WWYqd2', 'Chester', 'Benington', 823933, 'linkin@park.com', 6429911, 'LA'),
+(10003, 'qqwwee', '$2y$10$pSehOAE6YLeq9Pqq8q/dbevkEaGKobCU5g.i3MrId9XtIA5eNi6fC', 'qqq', 'qqq', 888, '888', 888, 'dhh'),
+(10004, 'aaa', '$2y$10$D7m5YEt4NtD5Z1tEPa4V9.V.qA0F2wsKNYnOU7EfrLaQlot27oWky', 'qqq', 'qqq', 0, 'kkk', 0, 'kk');
 
 --
 -- Индексы сохранённых таблиц
@@ -219,7 +229,7 @@ ALTER TABLE `Contract`
 -- AUTO_INCREMENT для таблицы `Driver`
 --
 ALTER TABLE `Driver`
-  MODIFY `driver_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `driver_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT для таблицы `interval_availability`
 --
@@ -229,7 +239,7 @@ ALTER TABLE `interval_availability`
 -- AUTO_INCREMENT для таблицы `Owner`
 --
 ALTER TABLE `Owner`
-  MODIFY `owner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10002;
+  MODIFY `owner_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10005;
 --
 -- Ограничения внешнего ключа сохраненных таблиц
 --
