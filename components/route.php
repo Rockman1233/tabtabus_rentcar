@@ -78,6 +78,9 @@ class Route
                 {
                     include_once $controllerFile;
                 }
+                else {
+                    include_once $_SERVER['DOCUMENT_ROOT'].'/views/404.php';
+                }
                 //create new object
                 $classObject = new $controllerName();
                 $result = call_user_func_array(array($classObject, $actionName), $parametrs);

@@ -54,7 +54,7 @@
         <?php include($this->aData['temp']); ?>
     </div>
 </div>
-<!--
+
 <div id="footer">
     <div class="container">
         <p class="muted credit">Andreykin RentaCar <a href="#">Жмяк</a> и <a href="#">Жмяк-жмяк</a>.</p>
