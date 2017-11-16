@@ -5,8 +5,8 @@
  * Date: 30.10.17
  * Time: 13:51
  */
-include($_SERVER['DOCUMENT_ROOT'].'/models/Driver.php');
-include('Controller.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/models/Driver.php');
+include_once('Controller.php');
 
 class DriverController extends Controller {
 
@@ -27,6 +27,9 @@ class DriverController extends Controller {
 
         $NewDriver = new Driver();
         foreach ($_POST as $var => $value) {
+            if($var=='pass'){
+                $value = password_hash("$value", PASSWORD_DEFAULT);
+            }
             $NewDriver->__set($var, $value);
         }
 

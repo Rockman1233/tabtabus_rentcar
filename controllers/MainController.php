@@ -5,7 +5,7 @@
  * Date: 31.10.17
  * Time: 22:10
  */
-include 'Controller.php';
+include_once 'Controller.php';
 class MainController extends Controller {
 
 

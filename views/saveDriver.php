@@ -12,10 +12,8 @@
         <input type="text" class="form-control-static" name="passport_num" placeholder="Номер паспорта">
         <input type="text" class="form-control-static" name="experience" placeholder="Полных лет вождения">
         <input type="text" class="form-control-static" name="drive_license" placeholder="Номер вод.удостр">
-        <input type="text" class="form-control-static" name="desired_dates" placeholder="Желаемая дата">
-        <input type="text" class="form-control-static" name="desired_car" placeholder="Желаемый автомобиль">
     </div>
-<button type="submit" class="btn btn-default">Добавить владельца</button>
+<button type="submit" class="btn btn-default">Добавить водителя</button>
 </form>
 <br>
 </div>

@@ -5,8 +5,8 @@
  * Date: 30.10.17
  * Time: 13:51
  */
-include($_SERVER['DOCUMENT_ROOT'] . '/models/User.php');
-include('Controller.php');
+include_once($_SERVER['DOCUMENT_ROOT'] . '/models/User.php');
+include_once('Controller.php');
 class UserController extends Controller {
 
     public $User;
@@ -26,7 +26,7 @@ class UserController extends Controller {
         $user_id = $this->User->getUser();
 
         if($user_id == false){
-            echo 'Неверные данные';
+            echo 'Неверный логин или пароль';
             return false;
         }
         else {

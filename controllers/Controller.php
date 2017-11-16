@@ -5,7 +5,7 @@
  * Date: 01.11.17
  * Time: 9:49
  */
-include($_SERVER['DOCUMENT_ROOT'].'/views/view.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/views/view.php');
 
 class Controller {
     public $view;

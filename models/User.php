@@ -22,22 +22,22 @@ class User extends Object
 
     public function getUser()
     {
-        $oQuery = Object::$db->prepare("SELECT * FROM Driver WHERE login=:need_login AND pass=:pass");
-        $oQuery->execute(['need_login' => $this->login, 'pass' => $this->pass]);
+        $oQuery = Object::$db->prepare("SELECT * FROM Driver WHERE login=:need_login");
+        $oQuery->execute(['need_login' => $this->login]);
         $aRes = $oQuery->fetch(PDO::FETCH_ASSOC);
+        $access= password_verify($this->pass,$aRes['pass']);
 
-        echo '<pre>';
-        print_r($aRes);
-        echo '</pre>';
-        //($aRes) ?  : var_dump('пользователь не существует'); если будет желание сделать
-        // предупреждение о неверном пароле
-        if ($aRes) {
+        if ($access) {
+            echo "Привет,".$aRes['first_name'].' '.$aRes['last_name'];
             return $aRes['driver_id'];
         }
-        $oQuery = Object::$db->prepare("SELECT * FROM Owner WHERE login=:need_login AND pass=:pass");
-        $oQuery->execute(['need_login' => $this->login, 'pass' => $this->pass]);
+
+        $oQuery = Object::$db->prepare("SELECT * FROM Owner WHERE login=:need_login");
+        $oQuery->execute(['need_login' => $this->login]);
         $aRes = $oQuery->fetch(PDO::FETCH_ASSOC);
-        if ($aRes) {
+        $access= password_verify($this->pass,$aRes['pass']);
+        if ($access) {
+            echo "Привет,".$aRes['first_name'].' '.$aRes['last_name'];
             return $aRes['owner_id'];
         }
         return false;
@@ -49,6 +49,5 @@ class User extends Object
             return 'Owner';
         }
         return 'Driver';
-
     }
 }

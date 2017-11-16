@@ -27,6 +27,9 @@ class OwnerController extends Controller {
 
         $NewOwner = new Owner();
         foreach ($_POST as $var => $value) {
+            if($var=='pass'){
+                $value = password_hash("$value", PASSWORD_DEFAULT);
+            }
             $NewOwner->__set($var, $value);
         }
 
