@@ -27,11 +27,11 @@ class View
 
     function generate()
     {
-        echo '<br>';
-        print_r($this->aData);
+        echo " -----View - ";
+        print_r($this->aData['temp']);
         foreach ($this->aData as $sName => $value) {
         }
-        include $this->template;
+        include_once $this->template;
     }
 
     function generateIn()

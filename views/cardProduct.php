@@ -5,7 +5,6 @@
             <div class="panel panel-default  panel--styled">
                 <div class="panel-body">
                     <div class="col-md-12 panelTop">
-
                         <div class="col-md-4">
                             <img class="img-responsive" src="<?php if($value['foto']): ?><? echo '../foto/'.$value['foto'] ?><? else: ?>http://placehold.it/350x350<? endif; ?>" alt=""/>
                         </div>
@@ -22,7 +21,6 @@
                             Цена за сутки
                         </div>
                     </div>
-
                     <div class="col-md-12 panelBottom">
                         <?php if(User::whoisUser() == 'Driver'): ?>
                         <div class="col-md-4 text-center">

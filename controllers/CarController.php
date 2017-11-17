@@ -35,9 +35,9 @@ class CarController extends Controller {
         $uploaddir = $_SERVER['DOCUMENT_ROOT'].'/foto/';
         $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
         if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
-            echo "Файл корректен и был успешно загружен.\n";
+            echo "<br>Файл корректен и был успешно загружен.\n";
         } else {
-            echo "Ошибка загрузки файла!\n";
+            echo "<br>Ошибка загрузки файла!\n";
         }
         $car = Car::findById($_SESSION['car']);
         /*echo '<pre>';
@@ -48,12 +48,16 @@ class CarController extends Controller {
             $this->view->addData('Car', $car);
             $this->view->generateIn();
         }
+
         foreach ($_POST as $par => $value) {
             if($value) {
                 $car->__set($par, $value);
             }
         }
-        $car->__set('foto', $_FILES['userfile']['name']);
+        //исключаем перезапись фотографии в сучае отправки пустого поля Фото
+        if($_FILES['userfile']['name']) {
+            $car->__set('foto', $_FILES['userfile']['name']);
+        }
         $car->edit();
     }
 

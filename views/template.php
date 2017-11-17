@@ -57,7 +57,9 @@
 
 <div id="footer">
     <div class="container">
+        <div class="row">
         <p class="muted credit">Andreykin RentaCar <a href="#">Жмяк</a> и <a href="#">Жмяк-жмяк</a>.</p>
+        </div>
     </div>
 </div>
 

@@ -33,7 +33,7 @@ class Route
 	public function start() {
 
         $uri = $this->getURL();
-        echo "Строка запроса - ".$uri;
+        echo "Строка запроса - localhost/".$uri;
 
         if(!$uri){
             $controllerFile = $_SERVER['DOCUMENT_ROOT'].'/controllers/MainController.php';
