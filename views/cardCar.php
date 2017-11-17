@@ -28,7 +28,7 @@
                                 </tr>
                                 <tr>
                                     <td>Расход:</td>
-                                    <td><input type="text" class="form-control-static" name="comsumption" placeholder="<?php echo $this->aData['Car']->consumption ?>"></td>
+                                    <td><input type="text" class="form-control-static" name="consumption" placeholder="<?php echo $this->aData['Car']->consumption ?>"></td>
                                 </tr>
                                 <tr>
                                     <td>Пробег:</td>
