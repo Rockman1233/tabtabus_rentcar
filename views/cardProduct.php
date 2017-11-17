@@ -22,7 +22,7 @@
                         </div>
                     </div>
                     <div class="col-md-12 panelBottom">
-                        <?php if(User::whoisUser() == 'Driver'): ?>
+                        <?php if(User::whoisUser() == 'Driver'): ?>123
                         <div class="col-md-4 text-center">
                             <a class="btn btn-lg btn-add-to-cart" data-id="<?php echo $value['car_id'] ?>"><span class="glyphicon glyphicon-ok"> Выбрать</span></a>
                         </div>
