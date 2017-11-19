@@ -1,4 +1,5 @@
 <div class="container">
+<div class="row">
     <?php if(!($_SERVER['REQUEST_URI'] == "/cabinet/create")): ?>
 <h2>Новая заявка<?php if($this->aData['CurrentCont']['status']==0): ?><span class="glyphicon glyphicon-hourglass fa-1x"> Заявка рассматривается<?php endif; ?>
     <?php if($this->aData['CurrentCont']['status']==1): ?><span class="glyphicon glyphicon-ok fa-1x"> Заявка одобрена<?php endif; ?>
@@ -123,5 +124,8 @@
   <?php endif; ?>
 
 </div>
+</div>
+<? echo '<br>' ?>
+<? echo '<br>' ?>
 <? echo '<br>' ?>
 
