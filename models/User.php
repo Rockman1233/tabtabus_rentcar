@@ -28,7 +28,9 @@ class User extends Object
         $access= password_verify($this->pass,$aRes['pass']);
 
         if ($access) {
+            echo '<pre>';
             echo "Привет,".$aRes['first_name'].' '.$aRes['last_name'];
+            echo '</pre>';
             return $aRes['driver_id'];
         }
 
@@ -37,7 +39,9 @@ class User extends Object
         $aRes = $oQuery->fetch(PDO::FETCH_ASSOC);
         $access= password_verify($this->pass,$aRes['pass']);
         if ($access) {
+            echo '<pre>';
             echo "Привет,".$aRes['first_name'].' '.$aRes['last_name'];
+            echo '</pre>';
             return $aRes['owner_id'];
         }
         return false;

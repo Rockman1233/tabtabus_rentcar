@@ -51,7 +51,7 @@
                                 <?php else: ?>
                                 <tr>
                                     <td>Мои автомобили:</td>
-                                    <td><a href="../car/showall">Нажми</a></td>
+                                    <td><a href="../car/showall/1">Нажми</a></td>
                                 </tr>
                                 <?php endif; ?>
 

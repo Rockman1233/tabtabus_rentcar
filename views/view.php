@@ -27,8 +27,6 @@ class View
 
     function generate()
     {
-        echo " -----View - ";
-        print_r($this->aData['temp']);
         foreach ($this->aData as $sName => $value) {
         }
         include_once $this->template;

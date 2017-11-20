@@ -38,10 +38,10 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="/car">Автомобили</a></li>
-                <li><a href="/user">Войти</a></li>
+                <li <?php if($_SERVER['REQUEST_URI']=='/car') echo "class=\"active\""?>><a href="/car" >Автомобили</a></li>
+                <li <?php if($_SERVER['REQUEST_URI']=='/user') echo "class=\"active\""?>><a href="/user">Войти</a></li>
                 <?php if(isset($_SESSION['user'])): ?>
-                <li><a href="/cabinet"><?php if($_SESSION['user'] >= 10000): ?>Личный кабинет арендодателя<? else: ?>Личный кабинет водителя<?php endif; ?></a></li>
+                <li <?php if($_SERVER['REQUEST_URI']=='/cabinet') echo "class=\"active\""?>><a href="/cabinet"><?php if($_SESSION['user'] >= 10000): ?>Личный кабинет арендодателя<? else: ?>Личный кабинет водителя<?php endif; ?></a></li>
                 <?php endif; ?>
             </ul>
 
@@ -55,6 +55,7 @@
     </div>
 </div>
 
+
 <div id="footer">
     <div class="container">
         <div class="row">
@@ -64,20 +65,20 @@
 </div>
 
 <!-- 3. Подключить библиотеку jQuery -->
-<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../../js/jquery-3.2.1.min.js"></script>
 <!-- 4. Подключить библиотеку moment -->
-<script src="../js/moment-with-locales.min.js"></script>
+<script src="../../js/moment-with-locales.min.js"></script>
 <!-- 5. Подключить js-файл фреймворка Bootstrap 3 -->
-<script src="../js/bootstrap.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
 <!-- 6. Подключить js-файл библиотеки Bootstrap 3 DateTimePicker -->
-<script src="../js/bootstrap-datetimepicker.min.js"></script>
+<script src="../../js/bootstrap-datetimepicker.min.js"></script>
 <!-- ajax (add car to contract)-->
 <script type="text/javascript">
     $(document).ready(function () {
         $('.btn-add-to-cart').click(function () {
             var id = $(this).attr('data-id');
             $.ajax({
-                url: '../cabinet/addcar',
+                url: '../../cabinet/addcar',
                 type: 'POST',
                 data: {'car': id},
                 success: function (result) {

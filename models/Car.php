@@ -22,6 +22,8 @@ class Car extends Object {
     public $cost_more_31;
     public $car_owner;
 
+    const SHOW_DEFAULT = 3;
+
 
     static function TableName()
     {
@@ -105,21 +107,33 @@ class Car extends Object {
             ));
     }
 
-        static function Showall() {
+        static function Showall($page)
+        {
+            $page = intval($page);
+            $count = Car::SHOW_DEFAULT;
+            $offset = $count * ($page - 1);
 
             //if user is authenticated as Owner show him his cars
-            if(User::whoisUser()=='Owner') {
-                $oQuery = Object::$db->query('SELECT * FROM `Car` WHERE car_owner=' . $_SESSION['user']);
+            if (User::whoisUser() == 'Owner') {
+                $oQuery = Object::$db->query('SELECT * FROM `Car` WHERE car_owner=' . $_SESSION['user'].' ORDER BY mark LIMIT ' . $count . ' OFFSET ' . $offset);
+            } else {
+                $oQuery = Object::$db->query('SELECT * FROM `Car` ORDER BY mark LIMIT ' . $count . ' OFFSET ' . $offset);
             }
-            else {
-                $oQuery = Object::$db->query('SELECT * FROM `Car`');
-            }
+
             return $oQuery->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+        static function TotalCars()
+        {
+            if (User::whoisUser() == 'Driver') {
+                $oQuery = Object::$db->query('SELECT COUNT(*) FROM `Car`');
+                return $oQuery->fetch(PDO::FETCH_ASSOC);
+            } else {
+                $oQuery = Object::$db->query('SELECT COUNT(*) FROM `Car` WHERE car_owner=' . $_SESSION['user']);
+                return $oQuery->fetch(PDO::FETCH_ASSOC);
+            }
 
 
-
-        //если мы добавляем новую машину в бд то используем все поля а если уже существующую то не все (например цвет или марка остаются прежними)
-    }
-
+        }
 
 }

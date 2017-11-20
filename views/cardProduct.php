@@ -6,7 +6,7 @@
                 <div class="panel-body">
                     <div class="col-md-12 panelTop">
                         <div class="col-md-4">
-                            <img class="img-responsive" src="<?php if($value['foto']): ?><? echo '../foto/'.$value['foto'] ?><? else: ?>http://placehold.it/350x350<? endif; ?>" alt=""/>
+                            <img class="img-responsive" src="<?php if($value['foto']): ?><? echo '../../foto/'.$value['foto'] ?><? else: ?>http://placehold.it/350x350<? endif; ?>" alt=""/>
                         </div>
                         <div class="col-md-8">
                             <h2><?php echo $value['mark'].' '.$value['model'] ?></h2>
@@ -28,7 +28,7 @@
                         </div>
                         <?php else: ; ?>
                         <div class="col-md-4 text-center">
-                            <a class="btn btn-lg btn-add-to-cart" data-id="<?php echo $value['car_id'] ?>" href="edit"  "><span class="glyphicon glyphicon-edit"> Редактировать</span></a>
+                            <a class="btn btn-lg btn-add-to-cart" data-id="<?php echo $value['car_id'] ?>" href="../edit"  "><span class="glyphicon glyphicon-edit"> Редактировать</span></a>
                         </div>
                         <?php endif; ?>
                         <div class="col-md-4 text-right">

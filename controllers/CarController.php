@@ -9,8 +9,10 @@
 include_once('Controller.php');
 include_once($_SERVER['DOCUMENT_ROOT'].'/models/Car.php');
 include_once($_SERVER['DOCUMENT_ROOT'].'/models/User.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/components/Pagination.php');
 
 class CarController extends Controller {
+
 
 
     public function actionIndex($render='indexCar.php')
@@ -88,15 +90,19 @@ class CarController extends Controller {
 
     }
 
-    public function actionShowall() {
-        $aRes = Car::Showall();
+    public function actionShowall($page) {
+        $aRes = Car::Showall($page); //array of cars for show
+        $total = Car::TotalCars(); // total numbers of cars
+        $total = $total['COUNT(*)'];
+        //making of pagination
+        $pagination = new Pagination("$total", "$page", Car::SHOW_DEFAULT, '');
+        print_r($pagination->get());
         // достаем из результирующего массива автомобили и передаем на обработку в шаблон
         $this->view->addData("temp", 'cardProduct.php');
         foreach($aRes as $carArray) {
             //передаем машину в массив с контентом , затем вызываем ф-цию построение "карточки машины"
             $this->view->addData("CurrentCar", $carArray);
             $this->view->generateIn();
-
         }
 
         /*echo '<pre>';

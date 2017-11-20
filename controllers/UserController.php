@@ -31,13 +31,12 @@ class UserController extends Controller {
         }
         else {
             $_SESSION['user'] = $user_id;
-            echo $user_id;
             return $user_id;
         }
     }
     public function actionLogout() {
         unset($_SESSION['user']);
-        //header('Location:/');
+        header('Location:/');
     }
 
 }
